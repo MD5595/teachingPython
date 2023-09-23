@@ -7,3 +7,6 @@ https://docs.google.com/document/d/18pOZAv8kwUpfFii0ko1iciQv3-eyxOmcmdLVdaqvjVg/
 
 
 https://docs.streamlit.io/library/api-reference/text/st.markdown
+
+
+st.markdown("<h1 style='text-align: center;'>Centered Title</h1>", unsafe_allow_html=True)
