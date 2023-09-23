@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Hello")
+st.title("Welcome to pyEDU")
 
 
 
