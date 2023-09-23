@@ -7,10 +7,10 @@ def account():
 
     st.title("Account")
 
-    if (st.button("Sign Up")):
+    if st.button("Sign Up"):
         create_credentials(user_credentials)
 
-    if (st.button("Login")):
+    if st.button("Login"):
 
         login()
         user_info = login()
