@@ -10,3 +10,6 @@ https://docs.streamlit.io/library/api-reference/text/st.markdown
 
 
 st.markdown("<h1 style='text-align: center;'>Centered Title</h1>", unsafe_allow_html=True)
+
+
+pip install streamlit-authenticator
