@@ -13,11 +13,12 @@ def account():
     if (st.button("Login")):
 
         login()
-        check_credentials(login[0], login[1], user_credentials)
+        user_info = login()
+        check_credentials(user_info[0], user_info[1], user_credentials)
 
         while flag:
 
-            if check_credentials(login[0], login[1], user_credentials):
+            if check_credentials(user_info[0], user_info[1], user_credentials):
                 st.success("Access granted")
                 flag = False
             else:
