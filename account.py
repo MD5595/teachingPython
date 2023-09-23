@@ -21,7 +21,7 @@ def account():
                 st.success("Access granted")
                 flag = False
             else:
-                st.text("Access denied, Try Again")
+                st.error("Access denied, Try Again")
                 login()
 
 
@@ -59,9 +59,9 @@ def check_credentials(username, password, credentials):
     if username in credentials and (credentials[username] == password):
         return True
     elif (username in credentials) and (credentials[username] != password):
-        st.text("Incorrect password, try again.")
+        st.warning("Incorrect password, try again.")
         return False
     elif username not in credentials:
-        st.text("Username incorrect, try again or Create Account.")
+        st.warning("Username incorrect, try again or Create Account.")
         return False
 
