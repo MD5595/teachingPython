@@ -5,12 +5,15 @@ st.set_page_config(page_title="py.EDU", page_icon=":snake:", layout="wide", init
                    menu_items=None)
 st.header(":blue[py]:red[EDU]:snake:")
 expandtitle = None
-
-
-
+complete = False
+if st.button("Cheatsheet"):
+    expandtitle = "Cheatsheet"
 
 with st.sidebar:
     "Select:"
+    with st.expander("Practice Tools"):
+        if st.button("Flashcard Maker"):
+            expandtitle = "Flashcards"
     with st.expander("Unit 1"):
         if st.button("Unit 1.1: Python Introduction"):
             expandtitle = "Unit 1.1"
@@ -28,8 +31,6 @@ with st.sidebar:
             expandtitle = "Unit 4.1"
 
 if expandtitle == "Unit 1.1":
-    if st.button("Home"):
-        expandtitle = "Cheatsheet"
     st.header("Unit 1.1: Introduction to Python")
     st.divider()
     st.markdown("In this introductory chapter, we'll take our first steps "
@@ -48,14 +49,23 @@ if expandtitle == "Unit 1.1":
                 "file called \"hello_world.py\" In this file you will want to code the following, don't worry we will "
                 "explain it later.")
     st.code("if __name__ == \"__main__\":\n"
-            "\tprint(\"Hello, World\")", language='python')
+            "\tprint(\"Hello, World!\")", language='python')
     st.markdown("After writing your first program, choose which way you want to run it. If you are writing code in "
                 "the terminal "
                 "you would use the \"python3 hello_world.cpp\" command. Whatever way you run it, the result of the "
                 "program should be:")
-
+    st.code("Hello, World!", language='python')
+    yorno = st.radio("Which of the following ",
+                     [":green[Yes]", "No"],
+                     index=None)
+    if yorno != ":green[Yes]":
+        pass
+    else:
+        expandtitle = "Unit 1.2"
+        complete = True
 
 elif expandtitle == "Unit 1.2":
+    complete = False
     st.header("Unit 1.2: Syntax and Formatting Conventions")
 elif expandtitle == "Unit 1.3":
     st.header("Unit 1.3: Variables")
@@ -67,5 +77,8 @@ elif expandtitle == "Unit 4.1":
     st.header("Unit 4.1: ")
 elif expandtitle == "Cheatsheet":
     st.header("Cheatsheet")
+elif expandtitle == "Flashcards":
+    st.header("Flashcards")
+    #start your code here
 else:
     st.header("Home")
