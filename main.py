@@ -1065,127 +1065,6 @@ elif st.session_state.expandtitle == "Unit 4.2":
 
     # More complex example
     st.header("Example: Counting Odd Numbers")
-    st.title("Unit 3: Conditionals Summary")
-
-    st.write(
-        "Unit 3 explores the world of conditionals, which are used to make decisions and control the flow of a program.")
-
-    # Subsection 3.1: If Statements
-    st.header("3.1: If Statements")
-    st.write("In this section, you learned about 'if' statements, the most basic form of conditional statements.")
-
-    st.subheader("Key Points")
-    st.write("1. 'if' statements evaluate a condition and execute a block of code if the condition is true.")
-    st.write("2. Proper indentation is crucial to define the code block that belongs to the 'if' statement.")
-    st.write("3. 'if' statements allow your program to make decisions based on specific conditions.")
-
-    # Subsection 3.2: Else if Statements
-    st.header("3.2: Else if Statements")
-    st.write("Else if statements allow you to consider multiple conditions in a controlled manner.")
-
-    st.subheader("Key Points")
-    st.write("1. 'else if' statements (also written as 'elif') are used to specify alternative conditions.")
-    st.write("2. They are evaluated only if the preceding 'if' or 'elif' conditions are false.")
-    st.write("3. 'else' can be used as a final fallback condition if none of the previous conditions are met.")
-
-    # Subsection 3.3: Nested Statements
-    st.header("3.3: Nested Statements")
-    st.write(
-        "Nested statements involve placing one conditional statement within another, allowing for complex decision-making.")
-
-    st.subheader("Key Points")
-    st.write("1. Nested statements involve 'if' or 'elif' statements inside other 'if' or 'elif' blocks.")
-    st.write("2. Proper indentation is crucial to indicate the nesting level.")
-    st.write("3. Nested statements enable you to consider multiple conditions and execute code accordingly.")
-
-    # Conclusion
-    st.header("Conclusion")
-    st.write("In Unit 3, you've explored conditionals, a fundamental aspect of programming.")
-    st.write("You've learned how 'if' statements allow you to make decisions based on specific conditions.")
-    st.write("Else if statements expand your decision-making capabilities by considering multiple conditions.")
-    st.write("Nested statements provide a way to handle complex scenarios by combining conditionals.")
-    st.write(
-        "Understanding and mastering these conditional structures is essential for creating responsive and flexible programs.")
-elif st.session_state.expandtitle == "Unit 3.6":
-    st.header("Unit 3 Quiz")
-elif st.session_state.expandtitle == "Unit 4.1":
-    st.header("Unit 4.1: For Loops")
-    st.title("Unit 4.1: For Loops")
-
-    st.write(
-        "For loops are used for iterating over sequences (such as lists, tuples, or strings) and performing actions on each item in the sequence.")
-
-    # Example of a for loop
-    st.write("Example:")
-    st.code("""
-        fruits = ["Apple", "Banana", "Cherry"]
-        for fruit in fruits:
-            st.write(f"Current fruit: {fruit}")
-        """)
-    st.write(
-        "In this example, we have a list of fruits, and we use a for loop to iterate through each fruit and print its name.")
-
-    st.write("Key points about for loops:")
-
-    st.subheader("Iteration Over Sequences")
-    st.write("For loops are commonly used to iterate over sequences like lists, tuples, or strings.")
-
-    st.subheader("Iterable Element")
-    st.write(
-        "The loop variable (e.g., 'fruit' in the example) takes on each item in the sequence during each iteration.")
-
-    st.subheader("Indentation")
-    st.write("Proper indentation is crucial to indicate the code block that should be executed for each iteration.")
-
-    st.subheader("Loop Control")
-    st.write("You can use control statements like 'break' and 'continue' to control the flow of the loop.")
-
-    st.write("For loops are fundamental for performing repetitive tasks in programming.")
-
-    # Conclusion
-    st.header("Conclusion")
-    st.write(
-        "In this unit, you've learned about for loops, which are essential for iterating over sequences and performing actions on each element.")
-    st.write(
-        "For loops are versatile and commonly used in programming for tasks like data processing and repetitive actions.")
-    st.write("Understanding how to use for loops effectively is crucial for writing efficient and structured code.")
-elif st.session_state.expandtitle == "Unit 4.2":
-    st.header("Unit 4.2: While Loops")
-    st.title("Understanding While Loops")
-
-    # Explanation
-    st.write("While loops continuously perform an action as long as a condition is fulfilled.")
-    st.write("They are useful when you don't know how many iterations your statement will have.")
-    st.write("Here's an example:")
-
-    # Initialize x
-    x = 1
-
-    # While loop example
-    st.code(
-        """
-    while x < 10:
-        st.write("x is less than 10")
-        x += 1
-        """
-    )
-
-    st.write("In this example, the while loop will execute until x becomes greater than or equal to 10.")
-    st.write(
-        "Each time the loop runs, it checks if x is less than 10. If that's true, it prints 'x is less than 10' and increments x by 1.")
-    st.write("Now, let's run the loop to see it in action:")
-
-    # While loop execution
-    x = 1  # Reset x
-    while x < 10:
-        st.write(f"x is {x}. It is less than 10.")
-        x += 1
-
-    st.write("The loop stops when x reaches 10 because the condition (x < 10) is no longer fulfilled.")
-    st.write("While loops are powerful for tasks where you need to repeat an action until a certain condition is met.")
-
-    # More complex example
-    st.header("Example: Counting Odd Numbers")
 
     st.write("Let's use a while loop to count and display the first 10 odd numbers.")
     st.write("We'll start with 1 and keep adding 2 until we have 10 odd numbers.")
@@ -1211,10 +1090,10 @@ elif st.session_state.expandtitle == "Unit 4.3":
     # Example of a nested loop
     st.write("Example:")
     st.code("""
-        for i in range(3):
-            for j in range(2):
-                st.write(f"Outer loop iteration {i}, Inner loop iteration {j}")
-        """)
+    for i in range(3):
+        for j in range(2):
+            st.write(f"Outer loop iteration {i}, Inner loop iteration {j}")
+    """)
     st.write(
         "In this example, we have an outer loop that iterates three times and an inner loop that iterates two times for each outer loop iteration.")
 
@@ -1242,48 +1121,169 @@ elif st.session_state.expandtitle == "Unit 4.3":
     st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
-    st.title("Unit 4: Loops Summary")
+elif st.session_state.expandtitle == "Unit 4.5":
+    st.header("Unit 4 Quiz")
+elif st.session_state.expandtitle == "Unit 5.1":
+    st.header("Unit 5.1: Lists")
+    st.title("Unit 5.1: Lists")
+
+    st.write("Lists store multiple values within one variable. Any data type can be stored within a list, "
+             "and differing data types can be stored within the same list. Any value stored within a list is called an element.")
+
+    # Example list
+    devices = ["Phone", "Laptop", "Tablet"]
+
+    st.write("Example:")
+    st.code("Devices = ['Phone', 'Laptop', 'Tablet']")
+
+    st.write("Below are functions that can be used on lists:")
+    st.code("""
+    import random
+
+    Y = [1, 3, 2, 5]
+    X = 3
+
+    Value1 = Y.append(X)  # Adds an element to the end of a list
+    Value2 = Y.count(X)   # Returns the number of elements that have the value X
+    Value3 = Y.sort()     # Sorts the list
+    Value5 = random.choice(Y)  # Picks a random value within a list
+    """)
 
     st.write(
-        "Unit 4 introduces the concept of loops, which are used to perform repetitive tasks and iterate through data structures.")
-
-    # Subsection 4.1: While Loops
-    st.header("4.1: While Loops")
-    st.write(
-        "In this section, you learned about 'while' loops, which repeatedly execute a block of code as long as a condition is true.")
-
-    st.subheader("Key Points")
-    st.write("1. 'while' loops continue executing as long as the specified condition remains true.")
-    st.write("2. Careful attention to the loop condition and an exit strategy is essential to avoid infinite loops.")
-    st.write("3. 'while' loops are useful when you don't know the number of iterations in advance.")
-
-    # Subsection 4.2: For Loops
-    st.header("4.2: For Loops")
-    st.write("For loops are used to iterate through sequences and perform actions on each item in the sequence.")
-
-    st.subheader("Key Points")
-    st.write("1. For loops are commonly used for iterating over sequences like lists, tuples, or strings.")
-    st.write("2. A loop variable takes on each item in the sequence during each iteration.")
-    st.write("3. Proper indentation is crucial to define the code block within the loop.")
-
-    # Subsection 4.3: Nested For-Loops
-    st.header("4.3: Nested For-Loops")
-    st.write(
-        "Nested for-loops involve placing one for-loop inside another, enabling complex iteration and data processing.")
-
-    st.subheader("Key Points")
-    st.write("1. Nested for-loops involve one for-loop within another, creating a nested structure.")
-    st.write("2. Proper indentation indicates the level of nesting.")
-    st.write("3. Nested for-loops are used for tasks like matrix traversal and multi-dimensional data processing.")
+        "In this unit, you've learned about lists, versatile data structures that can store multiple values of any data type. "
+        "Lists are fundamental in programming and provide a convenient way to work with collections of data.")
 
     # Conclusion
     st.header("Conclusion")
-    st.write("In Unit 4, you've explored the concept of loops, a fundamental aspect of programming.")
-    st.write("While loops allow you to repeat code execution based on a condition.")
-    st.write("For loops simplify the process of iterating through sequences like lists.")
-    st.write("Nested for-loops enable you to work with complex data structures and perform multi-level iterations.")
     st.write(
-        "Mastering loops is crucial for automating repetitive tasks and processing data efficiently in your programs.")
+        "Lists are an essential data structure in programming, allowing you to store and manipulate collections of data efficiently.")
+    st.write("You've also seen some common functions that can be used to modify and work with lists, "
+             "such as appending elements, counting occurrences, sorting, and selecting random values.")
+    st.write(
+        "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
+elif st.session_state.expandtitle == "Unit 5.2":
+    st.header("Unit 5.2: Traversing Through Lists")
+
+    st.title("Unit 5.2: Traversing Through Lists")
+
+    st.write("Traversing through lists means accessing and processing each element in a list one by one. "
+             "This is a fundamental operation when working with lists.")
+
+    # Example list
+    numbers = [1, 2, 3, 4, 5]
+
+    st.write("Example:")
+    st.code("numbers = [1, 2, 3, 4, 5]")
+
+    st.write("Here are common techniques for traversing through lists:")
+
+    st.subheader("1. Using a For Loop")
+    st.write("You can use a 'for' loop to iterate through each element in the list.")
+    st.code("""
+    for num in numbers:
+        st.write(f"Element: {num}")
+    """)
+
+    st.subheader("2. Using List Indexing")
+    st.write("You can access elements by their index in the list.")
+    st.code("""
+    for i in range(len(numbers)):
+        st.write(f"Element {i + 1}: {numbers[i]}")
+    """)
+
+    st.subheader("3. Using Enumerate")
+    st.write("Enumerate allows you to access both the index and the value of each element.")
+    st.code("""
+    for idx, num in enumerate(numbers):
+        st.write(f"Element {idx + 1}: {num}")
+    """)
+
+    st.write(
+        "Traversing through lists is essential for performing various operations, such as calculations, filtering, and data processing.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about traversing through lists, a fundamental operation when working with collections of data.")
+    st.write("You've seen different techniques, including 'for' loops, list indexing, and 'enumerate,' "
+             "that allow you to access and process each element in a list.")
+    st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
+
+elif st.session_state.expandtitle == "Unit 5.3":
+    st.header("Unit 5.3: Appending/Removing")
+    st.title("Unit 5.3: Appending and Removing from Lists")
+
+    st.write("Appending and removing elements from lists are common operations when working with data in programming. "
+             "These operations allow you to modify the contents of a list.")
+
+    # Example list
+    fruits = ["Apple", "Banana", "Cherry"]
+
+    st.write("Example:")
+    st.code("fruits = ['Apple', 'Banana', 'Cherry']")
+
+    st.write("Here are common techniques for appending and removing elements from lists:")
+
+    st.subheader("1. Appending Elements")
+    st.write("You can add elements to the end of a list using the 'append' method.")
+    st.code("""
+    fruits.append("Orange")
+    st.write(fruits)
+    """)
+
+    st.subheader("2. Inserting Elements")
+    st.write("You can insert elements at a specific position in the list using the 'insert' method.")
+    st.code("""
+    fruits.insert(1, "Grape")
+    st.write(fruits)
+    """)
+
+    st.subheader("3. Removing Elements by Value")
+    st.write("You can remove elements by their value using the 'remove' method.")
+    st.code("""
+    fruits.remove("Banana")
+    st.write(fruits)
+    """)
+
+    st.subheader("4. Removing Elements by Index")
+    st.write("You can remove elements by their index using the 'pop' method.")
+    st.code("""
+    removed_fruit = fruits.pop(0)
+    st.write(f"Removed: {removed_fruit}")
+    st.write(fruits)
+    """)
+
+    st.write(
+        "Appending and removing elements from lists are essential for data manipulation and management in programming.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned how to append and remove elements from lists, fundamental operations when working with data.")
+    st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
+             "that allow you to modify the contents of a list.")
+    st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
+
+elif st.session_state.expandtitle == "Unit 5.4":
+    st.header("Unit 5.4: 2-D Lists")
+    st.write("Example:")
+    st.code("matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
+
+    st.write("Here are common techniques for working with 2-D lists:")
+
+    st.subheader("1. Accessing Elements")
+    st.write("You can access elements in a 2-D list using two indices: one for the row and one for the column.")
+    st.code("""
+    element = matrix[1][2]  # Accessing the element in the second row and third column
+    st.write(f"Element: {element}")
+    """)
+
+    st.subheader("2. Iterating Through Rows")
+    st.write("You can iterate through the rows of a 2-D list using 'for' loops.")
+    st.code("""
+    for row in matrix:
+        st.write(row)
+    """)
 
     st.subheader("3. Iterating Through Elements")
     st.write("You can iterate through all elements in a 2-D list using nested 'for' loops.")
