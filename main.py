@@ -2108,7 +2108,25 @@ elif st.session_state.expandtitle == "Unit 6.1":
     st.write("Functions allow you to encapsulate code, making it reusable and organized.")
     st.write(
         "You've seen how to declare functions with names, parameters, and a function body, as well as how to call them.")
+    question = st.radio("What is the primary purpose of function declaration in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To define reusable blocks of code that perform specific tasks",
+                         "To print text to the console"),
+                        index=None
+                        )
 
+    # Check the answer
+    if question == "To define reusable blocks of code that perform specific tasks":
+        st.markdown("Correct!")
+
+        # Provide a button to move to the next section
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 6.2"
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 6.2":
     st.title("Unit 6.2: Function Parameters")
 
@@ -2156,6 +2174,21 @@ elif st.session_state.expandtitle == "Unit 6.2":
         "You've seen how to declare parameters, pass arguments, use multiple parameters, and assign default values.")
     st.write(
         "Understanding and effectively using parameters is essential for creating flexible and reusable functions.")
+    question = st.radio("What is the primary purpose of function parameters in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To customize a function's behavior by passing data into it",
+                         "To print text to the console"),
+                        index=None
+                        )
+    if question == "To customize a function's behavior by passing data into it":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 6.3"
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 6.3":
     st.title("Unit 6.3: Returning Values in Functions")
 
