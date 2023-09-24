@@ -107,8 +107,6 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 7.1"
         if st.button("Final Exam", use_container_width=True):
             st.session_state.expandtitle = "Unit 7.2"
-        if st.button("Final Project", use_container_width=True):
-            st.session_state.expandtitle = "Unit 7.3"
 
 
 
@@ -182,7 +180,7 @@ elif st.session_state.expandtitle == "Unit 1.2":
 
 
 elif st.session_state.expandtitle == "Unit 1.3":
-    st.title("Variable Explanation App")
+    st.title("Unit 1.3: Variable Explanation App")
 
     # Explanations
     st.write("""
@@ -517,7 +515,7 @@ elif st.session_state.expandtitle == "Unit 1.6":
 
 
 elif st.session_state.expandtitle == "Unit 2.1":
-    st.title("Basic Symbols")
+    st.title("Unit 2.1: Basic Symbols")
 
     # Explanation of mathematical operators
     st.write("""
@@ -550,7 +548,7 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num4 / num5 = {num4 / num5}")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
-    st.title("Order of Operations in Python")
+    st.title("Unit 2.2: Order of Operations in Python")
 
     # Explanation of the order of operations
     st.write("""
@@ -588,7 +586,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
     """)
 
 elif st.session_state.expandtitle == "Unit 2.3":
-    st.title("Modules Explanation")
+    st.title("Unit 2.3: Modules Explanation")
 
     # Explanation of modules
     st.write("""
@@ -788,8 +786,7 @@ elif st.session_state.expandtitle == "Unit 2.5":
         st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 3.1":
-    st.header("Unit 3.1: If Statements")
-    st.title("If-Else Statements, Conditional, and Logical Operators")
+    st.header("Unit 3.1: If Statements, If-Else Statements, Logical Operators")
 
     # Explanation of conditional statements, comparison operators, and logical operators
     st.write("""
@@ -839,8 +836,7 @@ elif st.session_state.expandtitle == "Unit 3.1":
     Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
     """)
 elif st.session_state.expandtitle == "Unit 3.2":
-    st.header("Unit 3.2: Else Statements")
-    st.title("Else-If Statements (elif) Explanation")
+    st.header("Unit 3.2: Else If (elif) Statements")
 
     # Explanation of else-if statements (elif)
     st.write("""
@@ -932,7 +928,6 @@ elif st.session_state.expandtitle == "Unit 3.2":
 
 elif st.session_state.expandtitle == "Unit 3.3":
     st.header("Unit 3.3: Nested Conditionals")
-    st.title("Nested If Statements Explanation")
 
     # Explanation of nested if statements
     st.write("""
@@ -1001,7 +996,6 @@ elif st.session_state.expandtitle == "Unit 3.3":
     Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
     """)
 elif st.session_state.expandtitle == "Unit 3.4":
-    st.header("Unit 3 Summary")
     st.title("Unit 3: Conditionals Summary")
 
     st.write(
@@ -1048,7 +1042,6 @@ elif st.session_state.expandtitle == "Unit 3.5":
     st.header("Unit 3 Quiz")
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1: For Loops")
-    st.title("Unit 4.1: For Loops")
 
     st.write(
         "For loops are used for iterating over sequences (such as lists, tuples, or strings) and performing actions on each item in the sequence.")
@@ -1090,7 +1083,6 @@ elif st.session_state.expandtitle == "Unit 4.1":
 
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
-    st.title("Understanding While Loops")
 
     # Explanation
     st.write("While loops continuously perform an action as long as a condition is fulfilled.")
@@ -1142,7 +1134,6 @@ elif st.session_state.expandtitle == "Unit 4.2":
 
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
-    st.title("Unit 4.3: Nested Loops")
 
     st.write(
         "Nested loops are loops within loops. They are used when you need to perform repetitive tasks within repetitive tasks.")
@@ -1181,7 +1172,6 @@ elif st.session_state.expandtitle == "Unit 4.3":
     st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
-    st.title("Unit 4: Loops Summary")
 
     st.write(
         "Unit 4 explores the concept of loops, which are used to perform repetitive tasks and iterate through data structures.")
@@ -1228,7 +1218,6 @@ elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
 elif st.session_state.expandtitle == "Unit 5.1":
     st.header("Unit 5.1: Lists")
-    st.title("Unit 5.1: Lists")
 
     st.write("Lists store multiple values within one variable. Any data type can be stored within a list, "
              "and differing data types can be stored within the same list. Any value stored within a list is called an element.")
@@ -1266,8 +1255,6 @@ elif st.session_state.expandtitle == "Unit 5.1":
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.header("Unit 5.2: Traversing Through Lists")
-
-    st.title("Unit 5.2: Traversing Through Lists")
 
     st.write("Traversing through lists means accessing and processing each element in a list one by one. "
              "This is a fundamental operation when working with lists.")
@@ -1313,8 +1300,7 @@ elif st.session_state.expandtitle == "Unit 5.2":
     st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
 
 elif st.session_state.expandtitle == "Unit 5.3":
-    st.header("Unit 5.3: Appending/Removing")
-    st.title("Unit 5.3: Appending and Removing from Lists")
+    st.header("Unit 5.3: Appending/Removing From Lists")
 
     st.write("Appending and removing elements from lists are common operations when working with data in programming. "
              "These operations allow you to modify the contents of a list.")
@@ -1635,7 +1621,7 @@ elif st.session_state.expandtitle == "Unit 5.5":
     st.write("Lists allow you to store and manipulate collections of values, providing flexibility in data management.")
     st.write("Traversing through lists, appending, and removing elements enable dynamic data processing.")
     st.write(
-        "2D lists expand your data modeling capabilities, making them essential for various applications in programming."
+        "2D lists expand your data modeling capabilities, making them essential for various applications in programming.")
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
 elif st.session_state.expandtitle == "Unit 6.1":
@@ -1819,8 +1805,7 @@ elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
-elif st.session_state.expandtitle == "Unit 7.3":
-    st.header("Final Project")
+
 
 
 elif st.session_state.expandtitle == "Cheatsheet":
