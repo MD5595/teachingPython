@@ -3,7 +3,6 @@ import streamlit as st
 def account():
 
     user_credentials = {}
-    flag = True
 
     st.title("Account")
 
@@ -16,24 +15,25 @@ def account():
         user_info = login()
         check_credentials(user_info[0], user_info[1], user_credentials)
 
-        while flag:
+        #while flag:
 
-            if check_credentials(user_info[0], user_info[1], user_credentials):
-                st.success("Access granted")
-                flag = False
-            else:
-                st.error("Access denied, Try Again")
-                login()
+        if check_credentials(user_info[0], user_info[1], user_credentials):
+            st.success("Access granted")
+            #flag = False
+        else:
+            st.error("Access denied, Try Again")
+            login()
 
 
 def create_credentials(credentials):
 
-    # Asks user for their info
-    with st.form(key='Account Creation'):
-        username = (st.text_input("Enter a username for your account: ", "Type here..."))
-        password = (st.text_input("Enter a password for your account (8 characters or numbers): ", "Type here..."))
+     #Asks user for their info
+    with st.form('Account Creation'):
+        username = (st.text_input("Enter a username for your account: "))
+        password = (st.text_input("Enter a password for your account (8 characters or numbers): ", type="password"))
         st.form_submit_button("Sign Up!")
-    # stores user info in dictionary and returns dictionary
+
+     #stores user info in dictionary and returns dictionary
     credentials[username] = password
     return credentials
 
@@ -41,15 +41,16 @@ def create_credentials(credentials):
 def login():
 
     cred_list = []
-    with st.form(key='Log-In'):
-        username = (st.text_input("Enter the username for your account: ", "Type here..."))
-        password = (st.text_input("Enter the password for your account: ", "Type here..."))
-        st.form_submit_button("Log In!")
+    st.header('Log-In')
+    the_username = (st.text_input("Username: "))
+    the_password = (st.text_input("Password: ", type="password"))
+    st.button("Log In!")
 
-    cred_list.append(username)
-    cred_list.append(password)
+    cred_list.append(the_username)
+    cred_list.append(the_password)
 
     return cred_list
+
 
 def check_credentials(username, password, credentials):
     """
