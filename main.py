@@ -1856,6 +1856,22 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
     st.write(
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
+    question = st.radio("What is the primary purpose of 2-D lists in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To store and manage data in a grid-like structure",
+                         "To print text to the console"),
+                        index=None
+                        )
+
+    if question == "To store and manage data in a grid-like structure":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.5"
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
     st.title("Unit 5: Lists Summary")
