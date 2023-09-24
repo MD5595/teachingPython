@@ -112,7 +112,17 @@ elif st.session_state.expandtitle == "Unit 1.2":
 
 elif st.session_state.expandtitle == "Unit 1.3":
     st.header("Unit 1.3: Variables")
-    # Add content for Unit 1.3
+    st.markdown("Variables are values or characters that are stored within a phrase. "
+                "Some of the data types that variables can store are strings (any characters"
+                " placed within “ “), integers (any whole number), and floats (numbers with "
+                "decimal places).")
+    st.markdown("Making a variable and giving it a value is called variable "
+                "declaration. Some examples are shown below.")
+    st.code("A = 28 My_name = “John” \nNumber1 = 1 \n\t_car_ = “F-150” ", language='python')
+    st.markdown("Note the use of an equal sign to assign values to the variables."
+                " In Unit 3.1 we will go over Python’s equal symbol.")
+    st.markdown("By using variables we can label information using names that "
+                "allow code to be clear. ")
 
 elif st.session_state.expandtitle == "Unit 1.4":
     st.header("Unit 1.4: Inputs and Outputs")
