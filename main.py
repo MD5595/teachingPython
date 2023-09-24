@@ -582,7 +582,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
 
     Python does basic math in the same order you would do on paper.
     """)
-    question3 = st.radio("In Python, what is the correct order of operations for evaluating expressions?", 
+    question2_2 = st.radio("In Python, what is the correct order of operations for evaluating expressions?", 
                     ("Division, Addition, Multiplication, Subtraction",
                      "Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
                      "Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
