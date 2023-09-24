@@ -862,6 +862,7 @@ elif st.session_state.expandtitle == "Unit 3.1":
 
     Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
     """)
+
 elif st.session_state.expandtitle == "Unit 3.2":
     st.header("Unit 3.2: Else If (elif) Statements")
 
@@ -952,7 +953,23 @@ elif st.session_state.expandtitle == "Unit 3.2":
 
     Else-if statements are a powerful tool for branching logic in your code, making it more versatile and capable of handling complex decision-making tasks.
     """)
+    question3_2 = st.radio(
+        "Which of the following shows an accurate if,elif,else structure for a system that decides promotions, demotions, or a raise based on ranges of average scores out of 10? (0-4 score for demotion, 4-7 score for a raise, and 8-10 for a promotion)",
+        (
+        "if score > 8: status = 'promotion', elif score > 3 and score < 6: status = 'raise', else: status = 'demotion'",
+        "if score >= 8: status = 'promotion', else: status = 'demotion'",
+        "elif score >= 8: status = 'promotion', if score >=4 and score <= 7: status = 'raise', else: status = 'demotion'",
+        "if score >= 8: status = 'promotion', elif score >=4 and score <= 7: status = 'raise', else: status = 'demotion'"),
+        index=None,
+        )
 
+    if (
+            question3_2 == "if score >= 8: status = 'promotion', elif score >=4 and score <= 7: status = 'raise', else: status = 'demotion'"):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 3.3"
+    elif question3_2 == "if score > 8: status = 'promotion', elif score > 3 and score < 6: status = 'raise', else: status = 'demotion'" or question3_2 == "if score >= 8: status = 'promotion', else: status = 'demotion'" or question3_2 == "elif score >= 8: status = 'promotion', if score >=4 and score <= 7: status = 'raise', else: status = 'demotion'":
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 3.3":
     st.header("Unit 3.3: Nested Conditionals")
 
@@ -1245,7 +1262,22 @@ elif st.session_state.expandtitle == "Unit 4.1":
     st.write(
         "For loops are versatile and commonly used in programming for tasks like data processing and repetitive actions.")
     st.write("Understanding how to use for loops effectively is crucial for writing efficient and structured code.")
+    question = st.radio("What is the primary purpose of a 'for' loop in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To define a function",
+                         "To print text to the console"),
+                        index=None
+                        )
 
+    if question == "To create a loop":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 4.2"
+    elif (question == "To make decisions based on conditions"
+          or question == "To define a function"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
 
@@ -1296,6 +1328,21 @@ elif st.session_state.expandtitle == "Unit 4.2":
         count += 2
 
     st.write(f"The first 10 odd numbers are: {odd_numbers}")
+    question = st.radio("What is the primary purpose of a 'while' loop in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To define a function",
+                         "To print text to the console"),
+                        index=None
+                        )
+    if question == "To create a loop":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 4.3"
+    elif (question == "To make decisions based on conditions"
+          or question == "To define a function"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
@@ -1548,7 +1595,7 @@ elif st.session_state.expandtitle == "Unit 5.1":
         "In this unit, you've learned about lists, versatile data structures that can store multiple values of any data type. "
         "Lists are fundamental in programming and provide a convenient way to work with collections of data.")
 
-    # Conclusion
+    #
     st.header("Conclusion")
     st.write(
         "Lists are an essential data structure in programming, allowing you to store and manipulate collections of data efficiently.")
@@ -1556,6 +1603,21 @@ elif st.session_state.expandtitle == "Unit 5.1":
              "such as appending elements, counting occurrences, sorting, and selecting random values.")
     st.write(
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
+    st.title("Unit 5.1: Lists Question")
+
+
+    st.write("Which of the following best describes the purpose of lists in programming?")
+
+    #
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To store multiple values within a single variable":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.2"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.title("Unit 5.2: Traversing Through Lists")
 
@@ -1601,7 +1663,21 @@ elif st.session_state.expandtitle == "Unit 5.2":
     st.write("You've seen different techniques, including 'for' loops, list indexing, and 'enumerate,' "
              "that allow you to access and process each element in a list.")
     st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
+    st.title("Unit 5.2: Lists Question")
 
+    # Question
+    st.write("What is the main purpose of traversing through lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To iterate through a list and perform actions on each element":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.3"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.3":
     st.title("Unit 5.3: Appending and Removing from Lists")
 
@@ -1655,6 +1731,21 @@ elif st.session_state.expandtitle == "Unit 5.3":
     st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
              "that allow you to modify the contents of a list.")
     st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
+    st.title("Unit 5.3: Lists Question")
+
+    # Question
+    st.write("What is the primary purpose of appending and removing elements from lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To modify the content of a list by adding or removing elements":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.4"
+    else:
+        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 5.4":
     st.header("Unit 5.4: 2-D Lists")
@@ -1695,6 +1786,7 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
     st.write(
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
+
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
     st.title("Unit 5: Lists Summary")
@@ -2199,6 +2291,83 @@ elif st.session_state.expandtitle == "Unit 6.5":
 
 elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
+    st.title("Recap of Key Concepts")
+
+
+    st.header("Unit 1: Introduction")
+    st.subheader("1.1: Hello World")
+    st.write("Your first step in programming, writing and running a basic 'Hello World' program.")
+
+    st.subheader("1.2: Syntax and Formatting Conventions")
+    st.write("Understanding proper code formatting and syntax for readable and error-free code.")
+
+    st.subheader("1.3: Variables and Naming Conventions")
+    st.write("Introduction to variables and the importance of clear naming conventions.")
+
+    st.subheader("1.4: Printing and Input")
+    st.write("Learning how to display information using 'print' and obtain user input.")
+
+    st.subheader("1.5: Data Types")
+    st.write("Exploring fundamental data types like integers, floats, strings, and booleans.")
+
+
+    st.header("Unit 2: Math")
+    st.subheader("2.1: Basic Symbols")
+    st.write("Covering basic mathematical symbols for addition, subtraction, multiplication, division, and exponentiation.")
+
+    st.subheader("2.2: Order of Operations")
+    st.write("Exploring the order of operations (PEMDAS/BODMAS) for correct mathematical calculations.")
+
+    st.subheader("2.3: Modules")
+    st.write("Introduction to modules like 'math' and 'random' for advanced mathematical operations and randomness.")
+
+
+    st.header("Unit 3: Conditionals")
+    st.subheader("3.1: If Statements")
+    st.write("Learning to use 'if' statements to make decisions based on conditions.")
+
+    st.subheader("3.2: Else if Statements")
+    st.write("Exploring 'else if' statements to consider multiple conditions in a controlled manner.")
+
+    st.subheader("3.3: Nested Statements")
+    st.write("Introduction to nested statements, allowing complex decision-making.")
+
+
+    st.header("Unit 4: Loops")
+    st.subheader("4.1: While Loops")
+    st.write("Covering 'while' loops for executing code repeatedly as long as a condition is true.")
+
+    st.subheader("4.2: For Loops")
+    st.write("Exploring 'for' loops, useful for iterating through sequences like lists.")
+
+    st.subheader("4.3: Nested For-Loops")
+    st.write("Introduction to nested for-loops for multi-level iterations and complex data processing.")
+
+
+    st.header("Unit 5: Lists")
+    st.subheader("5.1: Lists")
+    st.write("Learning about lists, versatile data structures for storing multiple values.")
+
+    st.subheader("5.2: Traversing Through Lists")
+    st.write("Exploring ways to iterate through lists, performing actions on each element.")
+
+    st.subheader("5.3: Appending/Removing")
+    st.write("Covering modifying lists by adding or removing elements.")
+
+    st.subheader("5.4: 2D Lists")
+    st.write("Introduction to 2D lists, used for representing multi-dimensional data.")
+
+
+    st.header("Unit 6: Functions")
+    st.subheader("6.1: Function Declaration")
+    st.write("Learning how to declare and define functions, encapsulating reusable blocks of code.")
+
+    st.subheader("6.2: Parameters")
+    st.write("Exploring the use of parameters to pass data into functions, enhancing their flexibility.")
+
+    st.subheader("6.3: Returning Values in Functions")
+    st.write("Covering returning values from functions, allowing them to produce results.")
+
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
 
@@ -2256,11 +2425,10 @@ elif st.session_state.expandtitle == "Unit 7.2":
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
 
-    # Check if flashcards have been created previously
     if 'flashcards' not in st.session_state:
         st.session_state.flashcards = {}
 
-    # Input fields to add new flashcards
+
     st.subheader("Create Flashcards")
     term = st.text_input("Term:")
     definition = st.text_input("Definition:")
@@ -2269,7 +2437,7 @@ elif st.session_state.expandtitle == "Flashcards":
             st.session_state.flashcards[term] = definition
             st.success("Flashcard added successfully!")
 
-    # Main content area to display flashcards
+
     st.subheader("Your Flashcards")
 
     if not st.session_state.flashcards:
