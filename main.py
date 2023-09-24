@@ -194,6 +194,40 @@ elif st.session_state.expandtitle == "Unit 1.5":
     st.header("Unit 1.5: Summary")
     # Add content for Unit 1.5
 
+elif st.session_state.expandtitle == "Unit 2.1":
+    st.title("Mathematical Operators Explanation")
+
+    # Explanation of mathematical operators
+    st.write("""
+    Mathematical symbols, which are operators, are used in Python equations.
+    Here are some basic math operators:
+
+    - Addition (+)
+    - Subtraction (-)
+    - Multiplication (*)
+    - Division (/)
+    - Remainder (%): The left number after division
+    - Exponents (**): The base is placed to the left of the symbol while the power is to the right
+    - Floor Division (//): Removes any decimals produced from the division
+    """)
+
+    # Examples of using mathematical operators
+    st.write("""
+    When you want to display the solution to a math problem, you can either assign it to a variable and then print it, directly place the equation in a print statement, or place an equation using variables inside a print statement.
+    """)
+    num1 = 10 % 3
+    num2 = 3 ** 2
+    num3 = 5 // 2
+    num4 = 2
+    num5 = 14
+
+    st.write(f"num1 = {num1}")
+    st.write(f"num2 = {num2}")
+    st.write(f"num3 = {num3}")
+    st.write(f"3 // 10 = {3 // 10}")
+    st.write(f"num4 / num5 = {num4 / num5}")
+
+
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1:")
     # Add content for Unit 4.1
