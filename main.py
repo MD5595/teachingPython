@@ -264,7 +264,41 @@ elif st.session_state.expandtitle == "Unit 1.4":
 
 elif st.session_state.expandtitle == "Unit 1.5":
     st.header("Unit 1.5: Summary")
-    # Add content for Unit 1.5
+    st.title("Data Types Explanation")
+
+    # Create a 2x4 table to display data types
+    st.write("""
+    | Data Type | Description      |
+    |-----------|------------------|
+    | String    | Text type        |
+    | Integer   | Number type      |
+    | Float     | Number type      |
+    | List      | Sequence type    |
+    | Boolean   | Boolean type     |
+    """)
+
+    # Explanation of data types
+    st.write("""
+    In some programming languages, you must specify the data type of a variable when you declare it. However, in Python, the data type is automatically determined based on the value you assign to the variable.
+
+    Here are all the data types that this course will go over:
+    - **String**: Text type
+    - **Integer**, **Float**: Number type
+    - **List**: Sequence type
+    - **Boolean**: Boolean type
+    """)
+
+    # Examples of data types
+    st.write("Below are some examples:")
+    st.code("Tree = 'Oak'", language='python')
+    st.code("Number1 = 13", language='python')
+    st.code("Float1 = 3.14", language='python')
+    st.code("List1 = ['Iphone', 'Android', 'Google Pixel']", language='python')
+    st.code("Boolean1 = 3 > 8", language='python')
+
+    st.write("""
+    Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
+    """)
 
 elif st.session_state.expandtitle == "Unit 2.1":
     st.title("Mathematical Operators Explanation")
