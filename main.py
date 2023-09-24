@@ -2509,6 +2509,8 @@ elif st.session_state.expandtitle == "Unit 7.1":
     st.subheader("6.3: Returning Values in Functions")
     st.write("Covering returning values from functions, allowing them to produce results.")
 
+    if st.buttion("Next Section"):
+        st.session_state.expandtitle = "Unit 7.2"
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
 
