@@ -2333,11 +2333,10 @@ elif st.session_state.expandtitle == "Unit 7.2":
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
 
-    # Check if flashcards have been created previously
     if 'flashcards' not in st.session_state:
         st.session_state.flashcards = {}
 
-    # Input fields to add new flashcards
+
     st.subheader("Create Flashcards")
     term = st.text_input("Term:")
     definition = st.text_input("Definition:")
@@ -2346,7 +2345,7 @@ elif st.session_state.expandtitle == "Flashcards":
             st.session_state.flashcards[term] = definition
             st.success("Flashcard added successfully!")
 
-    # Main content area to display flashcards
+s
     st.subheader("Your Flashcards")
 
     if not st.session_state.flashcards:
