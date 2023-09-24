@@ -1002,10 +1002,92 @@ elif st.session_state.expandtitle == "Unit 3.3":
     """)
 elif st.session_state.expandtitle == "Unit 3.4":
     st.header("Unit 3 Summary")
+    st.title("Unit 3: Conditionals Summary")
+
+    st.write(
+        "Unit 3 explores the world of conditionals, which are used to make decisions and control the flow of a program.")
+
+    # Subsection 3.1: If Statements
+    st.header("3.1: If Statements")
+    st.write("In this section, you learned about 'if' statements, the most basic form of conditional statements.")
+
+    st.subheader("Key Points")
+    st.write("1. 'if' statements evaluate a condition and execute a block of code if the condition is true.")
+    st.write("2. Proper indentation is crucial to define the code block that belongs to the 'if' statement.")
+    st.write("3. 'if' statements allow your program to make decisions based on specific conditions.")
+
+    # Subsection 3.2: Else if Statements
+    st.header("3.2: Else if Statements")
+    st.write("Else if statements allow you to consider multiple conditions in a controlled manner.")
+
+    st.subheader("Key Points")
+    st.write("1. 'else if' statements (also written as 'elif') are used to specify alternative conditions.")
+    st.write("2. They are evaluated only if the preceding 'if' or 'elif' conditions are false.")
+    st.write("3. 'else' can be used as a final fallback condition if none of the previous conditions are met.")
+
+    # Subsection 3.3: Nested Statements
+    st.header("3.3: Nested Statements")
+    st.write(
+        "Nested statements involve placing one conditional statement within another, allowing for complex decision-making.")
+
+    st.subheader("Key Points")
+    st.write("1. Nested statements involve 'if' or 'elif' statements inside other 'if' or 'elif' blocks.")
+    st.write("2. Proper indentation is crucial to indicate the nesting level.")
+    st.write("3. Nested statements enable you to consider multiple conditions and execute code accordingly.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write("In Unit 3, you've explored conditionals, a fundamental aspect of programming.")
+    st.write("You've learned how 'if' statements allow you to make decisions based on specific conditions.")
+    st.write("Else if statements expand your decision-making capabilities by considering multiple conditions.")
+    st.write("Nested statements provide a way to handle complex scenarios by combining conditionals.")
+    st.write(
+        "Understanding and mastering these conditional structures is essential for creating responsive and flexible programs.")
+
 elif st.session_state.expandtitle == "Unit 3.5":
     st.header("Unit 3 Quiz")
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1: For Loops")
+    st.title("Unit 4.1: For Loops")
+
+    st.write(
+        "For loops are used for iterating over sequences (such as lists, tuples, or strings) and performing actions on each item in the sequence.")
+
+    # Example of a for loop
+    st.write("Example:")
+    st.code("""
+        fruits = ["Apple", "Banana", "Cherry"]
+        for fruit in fruits:
+            st.write(f"Current fruit: {fruit}")
+        """,language='python')
+    st.write(
+        "In this example, we have a list of fruits, and we use a for loop to iterate through each fruit and print its name.")
+
+    st.write("Key points about for loops:")
+
+    st.subheader("Iteration Over Sequences")
+    st.write("For loops are commonly used to iterate over sequences like lists, tuples, or strings.")
+
+    st.subheader("Iterable Element")
+    st.write(
+        "The loop variable (e.g., 'fruit' in the example) takes on each item in the sequence during each iteration.")
+
+    st.subheader("Indentation")
+    st.write("Proper indentation is crucial to indicate the code block that should be executed for each iteration.")
+
+    st.subheader("Loop Control")
+    st.write("You can use control statements like 'break' and 'continue' to control the flow of the loop.")
+
+    st.write("For loops are fundamental for performing repetitive tasks in programming.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about for loops, which are essential for iterating over sequences and performing actions on each element.")
+    st.write(
+        "For loops are versatile and commonly used in programming for tasks like data processing and repetitive actions.")
+    st.write("Understanding how to use for loops effectively is crucial for writing efficient and structured code.")
+
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
     st.title("Understanding While Loops")
