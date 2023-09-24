@@ -1125,7 +1125,7 @@ elif st.session_state.expandtitle == "Unit 3.4":
     st.write(
         "Understanding and mastering these conditional structures is essential for creating responsive and flexible programs.")
     if st.button("Next Section"):
-        st.session_state.expandtitle == "Unit 3.5"
+        st.session_state.expandtitle = "Unit 3.5"
 
 elif st.session_state.expandtitle == "Unit 3.5":
     st.header("Unit 3 Quiz")
