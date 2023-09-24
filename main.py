@@ -204,6 +204,19 @@ elif st.session_state.expandtitle == "Unit 1.3":
     st.write("""
     Making your variables descriptive is vital to creating readable code that is easily decipherable.
     """)
+ #Question for 1.3
+    question3 = st.radio("What would hello_world.py output?", ("variable = 42", "42 = variable", "variable == 42", "variable: 42"),
+                         index=None, key="q3")
+    if question3 == "variable = 42":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.4"
+    elif question3 == "42 = variable" or question3 == "variable == 42" or question3 == "variable: 42":
+        st.markdown("Try Again!")
+
+
+
+
 
 elif st.session_state.expandtitle == "Unit 1.4":
     st.header("Unit 1.4: Inputs and Outputs")
