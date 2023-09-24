@@ -113,7 +113,7 @@ elif st.session_state.expandtitle == "Unit 1.2":
 elif st.session_state.expandtitle == "Unit 1.3":
     st.title("Variable Explanation App")
 
-    # Explanations
+
     st.write("""
     Variables are values or characters that are stored within a phrase. Some of the data types that variables can store are strings (any characters placed within “ “), integers (any whole number), and floats (numbers with decimal places).
 
@@ -127,7 +127,7 @@ elif st.session_state.expandtitle == "Unit 1.3":
     By using variables we can label information using names that allow code to be clear.
     """)
 
-    # Code for a program
+
     st.write("""
     Below is the code for a program.
     """)
@@ -146,7 +146,6 @@ elif st.session_state.expandtitle == "Unit 1.3":
     Even if you don’t understand some parts such as random.choice and str(), you can reasonably figure out that this is the code for a random password generator. As you progress through this course you will find out that it is not hard to get lost when overlooking code you are currently working on. By having appropriately named variables you will reduce the time you spend rereading your code to regain understanding of it.
     """)
 
-    # Code with non-descriptive names
     st.write("""
     Below is the same code but with non-descriptive names.
     """)
@@ -165,7 +164,7 @@ elif st.session_state.expandtitle == "Unit 1.3":
     As you can see, this code is much harder to understand compared to its descriptive version.
     """)
 
-    # Variable naming rules
+
     st.write("""
     There are some rules tied with variable naming.
     """)
@@ -176,16 +175,16 @@ elif st.session_state.expandtitle == "Unit 1.3":
     st.write("- When making a variable that holds a word, ' ' must be used.")
     st.write("- Variables cannot have the same name as keywords.")
 
-    # Examples of incorrect variable names
+
     st.write("""
     Some examples of incorrect variable names, along with reasoning as to why the code is incorrect.
     """)
-    st.code("--hi = 3 #A non-letter/underscore character is at the front of the variable name"""", language='python')
+    st.code(" #A non-letter/underscore character is at the front of the variable name", language='python')
     st.code("", language='python')
     st.code("", language='python')
     st.code("", language='python')
 
-    st.write("" Making your variables descriptive is vital to creating readable code that is easily decipherable."")
+    st.write(" Making your variables descriptive is vital to creating readable code that is easily decipherable.")
 
 elif st.session_state.expandtitle == "Unit 1.4":
     st.header("Unit 1.4: Inputs and Outputs")
