@@ -1,4 +1,6 @@
 import streamlit as st
+import math
+import random
 from account import account_manager
 
 
@@ -385,7 +387,44 @@ elif st.session_state.expandtitle == "Unit 2.2":
     """)
 
 elif st.session_state.expandtitle == "Unit 2.3":
-    st.header("Unit 2.3: Modulo")
+    st.title("Modules Explanation")
+
+    # Explanation of modules
+    st.write("""
+    Modules are used to shorten programs by giving the user access to a group of functions. Generally, functions are given a number/text and return a value.
+
+    The two modules this course will have you use are the `math` and `random` modules. To use them, they first have to be imported, then the specific function you want to use has to be called using dot notation. You call a function from a module by saying `module.function`.
+
+    Here are the math functions you will use:
+    """)
+    st.code("import math\n"
+            "X = 2.1\n"
+            "Y = 3\n"
+            "\n"
+            "Num1 = math.ceil(X)  # Rounds X up\n"
+            "Num2 = math.fabs(X)  # Returns the absolute value of X\n"
+            "Num3 = math.floor(X)  # Returns X rounded down\n"
+            "Num4 = math.trunc(X)  # Returns X with the decimal part removed\n"
+            "Num5 = math.pow(X, Y)  # Returns X to the Y power\n"
+            "Num6 = math.sqrt(X)  # Returns the square root of X\n"
+            "Num7 = math.pi  # Returns pi",
+            language='python')
+
+    st.write("""
+    Below are the random functions you will use:
+    """)
+    st.code("import random\n"
+            "\n"
+            "Num1 = random.random()  # Generates a random number from 0-1\n"
+            "Num2 = random.randint(X, Y)  # Returns a random number from X to Y\n"
+            "Num3 = random.choice(['Red', 'Orange', 'Yellow'])  # Picks a random value within a list",
+            language='python')
+
+    st.write("""
+    It will be convenient for you to memorize these functions, but it is no problem if you forget the correct syntax. Consult the cheat sheet or Google to properly type out the functions/modules.
+    """)
+
+
 elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2 Summary")
 elif st.session_state.expandtitle == "Unit 2.5":
