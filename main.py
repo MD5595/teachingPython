@@ -1665,12 +1665,8 @@ elif st.session_state.expandtitle == "Unit 5.1":
              "such as appending elements, counting occurrences, sorting, and selecting random values.")
     st.write(
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
-    st.title("Unit 5.1: Lists Question")
 
 
-    st.write("Which of the following best describes the purpose of lists in programming?")
-
-    #
     question = st.radio("What is the primary purpose of lists in Python?",
                         ("To make decisions based on conditions",
                          "To create a loop",
@@ -1736,19 +1732,20 @@ elif st.session_state.expandtitle == "Unit 5.2":
              "that allow you to access and process each element in a list.")
     st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
     st.title("Unit 5.2: Lists Question")
-
-    # Question
-    st.write("What is the main purpose of traversing through lists in programming?")
-
-    # User input field
-    question2 = st.text_input("Enter your answer here:")
-
-    # Check user's answer
-    if question2 == "To iterate through a list and perform actions on each element":
+    question = st.radio("What is the primary purpose of traversing through a list in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To access and process each element in a list",
+                         "To print text to the console"),
+                        index=None
+                        )
+    if question == "To access and process each element in a list":
         st.markdown("Correct!")
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 5.3"
-    else:
+            st.session_state.expandtitle = "Chapter 5.3"
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
         st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.3":
     st.title("Unit 5.3: Appending and Removing from Lists")
