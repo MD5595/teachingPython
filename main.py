@@ -1565,7 +1565,7 @@ elif st.session_state.expandtitle == "Unit 5.1":
         "In this unit, you've learned about lists, versatile data structures that can store multiple values of any data type. "
         "Lists are fundamental in programming and provide a convenient way to work with collections of data.")
 
-    # Conclusion
+    #
     st.header("Conclusion")
     st.write(
         "Lists are an essential data structure in programming, allowing you to store and manipulate collections of data efficiently.")
@@ -1575,10 +1575,10 @@ elif st.session_state.expandtitle == "Unit 5.1":
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
     st.title("Unit 5.1: Lists Question")
 
-    # Question
+
     st.write("Which of the following best describes the purpose of lists in programming?")
 
-    # User input field
+    #
     question2 = st.text_input("Enter your answer here:")
 
     # Check user's answer
@@ -1633,7 +1633,21 @@ elif st.session_state.expandtitle == "Unit 5.2":
     st.write("You've seen different techniques, including 'for' loops, list indexing, and 'enumerate,' "
              "that allow you to access and process each element in a list.")
     st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
+    st.title("Unit 5.2: Lists Question")
 
+    # Question
+    st.write("What is the main purpose of traversing through lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To iterate through a list and perform actions on each element":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.3"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.3":
     st.title("Unit 5.3: Appending and Removing from Lists")
 
@@ -1687,6 +1701,21 @@ elif st.session_state.expandtitle == "Unit 5.3":
     st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
              "that allow you to modify the contents of a list.")
     st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
+    st.title("Unit 5.3: Lists Question")
+
+    # Question
+    st.write("What is the primary purpose of appending and removing elements from lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To modify the content of a list by adding or removing elements":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.4"
+    else:
+        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 5.4":
     st.header("Unit 5.4: 2-D Lists")
