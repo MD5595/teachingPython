@@ -1099,6 +1099,49 @@ elif st.session_state.expandtitle == "Unit 4.3":
     st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
+    st.title("Unit 4: Loops Summary")
+
+    st.write(
+        "Unit 4 explores the concept of loops, which are used to perform repetitive tasks and iterate through data structures.")
+
+    # Subsection 4.1: While Loops
+    st.header("4.1: While Loops")
+    st.write(
+        "In this section, you learned about 'while' loops, which repeatedly execute a block of code as long as a condition is true.")
+
+    st.subheader("Key Points")
+    st.write("1. 'while' loops continue executing as long as the specified condition remains true.")
+    st.write("2. Proper indentation is crucial to define the code block that belongs to the 'while' loop.")
+    st.write("3. 'while' loops are useful when you don't know the number of iterations in advance.")
+
+    # Subsection 4.2: For Loops
+    st.header("4.2: For Loops")
+    st.write("For loops are used to iterate through sequences and perform actions on each item in the sequence.")
+
+    st.subheader("Key Points")
+    st.write("1. For loops are commonly used for iterating over sequences like lists, tuples, or strings.")
+    st.write("2. A loop variable takes on each item in the sequence during each iteration.")
+    st.write("3. Proper indentation is crucial to define the code block within the loop.")
+
+    # Subsection 4.3: Nested For-Loops
+    st.header("4.3: Nested For-Loops")
+    st.write(
+        "Nested for-loops involve placing one for-loop inside another, enabling complex iteration and data processing.")
+
+    st.subheader("Key Points")
+    st.write("1. Nested for-loops involve one for-loop within another, creating a nested structure.")
+    st.write("2. Proper indentation indicates the level of nesting.")
+    st.write("3. Nested for-loops are used for tasks like matrix traversal and multi-dimensional data processing.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write("In Unit 4, you've explored the concept of loops, a fundamental aspect of programming.")
+    st.write("While loops allow you to repeat code execution based on a condition.")
+    st.write("For loops simplify the process of iterating through sequences like lists.")
+    st.write("Nested for-loops enable you to work with complex data structures and perform multi-level iterations.")
+    st.write(
+        "Mastering loops is crucial for automating repetitive tasks and processing data efficiently in your programs.")
+
 elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
 elif st.session_state.expandtitle == "Unit 5.1":
