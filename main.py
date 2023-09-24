@@ -2215,6 +2215,83 @@ elif st.session_state.expandtitle == "Unit 6.5":
 
 elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
+    st.title("Recap of Key Concepts")
+
+
+    st.header("Unit 1: Introduction")
+    st.subheader("1.1: Hello World")
+    st.write("Your first step in programming, writing and running a basic 'Hello World' program.")
+
+    st.subheader("1.2: Syntax and Formatting Conventions")
+    st.write("Understanding proper code formatting and syntax for readable and error-free code.")
+
+    st.subheader("1.3: Variables and Naming Conventions")
+    st.write("Introduction to variables and the importance of clear naming conventions.")
+
+    st.subheader("1.4: Printing and Input")
+    st.write("Learning how to display information using 'print' and obtain user input.")
+
+    st.subheader("1.5: Data Types")
+    st.write("Exploring fundamental data types like integers, floats, strings, and booleans.")
+
+
+    st.header("Unit 2: Math")
+    st.subheader("2.1: Basic Symbols")
+    st.write("Covering basic mathematical symbols for addition, subtraction, multiplication, division, and exponentiation.")
+
+    st.subheader("2.2: Order of Operations")
+    st.write("Exploring the order of operations (PEMDAS/BODMAS) for correct mathematical calculations.")
+
+    st.subheader("2.3: Modules")
+    st.write("Introduction to modules like 'math' and 'random' for advanced mathematical operations and randomness.")
+
+
+    st.header("Unit 3: Conditionals")
+    st.subheader("3.1: If Statements")
+    st.write("Learning to use 'if' statements to make decisions based on conditions.")
+
+    st.subheader("3.2: Else if Statements")
+    st.write("Exploring 'else if' statements to consider multiple conditions in a controlled manner.")
+
+    st.subheader("3.3: Nested Statements")
+    st.write("Introduction to nested statements, allowing complex decision-making.")
+
+
+    st.header("Unit 4: Loops")
+    st.subheader("4.1: While Loops")
+    st.write("Covering 'while' loops for executing code repeatedly as long as a condition is true.")
+
+    st.subheader("4.2: For Loops")
+    st.write("Exploring 'for' loops, useful for iterating through sequences like lists.")
+
+    st.subheader("4.3: Nested For-Loops")
+    st.write("Introduction to nested for-loops for multi-level iterations and complex data processing.")
+
+
+    st.header("Unit 5: Lists")
+    st.subheader("5.1: Lists")
+    st.write("Learning about lists, versatile data structures for storing multiple values.")
+
+    st.subheader("5.2: Traversing Through Lists")
+    st.write("Exploring ways to iterate through lists, performing actions on each element.")
+
+    st.subheader("5.3: Appending/Removing")
+    st.write("Covering modifying lists by adding or removing elements.")
+
+    st.subheader("5.4: 2D Lists")
+    st.write("Introduction to 2D lists, used for representing multi-dimensional data.")
+
+
+    st.header("Unit 6: Functions")
+    st.subheader("6.1: Function Declaration")
+    st.write("Learning how to declare and define functions, encapsulating reusable blocks of code.")
+
+    st.subheader("6.2: Parameters")
+    st.write("Exploring the use of parameters to pass data into functions, enhancing their flexibility.")
+
+    st.subheader("6.3: Returning Values in Functions")
+    st.write("Covering returning values from functions, allowing them to produce results.")
+
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
 
