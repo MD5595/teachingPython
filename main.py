@@ -40,7 +40,7 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 1.3"
         if st.button("Unit 1.4: Inputs and Outputs", use_container_width=True):
             st.session_state.expandtitle = "Unit 1.4"
-        if st.button("Unit 1.5: Summary", use_container_width=True):
+        if st.button("Unit 1 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 1.5"
     with st.expander("Unit 2"):
         if st.button("Unit 2.1: Basic Symbols", use_container_width=True):
@@ -49,9 +49,9 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 2.2"
         if st.button("Unit 2.3: Modulo", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.3"
-        if st.button("Unit 2.4: Summary", use_container_width=True):
+        if st.button("Unit 2 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.4"
-        if st.button("Unit 2.5: Quiz", use_container_width=True):
+        if st.button("Unit 2 Quiz", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.5"
 
     with st.expander("Unit 4"):
@@ -204,6 +204,19 @@ elif st.session_state.expandtitle == "Unit 1.3":
     st.write("""
     Making your variables descriptive is vital to creating readable code that is easily decipherable.
     """)
+ #Question for 1.3
+    question3 = st.radio("What would hello_world.py output?", ("variable = 42", "42 = variable", "variable == 42", "variable: 42"),
+                         index=None, key="q3")
+    if question3 == "variable = 42":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.4"
+    elif question3 == "42 = variable" or question3 == "variable == 42" or question3 == "variable: 42":
+        st.markdown("Try Again!")
+
+
+
+
 
 elif st.session_state.expandtitle == "Unit 1.4":
     st.header("Unit 1.4: Inputs and Outputs")
@@ -263,7 +276,7 @@ elif st.session_state.expandtitle == "Unit 1.4":
         st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 1.5":
-    st.header("Unit 1.5: Summary")
+    st.header("Unit 1 Summary")
     st.title("Data Types Explanation")
 
     # Create a 2x4 table to display data types
@@ -374,9 +387,9 @@ elif st.session_state.expandtitle == "Unit 2.2":
 elif st.session_state.expandtitle == "Unit 2.3":
     st.header("Unit 2.3: Modulo")
 elif st.session_state.expandtitle == "Unit 2.4":
-    st.header("Unit 2.4: Summary")
+    st.header("Unit 2 Summary")
 elif st.session_state.expandtitle == "Unit 2.5":
-    st.header("Unit 2.5: Quiz")
+    st.header("Unit 2 Quiz")
 
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1:")
