@@ -2293,6 +2293,8 @@ elif st.session_state.expandtitle == "Unit 6.4":
     st.write("Parameters make functions flexible by accepting input data.")
     st.write("Returning values from functions allows you to obtain results and use them in your programs.")
     st.write("By mastering functions, you can write modular, organized, and efficient code.")
+    if st.button("Next Section"):
+        st.session_state.expandtitle = "Unit 6.5"
 elif st.session_state.expandtitle == "Unit 6.5":
     st.header("Unit 6 Quiz")
 
