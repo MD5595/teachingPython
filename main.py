@@ -556,8 +556,8 @@ elif st.session_state.expandtitle == "Unit 2.1":
     if question2_1 == "5.5":
         st.markdown("Correct!")
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 1.5"
-    else:
+            st.session_state.expandtitle = "Unit 2.2"
+    elif question2_1 ==  "4.0" or question2_1 == "6.0" or question2_1 =="7.0":
         st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
