@@ -1926,6 +1926,8 @@ elif st.session_state.expandtitle == "Unit 5.5":
     st.write("Traversing through lists, appending, and removing elements enable dynamic data processing.")
     st.write(
         "2D lists expand your data modeling capabilities, making them essential for various applications in programming.")
+    if st.button("Next Section"):
+        st.session_state.expandtitle = "Unit 5.6"
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
     q1 = st.radio("What is the purpose of a 'for' loop in Python?",
