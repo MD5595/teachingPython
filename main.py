@@ -952,7 +952,23 @@ elif st.session_state.expandtitle == "Unit 3.2":
 
     Else-if statements are a powerful tool for branching logic in your code, making it more versatile and capable of handling complex decision-making tasks.
     """)
+    question3_2 = st.radio(
+        "Which of the following shows an accurate if,elif,else structure for a system that decides promotions, demotions, or a raise based on ranges of average scores out of 10? (0-4 score for demotion, 4-7 score for a raise, and 8-10 for a promotion)",
+        (
+        "if score > 8: status = 'promotion', elif score > 3 and score < 6: status = 'raise', else: status = 'demotion'",
+        "if score >= 8: status = 'promotion', else: status = 'demotion'",
+        "elif score >= 8: status = 'promotion', if score >=4 and score <= 7: status = 'raise', else: status = 'demotion'",
+        "if score >= 8: status = 'promotion', elif score >=4 and score <= 7: status = 'raise', else: status = 'demotion'"),
+        index=None,
+        )
 
+    if (
+            question3_2 == "if score >= 8: status = 'promotion', elif score >=4 and score <= 7: status = 'raise', else: status = 'demotion'"):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 3.3"
+    elif question3_2 == "if score > 8: status = 'promotion', elif score > 3 and score < 6: status = 'raise', else: status = 'demotion'" or question3_2 == "if score >= 8: status = 'promotion', else: status = 'demotion'" or question3_2 == "elif score >= 8: status = 'promotion', if score >=4 and score <= 7: status = 'raise', else: status = 'demotion'":
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 3.3":
     st.header("Unit 3.3: Nested Conditionals")
 
