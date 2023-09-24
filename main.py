@@ -1254,7 +1254,6 @@ elif st.session_state.expandtitle == "Unit 4.1":
     st.write("You can use control statements like 'break' and 'continue' to control the flow of the loop.")
 
     st.write("For loops are fundamental for performing repetitive tasks in programming.")
-
     # Conclusion
     st.header("Conclusion")
     st.write(
@@ -1272,12 +1271,14 @@ elif st.session_state.expandtitle == "Unit 4.1":
 
     if question == "To create a loop":
         st.markdown("Correct!")
+
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 4.2"
     elif (question == "To make decisions based on conditions"
           or question == "To define a function"
           or question == "To print text to the console"):
         st.markdown("Try Again!")
+
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
 
@@ -1335,6 +1336,7 @@ elif st.session_state.expandtitle == "Unit 4.2":
                          "To print text to the console"),
                         index=None
                         )
+
     if question == "To create a loop":
         st.markdown("Correct!")
         if st.button("Next Section"):
@@ -1786,7 +1788,6 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
     st.write(
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
-
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
     st.title("Unit 5: Lists Summary")
