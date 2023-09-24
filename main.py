@@ -669,6 +669,27 @@ elif st.session_state.expandtitle == "Unit 2.3":
 
 elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2 Summary")
+    st.write("""
+        | Operator  |   Function                                          |
+        |-----------|-----------------------------------------------------|
+        |    ()     |    Call operator - calls function or method         |
+        |    **     | Exponent operator - raises a value to an exponent   |
+        | *,/,//,%  |    Multiplication - multiplies, Division - divides, |
+        |           |   Floor Division - removes decimal after division,  |
+        |           |  Modulo - Provides remainder after division         |
+        |           |                                                     |
+        |   +, -    | Addition - Adds, Subtraction - subtracts            |
+        """)
+    st.write(" Examples of each: ")
+    st.code(" print('The parentheses help tell what to print')", language='python')
+    st.code(" val = 3 ** 2 #stores 9 in val", language='python')
+    st.code(" val = 3 * 2 #stores 6 in val", language='python')
+    st.code(" val = 3 / 1 #stores 3 in val", language='python')
+    st.code(" val = 3 // 2 #stores 1 in val (cuts off the .5 in 1.5)", language='python')
+    st.code(" val = 3 % 2 #stores 1 in val because 3/2 is 1 remainder 1", language='python')
+    st.code(" val = 3 + 2 #stores 5 in val", language='python')
+    st.code(" val = 3 - 2 #stores in 1", language='python')
+    st.write(" These operators, in order of highest precedence to lowest, make up the majority of arithmetic operators used in python")
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
     # Question 1
