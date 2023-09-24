@@ -118,7 +118,7 @@ elif st.session_state.expandtitle == "Unit 1.3":
                 "decimal places).")
     st.markdown("Making a variable and giving it a value is called variable "
                 "declaration. Some examples are shown below.")
-    st.code("A = 28 My_name = “John” \nNumber1 = 1 \n\t_car_ = “F-150” ", language='python')
+    st.code("A = 28 \nMy_name = “John” \nNumber1 = 1 \n_car_ = “F-150” ", language='python')
     st.markdown("Note the use of an equal sign to assign values to the variables."
                 " In Unit 3.1 we will go over Python’s equal symbol.")
     st.markdown("By using variables we can label information using names that "
@@ -126,7 +126,59 @@ elif st.session_state.expandtitle == "Unit 1.3":
 
 elif st.session_state.expandtitle == "Unit 1.4":
     st.header("Unit 1.4: Inputs and Outputs")
-    # Add content for Unit 1.4
+    st.header("Unit 1.3: Variables and Printing")
+    st.divider()
+    st.subheader("Printing Variables")
+    st.markdown("As Unit 1.1 showed, code you write can be displayed on the console by utilizing print() functions.")
+    st.markdown("If you want to print a number or the contents of a variable, you simply place the number/variable "
+                "inside the parentheses as shown below.")
+    st.code("Name = \"Jesse\"\n"
+            "print(Name)\n"
+            "print(16)", language='python')
+    st.markdown("Output:")
+    st.code("Jesse\n"
+            "16", language='python')
+
+    st.subheader("Printing Statements")
+    st.markdown("When printing a statement, you surround your text with quotation marks.")
+    st.code("print(\"Hello, it’s nice to meet you.\")", language='python')
+    st.markdown("Output:")
+    st.code("Hello, it’s nice to meet you.", language='python')
+
+    st.subheader("User Inputs")
+    st.markdown("Oftentimes, you will be required to make your programs interactive. This will be done by utilizing "
+                "the input() function. A variable will be assigned the text that the user inputs.")
+    st.code("Age = input(\"Input your age: \")\n"
+            "print(\"You are \" + Age)", language='python')
+    st.markdown("Example:")
+    st.code("Input your age: 17\n"
+            "You are 17", language='python')
+
+    st.subheader("Working with Numeric Inputs")
+    st.markdown("Inputs are automatically seen as words/text. In order to have an input that’s a number be seen as "
+                "one by the computer, which would allow the variable the input is assigned to partake in math "
+                "equations, the int() function must be used.")
+    st.code("Age = int(input(\"Input your age: \"))\n"
+            "Age_plus_ten = Age + 10\n"
+            "print(\"You will be \" + str(Age_plus_ten) + \" in 10 years.\")", language='python')
+    st.markdown("Example:")
+    st.code("Input your age: 17\n"
+            "You will be 27 in 10 years.", language='python')
+    question3 = st.radio("What is the purpose of the str() function in the last example?",
+                         ("Converts the Age variable to an integer",
+                          "Converts the Age_plus_ten variable to an integer",
+                          "Converts the result of the Age_plus_ten expression to a string",
+                          "Converts the Age_plus_ten variable to a string"),
+                         index=None,
+                         key="q3"
+                         )
+
+    if (question3 == "Converts the result of the Age_plus_ten expression to a string"):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.5"
+    else:
+        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 1.5":
     st.header("Unit 1.5: Summary")
