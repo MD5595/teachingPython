@@ -102,6 +102,45 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 6.3"
         if st.button("Unit 6 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 6.4"
+            
+            st.title("Unit 6: Functions Summary")
+
+            st.write("Unit 6 explores the concept of functions, which are essential for organizing code and creating reusable blocks of logic.")
+
+            # Subsection 6.1: Function Declaration
+            st.header("6.1: Function Declaration")
+            st.write("In this section, you learned how to declare functions, which are named blocks of code that can be called and reused.")
+
+            st.subheader("Key Points")
+            st.write("1. Functions are declared using the 'def' keyword followed by a function name and parentheses.")
+            st.write("2. Function names should be descriptive and follow naming conventions.")
+            st.write("3. Functions are defined by a code block that performs specific tasks when the function is called.")
+
+            # Subsection 6.2: Parameters
+            st.header("6.2: Parameters")
+            st.write("Parameters allow you to pass data into functions, making them flexible and versatile.")
+
+            st.subheader("Key Points")
+            st.write("1. Parameters are defined inside the parentheses of a function declaration.")
+            st.write("2. Parameters act as placeholders for data that will be provided when the function is called.")
+            st.write("3. Functions can have multiple parameters, and you can specify default values for them.")
+
+            # Subsection 6.3: Returning Values in Functions
+            st.header("6.3: Returning Values in Functions")
+            st.write("Functions can return values, allowing them to produce results and data that can be used in your code.")
+
+            st.subheader("Key Points")
+            st.write("1. Use the 'return' statement to send a value back from a function.")
+            st.write("2. The data type of the return value can be specified, and functions can return various data types.")
+            st.write("3. Returned values are useful for performing calculations, making decisions, or storing results.")
+
+            
+            st.header("Conclusion")
+            st.write("In Unit 6, you've explored the concept of functions, a crucial building block in programming.")
+            st.write("Function declaration allows you to define reusable blocks of code.")
+            st.write("Parameters make functions flexible by accepting input data.")
+            st.write("Returning values from functions allows you to obtain results and use them in your programs.")
+            st.write("By mastering functions, you can write modular, organized, and efficient code.")
         if st.button("Unit 6 Quiz", use_container_width=True):
             st.session_state.expandtitle = "Unit 6.5"
     with st.expander("Finals"):
