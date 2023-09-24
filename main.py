@@ -1043,28 +1043,369 @@ elif st.session_state.expandtitle == "Unit 4.2":
 
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
+    st.title("Unit 4.3: Nested Loops")
+
+    st.write(
+        "Nested loops are loops within loops. They are used when you need to perform repetitive tasks within repetitive tasks.")
+
+    # Example of a nested loop
+    st.write("Example:")
+    st.code("""
+    for i in range(3):
+        for j in range(2):
+            st.write(f"Outer loop iteration {i}, Inner loop iteration {j}")
+    """)
+    st.write(
+        "In this example, we have an outer loop that iterates three times and an inner loop that iterates two times for each outer loop iteration.")
+
+    st.write("Key points about nested loops:")
+
+    st.subheader("Nested Loop Structure")
+    st.write("Nested loops consist of an outer loop and one or more inner loops.")
+
+    st.subheader("Order of Execution")
+    st.write("The inner loop runs completely for each iteration of the outer loop.")
+
+    st.subheader("Common Use Cases")
+    st.write(
+        "Nested loops are often used for tasks like matrix traversal, working with multi-dimensional data, or generating combinations.")
+
+    st.subheader("Indentation")
+    st.write("Proper indentation is crucial to distinguish between the outer and inner loops.")
+
+    st.write("Nested loops can be powerful but require careful design to avoid excessive execution.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write("In this unit, you've learned about nested loops, a concept where loops are placed inside other loops.")
+    st.write("Nested loops are useful for tasks that involve repetitive actions within repetitive actions.")
+    st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
 elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
 elif st.session_state.expandtitle == "Unit 5.1":
     st.header("Unit 5.1: Lists")
+    st.title("Unit 5.1: Lists")
+
+    st.write("Lists store multiple values within one variable. Any data type can be stored within a list, "
+             "and differing data types can be stored within the same list. Any value stored within a list is called an element.")
+
+    # Example list
+    devices = ["Phone", "Laptop", "Tablet"]
+
+    st.write("Example:")
+    st.code("Devices = ['Phone', 'Laptop', 'Tablet']")
+
+    st.write("Below are functions that can be used on lists:")
+    st.code("""
+    import random
+
+    Y = [1, 3, 2, 5]
+    X = 3
+
+    Value1 = Y.append(X)  # Adds an element to the end of a list
+    Value2 = Y.count(X)   # Returns the number of elements that have the value X
+    Value3 = Y.sort()     # Sorts the list
+    Value5 = random.choice(Y)  # Picks a random value within a list
+    """)
+
+    st.write(
+        "In this unit, you've learned about lists, versatile data structures that can store multiple values of any data type. "
+        "Lists are fundamental in programming and provide a convenient way to work with collections of data.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "Lists are an essential data structure in programming, allowing you to store and manipulate collections of data efficiently.")
+    st.write("You've also seen some common functions that can be used to modify and work with lists, "
+             "such as appending elements, counting occurrences, sorting, and selecting random values.")
+    st.write(
+        "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.header("Unit 5.2: Traversing Through Lists")
+
+    st.title("Unit 5.2: Traversing Through Lists")
+
+    st.write("Traversing through lists means accessing and processing each element in a list one by one. "
+             "This is a fundamental operation when working with lists.")
+
+    # Example list
+    numbers = [1, 2, 3, 4, 5]
+
+    st.write("Example:")
+    st.code("numbers = [1, 2, 3, 4, 5]")
+
+    st.write("Here are common techniques for traversing through lists:")
+
+    st.subheader("1. Using a For Loop")
+    st.write("You can use a 'for' loop to iterate through each element in the list.")
+    st.code("""
+    for num in numbers:
+        st.write(f"Element: {num}")
+    """)
+
+    st.subheader("2. Using List Indexing")
+    st.write("You can access elements by their index in the list.")
+    st.code("""
+    for i in range(len(numbers)):
+        st.write(f"Element {i + 1}: {numbers[i]}")
+    """)
+
+    st.subheader("3. Using Enumerate")
+    st.write("Enumerate allows you to access both the index and the value of each element.")
+    st.code("""
+    for idx, num in enumerate(numbers):
+        st.write(f"Element {idx + 1}: {num}")
+    """)
+
+    st.write(
+        "Traversing through lists is essential for performing various operations, such as calculations, filtering, and data processing.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about traversing through lists, a fundamental operation when working with collections of data.")
+    st.write("You've seen different techniques, including 'for' loops, list indexing, and 'enumerate,' "
+             "that allow you to access and process each element in a list.")
+    st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
+
 elif st.session_state.expandtitle == "Unit 5.3":
     st.header("Unit 5.3: Appending/Removing")
+    st.title("Unit 5.3: Appending and Removing from Lists")
+
+    st.write("Appending and removing elements from lists are common operations when working with data in programming. "
+             "These operations allow you to modify the contents of a list.")
+
+    # Example list
+    fruits = ["Apple", "Banana", "Cherry"]
+
+    st.write("Example:")
+    st.code("fruits = ['Apple', 'Banana', 'Cherry']")
+
+    st.write("Here are common techniques for appending and removing elements from lists:")
+
+    st.subheader("1. Appending Elements")
+    st.write("You can add elements to the end of a list using the 'append' method.")
+    st.code("""
+    fruits.append("Orange")
+    st.write(fruits)
+    """)
+
+    st.subheader("2. Inserting Elements")
+    st.write("You can insert elements at a specific position in the list using the 'insert' method.")
+    st.code("""
+    fruits.insert(1, "Grape")
+    st.write(fruits)
+    """)
+
+    st.subheader("3. Removing Elements by Value")
+    st.write("You can remove elements by their value using the 'remove' method.")
+    st.code("""
+    fruits.remove("Banana")
+    st.write(fruits)
+    """)
+
+    st.subheader("4. Removing Elements by Index")
+    st.write("You can remove elements by their index using the 'pop' method.")
+    st.code("""
+    removed_fruit = fruits.pop(0)
+    st.write(f"Removed: {removed_fruit}")
+    st.write(fruits)
+    """)
+
+    st.write(
+        "Appending and removing elements from lists are essential for data manipulation and management in programming.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned how to append and remove elements from lists, fundamental operations when working with data.")
+    st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
+             "that allow you to modify the contents of a list.")
+    st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
+
 elif st.session_state.expandtitle == "Unit 5.4":
     st.header("Unit 5.4: 2-D Lists")
+    st.write("Example:")
+    st.code("matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
+
+    st.write("Here are common techniques for working with 2-D lists:")
+
+    st.subheader("1. Accessing Elements")
+    st.write("You can access elements in a 2-D list using two indices: one for the row and one for the column.")
+    st.code("""
+    element = matrix[1][2]  # Accessing the element in the second row and third column
+    st.write(f"Element: {element}")
+    """)
+
+    st.subheader("2. Iterating Through Rows")
+    st.write("You can iterate through the rows of a 2-D list using 'for' loops.")
+    st.code("""
+    for row in matrix:
+        st.write(row)
+    """)
+
+    st.subheader("3. Iterating Through Elements")
+    st.write("You can iterate through all elements in a 2-D list using nested 'for' loops.")
+    st.code("""
+    for row in matrix:
+        for element in row:
+            st.write(element)
+    """)
+
+    st.write("2-D lists are useful for representing and working with structured data, such as tables and grids.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about 2-D lists, a versatile data structure for organizing data in rows and columns.")
+    st.write(
+        "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
+    st.write(
+        "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
 elif st.session_state.expandtitle == "Unit 6.1":
     st.header("Unit 6.1: Function Declaration")
+    st.title("Unit 6.1: Function Declaration")
+
+    st.write("A function is a reusable block of code that performs a specific task or set of tasks. "
+             "Declaring a function involves defining its name, parameters, and the code to execute when the function is called.")
+
+    # Example function declaration
+    st.write("Example:")
+    st.code("""
+    def greet(name):
+        st.write(f"Hello, {name}!")
+
+    # Calling the function
+    greet("Alice")
+    """)
+    st.write(
+        "In this example, we've declared a function named 'greet' that takes a 'name' parameter and prints a greeting message.")
+
+    st.write("Here are the components of a function declaration:")
+
+    st.subheader("Function Name")
+    st.write("The name of the function, which should be descriptive and relevant to its purpose.")
+
+    st.subheader("Parameters")
+    st.write("Values that the function accepts as input. Parameters are enclosed in parentheses.")
+
+    st.subheader("Function Body")
+    st.write(
+        "The block of code that defines what the function does. It is indented and follows the function declaration.")
+
+    st.subheader("Calling a Function")
+    st.write(
+        "To execute the code within a function, you need to call the function by its name and provide any required arguments.")
+
+    st.write("Functions are essential for code organization, reusability, and modularity.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write("In this unit, you've learned about function declaration, a fundamental concept in programming.")
+    st.write("Functions allow you to encapsulate code, making it reusable and organized.")
+    st.write(
+        "You've seen how to declare functions with names, parameters, and a function body, as well as how to call them.")
+
 elif st.session_state.expandtitle == "Unit 6.2":
     st.header("Unit 6.2: Parameters")
+
+    st.title("Unit 6.2: Function Parameters")
+
+    st.write("Function parameters are values that you can pass to a function to customize its behavior. "
+             "They allow functions to work with different input data.")
+
+    # Example function with parameters
+    st.write("Example:")
+    st.code("""
+    def greet(name):
+        st.write(f"Hello, {name}!")
+
+    # Calling the function with a parameter
+    greet("Alice")
+    """)
+    st.write(
+        "In this example, we have a function 'greet' that takes a 'name' parameter and prints a greeting message with that name.")
+
+    st.write("Here are common aspects of function parameters:")
+
+    st.subheader("Parameter Declaration")
+    st.write("Parameters are declared within the parentheses when defining the function.")
+
+    st.subheader("Passing Arguments")
+    st.write("When calling a function, you pass arguments that match the function's parameters.")
+
+    st.subheader("Multiple Parameters")
+    st.write("Functions can have multiple parameters separated by commas.")
+
+    st.subheader("Default Values")
+    st.write("You can assign default values to parameters, making them optional when calling the function.")
+
+    st.subheader("Positional and Keyword Arguments")
+    st.write(
+        "Arguments can be passed either by position (matching the order of parameters) or by keyword (matching parameter names).")
+
+    st.write("Function parameters make functions versatile and adaptable to different scenarios.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about function parameters, which allow you to customize a function's behavior "
+        "by passing different values as arguments.")
+    st.write(
+        "You've seen how to declare parameters, pass arguments, use multiple parameters, and assign default values.")
+    st.write(
+        "Understanding and effectively using parameters is essential for creating flexible and reusable functions.")
 elif st.session_state.expandtitle == "Unit 6.3":
     st.header("Unit 6.3: Returning Values in Functions")
+    st.title("Unit 6.3: Returning Values in Functions")
+
+    st.write(
+        "Functions not only perform actions but can also return values. A return statement is used to specify what value the function should return.")
+
+    # Example function with a return value
+    st.write("Example:")
+    st.code("""
+    def add_numbers(a, b):
+        result = a + b
+        return result
+
+    # Calling the function and storing the result
+    sum_result = add_numbers(5, 3)
+    st.write(f"The sum is: {sum_result}")
+    """)
+    st.write(
+        "In this example, we have a function 'add_numbers' that takes two parameters, adds them, and returns the result.")
+
+    st.write("Here are important aspects of returning values in functions:")
+
+    st.subheader("Return Statement")
+    st.write("The 'return' statement is used to specify the value to be returned from the function.")
+
+    st.subheader("Function Output")
+    st.write("The value returned by a function can be assigned to a variable when calling the function.")
+
+    st.subheader("Multiple Return Statements")
+    st.write("A function can have multiple 'return' statements, each with different conditions.")
+
+    st.subheader("Void Functions")
+    st.write("Functions that don't have a 'return' statement implicitly return 'None'.")
+
+    st.write(
+        "Returning values from functions allows you to obtain results and use them in other parts of your program.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about returning values in functions, which enables functions to provide results that can be used elsewhere in your code.")
+    st.write("The 'return' statement is used to specify the value to be returned from a function.")
+    st.write(
+        "Understanding how to use return values is crucial for creating functions that perform specific tasks and provide meaningful results.")
 elif st.session_state.expandtitle == "Unit 6.4":
     st.header("Unit 6 Summary")
 elif st.session_state.expandtitle == "Unit 6.5":
