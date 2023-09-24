@@ -1502,6 +1502,58 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
+    st.title("Unit 5: Lists Summary")
+
+    st.write(
+        "Unit 5 explores the world of lists, a versatile data structure used to store and manipulate collections of values.")
+
+    # Subsection 5.1: Lists
+    st.header("5.1: Lists")
+    st.write(
+        "In this section, you learned about lists, which are used to store multiple values within a single variable.")
+
+    st.subheader("Key Points")
+    st.write("1. Lists can hold values of any data type and can mix different data types in the same list.")
+    st.write("2. Each value stored within a list is called an element.")
+    st.write("3. Lists are useful for managing collections of data, such as numbers, strings, or even other lists.")
+
+    # Subsection 5.2: Traversing through Lists
+    st.header("5.2: Traversing through Lists")
+    st.write("Traversing through lists involves accessing and processing each element in a list, often using loops.")
+
+    st.subheader("Key Points")
+    st.write(
+        "1. Loops, like 'for' loops and 'while' loops, are used to iterate through lists and perform actions on each element.")
+    st.write(
+        "2. Traversing through lists allows you to process data, make calculations, or apply functions to list elements.")
+
+    # Subsection 5.3: Appending/Removing
+    st.header("5.3: Appending/Removing")
+    st.write("Lists can be modified by adding or removing elements, making them dynamic data structures.")
+
+    st.subheader("Key Points")
+    st.write("1. The 'append' method adds an element to the end of a list.")
+    st.write("2. You can use 'insert' to add an element at a specific position in the list.")
+    st.write("3. 'remove' and 'pop' methods are used to remove elements from a list.")
+    st.write("4. Modifying lists allows you to update data or control the list's content.")
+
+    # Subsection 5.4: 2D Lists
+    st.header("5.4: 2D Lists")
+    st.write(
+        "2D lists, or nested lists, are lists of lists, enabling the creation of multi-dimensional data structures.")
+
+    st.subheader("Key Points")
+    st.write("1. 2D lists contain lists as their elements, creating a grid-like structure.")
+    st.write("2. Accessing elements in a 2D list involves specifying both row and column indices.")
+    st.write("3. 2D lists are used for tasks like representing grids, matrices, and tables.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write("In Unit 5, you've explored the power of lists, a fundamental data structure in programming.")
+    st.write("Lists allow you to store and manipulate collections of values, providing flexibility in data management.")
+    st.write("Traversing through lists, appending, and removing elements enable dynamic data processing.")
+    st.write(
+        "2D lists expand your data modeling capabilities, making them essential for various applications in programming."
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
 elif st.session_state.expandtitle == "Unit 6.1":
