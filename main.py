@@ -862,6 +862,7 @@ elif st.session_state.expandtitle == "Unit 3.1":
 
     Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
     """)
+
 elif st.session_state.expandtitle == "Unit 3.2":
     st.header("Unit 3.2: Else If (elif) Statements")
 
@@ -1572,6 +1573,21 @@ elif st.session_state.expandtitle == "Unit 5.1":
              "such as appending elements, counting occurrences, sorting, and selecting random values.")
     st.write(
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
+    st.title("Unit 5.1: Lists Question")
+
+    # Question
+    st.write("Which of the following best describes the purpose of lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "To store multiple values within a single variable":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.2"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.title("Unit 5.2: Traversing Through Lists")
 
