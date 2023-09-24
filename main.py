@@ -1428,6 +1428,21 @@ elif st.session_state.expandtitle == "Unit 4.3":
     st.write("In this unit, you've learned about nested loops, a concept where loops are placed inside other loops.")
     st.write("Nested loops are useful for tasks that involve repetitive actions within repetitive actions.")
     st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
+    question = st.radio("What is the primary purpose of nested loops in Python?",
+                        ("To make the code more complex",
+                         "To simplify code execution",
+                         "To perform repetitive tasks within repetitive tasks",
+                         "To create loops"),
+                        index=None
+                        )
+    if question == "To perform repetitive tasks within repetitive tasks":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 4.4"
+    elif (question == "To make the code more complex"
+          or question == "To simplify code execution"
+          or question == "To create loops"):
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
 
