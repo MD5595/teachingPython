@@ -360,7 +360,7 @@ elif st.session_state.expandtitle == "Unit 1.5":
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
     if st.button("Next Section"):
-        st.session_state.expand.title = "Unit 1.6"
+        st.session_state.expandtitle = "Unit 1.6"
     
 elif st.session_state.expandtitle == "Unit 1.6":
 
@@ -544,6 +544,21 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num3 = {num3}")
     st.write(f"3 // 10 = {3 // 10}")
     st.write(f"num4 / num5 = {num4 / num5}")
+    question2_1 = st.radio("What is the result of the expression 5 + 3 * 2 / 4 in Python?",
+                     ("4.0",
+                      "6.0",
+                      "5.5",
+                      "7.0"),
+                     index=None,
+                     key="q3"
+                     )
+
+    if question2_1 == "5.5":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 2.2"
+    elif question2_1 ==  "4.0" or question2_1 == "6.0" or question2_1 =="7.0":
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
     st.title("Unit 2.2: Order of Operations in Python")
@@ -593,7 +608,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
         st.markdown("Correct!")
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 2.3"
-    elif question2_2:=="Division, Addition, Multiplication, Subtraction" or question2_2 =="Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)" or question2_2 == "Subtraction, Addition, Multiplication, Division")
+    elif question2_2 =="Division, Addition, Multiplication, Subtraction" or question2_2 =="Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)" or question2_2 == "Subtraction, Addition, Multiplication, Division":
         st.markdown("Try Again!")
         
 
@@ -2313,13 +2328,7 @@ elif st.session_state.expandtitle == "Unit 7.2":
 
     if question_number >= len(questions):
         st.header("Congratulations! You've completed the final exam.")
-        st.session_state.expandtitle = "Exam Results"
 
-
-
-elif st.session_state.expandtitle == "Cheatsheet":
-    st.header("Cheatsheet")
-    # Add content for Cheatsheet
 
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
