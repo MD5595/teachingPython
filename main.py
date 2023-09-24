@@ -1,5 +1,8 @@
 import streamlit as st
+import math
+import random
 from account import account_manager
+
 
 st.set_page_config(
     page_title="EDUpy",
@@ -10,15 +13,20 @@ st.set_page_config(
 )
 st.header(":blue[EDU]:red[py]:snake:")
 
+
 if 'expandtitle' not in st.session_state:
     st.session_state.expandtitle = "Home"
+
+
+
+
 
 with st.sidebar:
     account_manager()
     container = st.container()
 
     "Select:"
-    if st.button("Home", use_container_width=True):
+    if st.button("Home",use_container_width=True):
         st.session_state.expandtitle = "Home"
 
     with st.expander("Practice Tools"):
@@ -81,7 +89,7 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 5.4"
         if st.button("Unit 5 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 5.5"
-        if st.button("Unit 5 Quiz", use_container_width=True):
+        if st.button("Unit 5 quiz", use_container_width=True):
             st.session_state.expandtitle = "Unit 5.6"
     with st.expander("Unit 6"):
         if st.button("Unit 6.1: Function Declaration", use_container_width=True):
@@ -99,6 +107,9 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 7.1"
         if st.button("Final Exam", use_container_width=True):
             st.session_state.expandtitle = "Unit 7.2"
+
+
+
 
 if st.session_state.expandtitle == "Unit 1.1":
     st.header("Unit 1.1: Introduction to Python")
@@ -139,7 +150,7 @@ elif st.session_state.expandtitle == "Unit 1.2":
     st.header("Unit 1.2: Syntax and Formatting Conventions")
     st.divider()
     st.subheader("A Python file being formatted improperly or having inappropriately named components will cause it to "
-                 "not function.")
+                "not function.")
     st.divider()
     st.subheader("Syntax Errors")
     st.markdown("The most errors you will face as you program will be syntax errors. Even if your logic "
@@ -153,10 +164,9 @@ elif st.session_state.expandtitle == "Unit 1.2":
     st.markdown("Ensure you include the correct spelling, spacing, indents, and within your code. Starting in unit 3 "
                 "cases where indentation is required will appear.")
     question2 = st.radio("Which two print statements would output: Goodmorning!",
-                         ("print(\"Goodmorning!\')", "print(Goodmorning!\")", "print(\"Goodmorning!\")",
-                          "print(\"Goodmorning!)"),
+                         ("print(\"Goodmorning!\')", "print(Goodmorning!\")", "print(\"Goodmorning!\")", "print(\"Goodmorning!)"),
                          index=None,
-                         )
+                        )
 
     if (question2 == "print(\"Goodmorning!\")"):
         st.markdown("Correct!")
@@ -247,9 +257,8 @@ elif st.session_state.expandtitle == "Unit 1.3":
     st.write("""
     Making your variables descriptive is vital to creating readable code that is easily decipherable.
     """)
-    # Question for 1.3
-    question3 = st.radio("What would hello_world.py output?",
-                         ("variable = 42", "42 = variable", "variable == 42", "variable: 42"),
+ #Question for 1.3
+    question3 = st.radio("What would hello_world.py output?", ("variable = 42", "42 = variable", "variable == 42", "variable: 42"),
                          index=None, key="q3")
     if question3 == "variable = 42":
         st.markdown("Correct!")
@@ -314,9 +323,9 @@ elif st.session_state.expandtitle == "Unit 1.4":
         st.markdown("Correct!")
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 1.5"
-    elif (question3 == "Converts the Age variable to an integer"
-          or question3 == "Converts the Age_plus_ten variable to an integer"
-          or question3 == "Converts the Age_plus_ten variable to a string"):
+    elif(question3 == "Converts the Age variable to an integer"
+    or question3 == "Converts the Age_plus_ten variable to an integer"
+    or question3 == "Converts the Age_plus_ten variable to a string"):
         st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 1.5":
@@ -356,22 +365,18 @@ elif st.session_state.expandtitle == "Unit 1.5":
     st.write("""
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
-    if st.button("Next Section"):
-        st.session_state.expand.title = "Unit 1.6"
-    
 elif st.session_state.expandtitle == "Unit 1.6":
 
     st.title("Unit 1 Quiz")
 
     # Question 1
-    q1 = st.radio(
-        "If x = 3 and y = 5. A variable result is made that aims to find the product of the two, how would it be done?",
-        ("3 * 5",
-         "result = x * y",
-         "print(\"3 * 5\"",
-         "result = 3 * 5"),
-        index=None
-    )
+    q1 = st.radio("If x = 3 and y = 5. A variable result is made that aims to find the product of the two, how would it be done?",
+                  ("3 * 5",
+                   "result = x * y",
+                   "print(\"3 * 5\"",
+                   "result = 3 * 5"),
+                  index=None
+                  )
 
     if q1 == "result = x * y":
         st.markdown("Correct!")
@@ -465,45 +470,45 @@ elif st.session_state.expandtitle == "Unit 1.6":
                                             if st.button("Next Unit!"):
                                                 st.session_state.expandtitle = "Unit 2.1"
 
-                                        elif (q10 == "To convert text to uppercase"
-                                              or q10 == "To accept user input"
-                                              or q10 == "To convert a value to an integer"):
+                                        elif(q10 == "To convert text to uppercase"
+                                        or q10 == "To accept user input"
+                                        or q10 == "To convert a value to an integer"):
                                             st.markdown("Try Again!")
-                                    elif (q9 == "3.33"
-                                          or q9 == "3.0"
-                                          or q9 == "33"):
+                                    elif(q9 == "3.33"
+                                    or q9 == "3.0"
+                                    or q9 == "33"):
                                         st.markdown("Try Again!")
-                                elif (q8 == "^"
-                                      or q8 == "//"
-                                      or q8 == "pwr()"):
+                                elif(q8 == "^"
+                                or q8 == "//"
+                                or q8 == "pwr()"):
                                     st.markdown("Try Again!")
-                            elif (q7 == "# This is a comment"
-                                  or q7 == "''' This is a comment '''"
-                                  or q7 == "\"This is a comment\""):
+                            elif(q7 == "# This is a comment"
+                            or q7 == "''' This is a comment '''"
+                            or q7 == "\"This is a comment\""):
                                 st.markdown("Try Again!")
-                        elif (q6 == "2"
-                              or q6 == "7"
-                              or q6 == "15"):
+                        elif(q6 == "2"
+                        or q6 == "7"
+                        or q6 == "15"):
                             st.markdown("Try Again!")
-                    elif (q5 == "To convert text to uppercase"
-                          or q5 == "To display text on the screen"
-                          or q5 == "To convert numbers to strings"):
+                    elif(q5 == "To convert text to uppercase"
+                    or q5 == "To display text on the screen"
+                    or q5 == "To convert numbers to strings"):
                         st.markdown("Try Again!")
-                elif (q4 == "It converts text to uppercase"
-                      or q4 == "It converts text to lowercase"
-                      or q4 == "It converts numbers to strings"):
+                elif(q4 == "It converts text to uppercase"
+                or q4 == "It converts text to lowercase"
+                or q4 == "It converts numbers to strings"):
                     st.markdown("Try Again!")
-            elif (q3 == "It defines a function"
-                  or q3 == "It performs mathematical calculations"
-                  or q3 == "It converts text to lowercase"):
+            elif(q3 == "It defines a function"
+            or q3 == "It performs mathematical calculations"
+            or q3 == "It converts text to lowercase"):
                 st.markdown("Try Again!")
-        elif (q2 == "To display text on the screen"
-              or q2 == "To convert numbers to strings"
-              or q2 == "To create comments"):
+        elif(q2 == "To display text on the screen"
+        or q2 == "To convert numbers to strings"
+        or q2 == "To create comments"):
             st.markdown("Try Again!")
-    elif (q1 == "3 * 5"
-          or q1 == "print(\"3 * 5\""
-          or q1 == "result = 3 * 5"):
+    elif(q1 == "3 * 5"
+    or q1 == "print(\"3 * 5\""
+    or q1 == "result = 3 * 5"):
         st.markdown("Try Again!")
 
 
@@ -641,8 +646,7 @@ elif st.session_state.expandtitle == "Unit 2.4":
     st.code(" val = 3 % 2 #stores 1 in val because 3/2 is 1 remainder 1", language='python')
     st.code(" val = 3 + 2 #stores 5 in val", language='python')
     st.code(" val = 3 - 2 #stores in 1", language='python')
-    st.write(
-        " These operators, in order of highest precedence to lowest, make up the majority of arithmetic operators used in python")
+    st.write(" These operators, in order of highest precedence to lowest, make up the majority of arithmetic operators used in python")
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
     # Question 1
@@ -1108,7 +1112,7 @@ elif st.session_state.expandtitle == "Unit 3.5":
                                      "They should be indented in reverse",
                                      "The level of indentation doesn't matter"),
                                     index=None
-                                )
+                                    )
                                 if q8 == "They should be indented to the same level as the outer if statement":
                                     st.markdown("Correct!")
                                     q9 = st.radio(
@@ -1118,15 +1122,15 @@ elif st.session_state.expandtitle == "Unit 3.5":
                                          "Scenarios involving loops",
                                          "Scenarios involving functions"),
                                         index=None
-                                    )
+                                        )
                                     if q9 == "Complex scenarios where multiple conditions need to be considered":
                                         st.markdown("Correct!")
                                         q10 = st.radio("What is the primary purpose of 'elif' statements?",
                                                        (
-                                                           "To specify an alternative condition to check if the previous conditions are False",
-                                                           "To define the main condition",
-                                                           "To indicate the end of the statement",
-                                                           "To create loops"),
+                                                       "To specify an alternative condition to check if the previous conditions are False",
+                                                       "To define the main condition",
+                                                       "To indicate the end of the statement",
+                                                       "To create loops"),
                                                        index=None
                                                        )
                                         if q10 == "To specify an alternative condition to check if the previous conditions are False":
@@ -1186,7 +1190,7 @@ elif st.session_state.expandtitle == "Unit 4.1":
         fruits = ["Apple", "Banana", "Cherry"]
         for fruit in fruits:
             st.write(f"Current fruit: {fruit}")
-        """, language='python')
+        """,language='python')
     st.write(
         "In this example, we have a list of fruits, and we use a for loop to iterate through each fruit and print its name.")
 
@@ -1488,6 +1492,183 @@ elif st.session_state.expandtitle == "Unit 4.5":
           or q1 == "To define a function"
           or q1 == "To print text to the console"):
         st.markdown("Try Again!")
+
+elif st.session_state.expandtitle == "Unit 5.1":
+    st.header("Unit 5.1: Lists")
+
+    st.write("Lists store multiple values within one variable. Any data type can be stored within a list, "
+             "and differing data types can be stored within the same list. Any value stored within a list is called an element.")
+
+    # Example list
+    devices = ["Phone", "Laptop", "Tablet"]
+
+    st.write("Example:")
+    st.code("Devices = ['Phone', 'Laptop', 'Tablet']")
+
+    st.write("Below are functions that can be used on lists:")
+    st.code("""
+    import random
+
+    Y = [1, 3, 2, 5]
+    X = 3
+
+    Value1 = Y.append(X)  # Adds an element to the end of a list
+    Value2 = Y.count(X)   # Returns the number of elements that have the value X
+    Value3 = Y.sort()     # Sorts the list
+    Value5 = random.choice(Y)  # Picks a random value within a list
+    """)
+
+    st.write(
+        "In this unit, you've learned about lists, versatile data structures that can store multiple values of any data type. "
+        "Lists are fundamental in programming and provide a convenient way to work with collections of data.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "Lists are an essential data structure in programming, allowing you to store and manipulate collections of data efficiently.")
+    st.write("You've also seen some common functions that can be used to modify and work with lists, "
+             "such as appending elements, counting occurrences, sorting, and selecting random values.")
+    st.write(
+        "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
+elif st.session_state.expandtitle == "Unit 5.2":
+    st.header("Unit 5.2: Traversing Through Lists")
+
+    st.write("Traversing through lists means accessing and processing each element in a list one by one. "
+             "This is a fundamental operation when working with lists.")
+
+    # Example list
+    numbers = [1, 2, 3, 4, 5]
+
+    st.write("Example:")
+    st.code("numbers = [1, 2, 3, 4, 5]")
+
+    st.write("Here are common techniques for traversing through lists:")
+
+    st.subheader("1. Using a For Loop")
+    st.write("You can use a 'for' loop to iterate through each element in the list.")
+    st.code("""
+    for num in numbers:
+        st.write(f"Element: {num}")
+    """)
+
+    st.subheader("2. Using List Indexing")
+    st.write("You can access elements by their index in the list.")
+    st.code("""
+    for i in range(len(numbers)):
+        st.write(f"Element {i + 1}: {numbers[i]}")
+    """)
+
+    st.subheader("3. Using Enumerate")
+    st.write("Enumerate allows you to access both the index and the value of each element.")
+    st.code("""
+    for idx, num in enumerate(numbers):
+        st.write(f"Element {idx + 1}: {num}")
+    """)
+
+    st.write(
+        "Traversing through lists is essential for performing various operations, such as calculations, filtering, and data processing.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about traversing through lists, a fundamental operation when working with collections of data.")
+    st.write("You've seen different techniques, including 'for' loops, list indexing, and 'enumerate,' "
+             "that allow you to access and process each element in a list.")
+    st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
+
+elif st.session_state.expandtitle == "Unit 5.3":
+    st.header("Unit 5.3: Appending/Removing From Lists")
+
+    st.write("Appending and removing elements from lists are common operations when working with data in programming. "
+             "These operations allow you to modify the contents of a list.")
+
+    # Example list
+    fruits = ["Apple", "Banana", "Cherry"]
+
+    st.write("Example:")
+    st.code("fruits = ['Apple', 'Banana', 'Cherry']")
+
+    st.write("Here are common techniques for appending and removing elements from lists:")
+
+    st.subheader("1. Appending Elements")
+    st.write("You can add elements to the end of a list using the 'append' method.")
+    st.code("""
+    fruits.append("Orange")
+    st.write(fruits)
+    """)
+
+    st.subheader("2. Inserting Elements")
+    st.write("You can insert elements at a specific position in the list using the 'insert' method.")
+    st.code("""
+    fruits.insert(1, "Grape")
+    st.write(fruits)
+    """)
+
+    st.subheader("3. Removing Elements by Value")
+    st.write("You can remove elements by their value using the 'remove' method.")
+    st.code("""
+    fruits.remove("Banana")
+    st.write(fruits)
+    """)
+
+    st.subheader("4. Removing Elements by Index")
+    st.write("You can remove elements by their index using the 'pop' method.")
+    st.code("""
+    removed_fruit = fruits.pop(0)
+    st.write(f"Removed: {removed_fruit}")
+    st.write(fruits)
+    """)
+
+    st.write(
+        "Appending and removing elements from lists are essential for data manipulation and management in programming.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned how to append and remove elements from lists, fundamental operations when working with data.")
+    st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
+             "that allow you to modify the contents of a list.")
+    st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
+
+elif st.session_state.expandtitle == "Unit 5.4":
+    st.header("Unit 5.4: 2-D Lists")
+    st.write("Example:")
+    st.code("matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
+
+    st.write("Here are common techniques for working with 2-D lists:")
+
+    st.subheader("1. Accessing Elements")
+    st.write("You can access elements in a 2-D list using two indices: one for the row and one for the column.")
+    st.code("""
+    element = matrix[1][2]  # Accessing the element in the second row and third column
+    st.write(f"Element: {element}")
+    """)
+
+    st.subheader("2. Iterating Through Rows")
+    st.write("You can iterate through the rows of a 2-D list using 'for' loops.")
+    st.code("""
+    for row in matrix:
+        st.write(row)
+    """)
+
+    st.subheader("3. Iterating Through Elements")
+    st.write("You can iterate through all elements in a 2-D list using nested 'for' loops.")
+    st.code("""
+    for row in matrix:
+        for element in row:
+            st.write(element)
+    """)
+
+    st.write("2-D lists are useful for representing and working with structured data, such as tables and grids.")
+
+    # Conclusion
+    st.header("Conclusion")
+    st.write(
+        "In this unit, you've learned about 2-D lists, a versatile data structure for organizing data in rows and columns.")
+    st.write(
+        "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
+    st.write(
+        "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
 elif st.session_state.expandtitle == "Unit 5.1":
     st.title("Unit 5.1: Lists")
 
@@ -1720,142 +1901,6 @@ elif st.session_state.expandtitle == "Unit 5.5":
         "2D lists expand your data modeling capabilities, making them essential for various applications in programming.")
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
-    q1 = st.radio("What is the purpose of a 'for' loop in Python?",
-                  ("To make decisions based on conditions",
-                   "To create a loop",
-                   "To define a function",
-                   "To print text to the console"),
-                  index=None
-                  )
-    if q1 == "To create a loop":
-        st.markdown("Correct!")
-        q2 = st.radio("Which of the following is NOT a key point about 'while' loops?",
-                      ("They continue executing as long as the specified condition remains true",
-                       "Proper indentation is crucial to define the code block within the loop",
-                       "They are useful when you know the exact number of iterations",
-                       "They repeatedly execute a block of code as long as a condition is true"),
-                      index=None
-                      )
-        if q2 == "They are useful when you know the exact number of iterations":
-            st.markdown("Correct!")
-            q3 = st.radio("What is the primary purpose of 'break' and 'continue' statements in loops?",
-                          ("To define the main condition",
-                           "To specify an alternative condition",
-                           "To control the flow of the loop",
-                           "To create loops"),
-                          index=None
-                          )
-            if q3 == "To control the flow of the loop":
-                st.markdown("Correct!")
-                q4 = st.radio("What kind of tasks are 'while' loops particularly useful for?",
-                              ("Tasks where you don't know the number of iterations in advance",
-                               "Tasks with known and fixed numbers of iterations",
-                               "Tasks involving multi-dimensional data",
-                               "Tasks involving matrix traversal"),
-                              index=None
-                              )
-                if q4 == "Tasks where you don't know the number of iterations in advance":
-                    st.markdown("Correct!")
-                    q5 = st.radio("In a 'for' loop, what does the loop variable do?",
-                                  ("It specifies the alternative condition to check",
-                                   "It defines the main condition",
-                                   "It takes on each item in the sequence during each iteration",
-                                   "It is used for comments"),
-                                  index=None
-                                  )
-                    if q5 == "It takes on each item in the sequence during each iteration":
-                        st.markdown("Correct!")
-                        q6 = st.radio("What does proper indentation indicate in loops?",
-                                      ("It has no significance",
-                                       "It is used for aesthetic purposes",
-                                       "It defines the order of execution",
-                                       "It indicates the code block that belongs to the loop"),
-                                      index=None
-                                      )
-                        if q6 == "It indicates the code block that belongs to the loop":
-                            st.markdown("Correct!")
-                            q7 = st.radio("What is the primary purpose of nested loops?",
-                                          ("To make the code more complex",
-                                           "To simplify code execution",
-                                           "To perform repetitive tasks within repetitive tasks",
-                                           "To create loops"),
-                                          index=None
-                                          )
-                            if q7 == "To perform repetitive tasks within repetitive tasks":
-                                st.markdown("Correct!")
-                                q8 = st.radio(
-                                    "What type of tasks are nested loops often used for?",
-                                    ("Tasks involving simple iterations",
-                                     "Tasks where you need to repeat an action until a certain condition is met",
-                                     "Tasks with a single loop",
-                                     "Tasks where you don't need to iterate"),
-                                    index=None
-                                )
-                                if q8 == "Tasks involving simple iterations":
-                                    st.markdown("Correct!")
-                                    q9 = st.radio(
-                                        "What is the order of execution in nested loops?",
-                                        ("The inner loop runs completely for each iteration of the outer loop",
-                                         "The outer loop runs completely for each iteration of the inner loop",
-                                         "Both loops run in parallel",
-                                         "The inner loop executes first, followed by the outer loop"),
-                                        index=None
-                                    )
-                                    if q9 == "The inner loop runs completely for each iteration of the outer loop":
-                                        st.markdown("Correct!")
-                                        q10 = st.radio("What is a common use case for nested loops?",
-                                                       (
-                                                           "Matrix traversal and working with multi-dimensional data",
-                                                           "Simple data processing tasks",
-                                                           "Creating loops within functions",
-                                                           "Printing text to the console"),
-                                                       index=None
-                                                       )
-                                        if q10 == "Matrix traversal and working with multi-dimensional data":
-                                            st.markdown("Correct!")
-                                            if st.button("Next Unit!"):
-                                                st.session_state.expandtitle = "Unit 6.1"
-                                        elif (q10 == "Simple data processing tasks"
-                                              or q10 == "Creating loops within functions"
-                                              or q10 == "Printing text to the console"):
-                                            st.markdown("Try Again!")
-                                    elif (q9 == "The outer loop runs completely for each iteration of the inner loop"
-                                          or q9 == "Both loops run in parallel"
-                                          or q9 == "The inner loop executes first, followed by the outer loop"):
-                                        st.markdown("Try Again!")
-                                elif (q8 == "Tasks where you need to repeat an action until a certain condition is met"
-                                      or q8 == "Tasks with a single loop"
-                                      or q8 == "Tasks where you don't need to iterate"):
-                                    st.markdown("Try Again!")
-                            elif (q7 == "To make the code more complex"
-                                  or q7 == "To simplify code execution"
-                                  or q7 == "To create loops"):
-                                st.markdown("Try Again!")
-                        elif (q6 == "It has no significance"
-                              or q6 == "It is used for aesthetic purposes"
-                              or q6 == "It defines the order of execution"):
-                            st.markdown("Try Again!")
-                    elif (q5 == "It specifies the alternative condition to check"
-                          or q5 == "It defines the main condition"
-                          or q5 == "It is used for comments"):
-                        st.markdown("Try Again!")
-                elif (q4 == "Tasks with known and fixed numbers of iterations"
-                      or q4 == "Tasks involving multi-dimensional data"
-                      or q4 == "Tasks involving matrix traversal"):
-                    st.markdown("Try Again!")
-            elif (q3 == "To define the main condition"
-                  or q3 == "To specify an alternative condition"
-                  or q3 == "To create loops"):
-                st.markdown("Try Again!")
-        elif (q2 == "They continue executing as long as the specified condition remains true"
-              or q2 == "Proper indentation is crucial to define the code block within the loop"
-              or q2 == "They repeatedly execute a block of code as long as a condition is true"):
-            st.markdown("Try Again!")
-    elif (q1 == "To make decisions based on conditions"
-          or q1 == "To define a function"
-          or q1 == "To print text to the console"):
-        st.markdown("Try Again!")
-
 elif st.session_state.expandtitle == "Unit 6.1":
     st.title("Unit 6.1: Function Declaration")
 
@@ -2033,139 +2078,6 @@ elif st.session_state.expandtitle == "Unit 6.4":
     st.write("By mastering functions, you can write modular, organized, and efficient code.")
 elif st.session_state.expandtitle == "Unit 6.5":
     st.header("Unit 6 Quiz")
-
-    q1 = st.radio("What is the primary purpose of a function in programming?",
-                  ("To create loops",
-                   "To make decisions based on conditions",
-                   "To perform a specific task or set of tasks",
-                   "To define a variable"),
-                  index=None
-                  )
-    if q1 == "To perform a specific task or set of tasks":
-        st.markdown("Correct!")
-        q2 = st.radio("What is a function declaration?",
-                      ("A statement that defines a variable",
-                       "A reusable block of code that performs a specific task",
-                       "A way to create conditions",
-                       "A data type in Python"),
-                      index=None
-                      )
-        if q2 == "A reusable block of code that performs a specific task":
-            st.markdown("Correct!")
-            q3 = st.radio("What are parameters in a function?",
-                          ("Values that the function returns",
-                           "Variables used inside a function",
-                           "Values that the function accepts as input",
-                           "The name of the function"),
-                          index=None
-                          )
-            if q3 == "Values that the function accepts as input":
-                st.markdown("Correct!")
-                q4 = st.radio("What does the 'return' statement do in a function?",
-                              ("It defines the main condition of the function",
-                               "It specifies the alternative condition to check",
-                               "It sends a value back from the function",
-                               "It creates a loop within the function"),
-                              index=None
-                              )
-                if q4 == "It sends a value back from the function":
-                    st.markdown("Correct!")
-                    q5 = st.radio("Can a function have multiple parameters?",
-                                  ("Yes, but they must be enclosed in square brackets",
-                                   "No, a function can have only one parameter",
-                                   "Yes, they can be separated by commas",
-                                   "No, a function cannot have any parameters"),
-                                  index=None
-                                  )
-                    if q5 == "Yes, they can be separated by commas":
-                        st.markdown("Correct!")
-                        q6 = st.radio("What is a default value for a parameter in a function?",
-                                      ("A value that is required to call the function",
-                                       "A value that is automatically assigned to the parameter if no value is provided when calling the function",
-                                       "A value that cannot be changed",
-                                       "A value that is returned by the function"),
-                                      index=None
-                                      )
-                        if q6 == "A value that is automatically assigned to the parameter if no value is provided when calling the function":
-                            st.markdown("Correct!")
-                            q7 = st.radio("What is the purpose of returning values in functions?",
-                                          ("To make the function more complex",
-                                           "To provide results that can be used in other parts of the program",
-                                           "To define multiple conditions within a function",
-                                           "To create loops within functions"),
-                                          index=None
-                                          )
-                            if q7 == "To provide results that can be used in other parts of the program":
-                                st.markdown("Correct!")
-                                q8 = st.radio("What is the data type of a returned value in a function?",
-                                              ("It can only be an integer",
-                                               "It must be a string",
-                                               "It can be any data type",
-                                               "It must be a list"),
-                                              index=None
-                                              )
-                                if q8 == "It can be any data type":
-                                    st.markdown("Correct!")
-                                    q9 = st.radio("What happens if a function does not have a 'return' statement?",
-                                                  ("The function returns the value 'None'",
-                                                   "The function cannot be called",
-                                                   "The function raises an error",
-                                                   "The function returns an empty string"),
-                                                  index=None
-                                                  )
-                                    if q9 == "The function returns the value 'None'":
-                                        st.markdown("Correct!")
-                                        q10 = st.radio("What is the main benefit of using functions in programming?",
-                                                       (
-                                                           "To make the code longer and more complex",
-                                                           "To avoid using parameters",
-                                                           "To organize and reuse code, making it more modular and readable",
-                                                           "To create nested loops"),
-                                                       index=None
-                                                       )
-                                        if q10 == "To organize and reuse code, making it more modular and readable":
-                                            st.markdown("Correct!")
-                                            if st.button("Next Unit!"):
-                                                st.session_state.expandtitle = "Unit 7.1"
-                                        elif (q10 == "To make the code longer and more complex"
-                                              or q10 == "To avoid using parameters"
-                                              or q10 == "To create nested loops"):
-                                            st.markdown("Try Again!")
-                                    elif (q9 == "The function cannot be called"
-                                          or q9 == "The function raises an error"
-                                          or q9 == "The function returns an empty string"):
-                                        st.markdown("Try Again!")
-                                elif (q8 == "It must be a string"
-                                      or q8 == "It can only be an integer"
-                                      or q8 == "It must be a list"):
-                                    st.markdown("Try Again!")
-                            elif (q7 == "To make the function more complex"
-                                  or q7 == "To define multiple conditions within a function"
-                                  or q7 == "To create loops within functions"):
-                                st.markdown("Try Again!")
-                        elif (q6 == "A value that is required to call the function"
-                              or q6 == "A value that cannot be changed"
-                              or q6 == "A value that is returned by the function"):
-                            st.markdown("Try Again!")
-                    elif (q5 == "No, a function can have only one parameter"
-                          or q5 == "No, a function cannot have any parameters"):
-                        st.markdown("Try Again!")
-                elif (q4 == "It defines the main condition of the function"
-                      or q4 == "It specifies the alternative condition to check"
-                      or q4 == "It creates a loop within the function"):
-                    st.markdown("Try Again!")
-            elif (q3 == "Values that the function returns"
-                  or q3 == "Variables used inside a function"
-                  or q3 == "The name of the function"):
-                st.markdown("Try Again!")
-        elif (q2 == "A way to create conditions"
-              or q2 == "A data type in Python"):
-            st.markdown("Try Again!")
-    elif (q1 == "To create loops"
-          or q1 == "To make decisions based on conditions"
-          or q1 == "To define a variable"):
-        st.markdown("Try Again!")
-
 elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
 elif st.session_state.expandtitle == "Unit 7.2":
@@ -2301,8 +2213,7 @@ elif st.session_state.expandtitle == "Home":
         st.write("With Python and PyCharm installed, you're ready to explore the world of Python programming. "
                  "Consider taking our introductory courses to begin your learning journey.")
 
-        st.link_button("Syllabus",
-                       "https://docs.google.com/document/d/18pOZAv8kwUpfFii0ko1iciQv3-eyxOmcmdLVdaqvjVg/edit?usp=sharing")
+        st.link_button("Syllabus", "https://docs.google.com/document/d/18pOZAv8kwUpfFii0ko1iciQv3-eyxOmcmdLVdaqvjVg/edit?usp=sharing")
 
         # Footer
         st.write("Thank you for choosing eduPY. We wish you success in your Python development endeavors!")
@@ -2360,5 +2271,6 @@ elif st.session_state.expandtitle == "Home":
             "simply explore the world of coding, we're here to support you every step of the way.")
 
         st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
+
 
     # Add content for Home
