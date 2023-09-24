@@ -360,7 +360,7 @@ elif st.session_state.expandtitle == "Unit 1.5":
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
     if st.button("Next Section"):
-        st.session_state.expand.title = "Unit 1.6"
+        st.session_state.expandtitle = "Unit 1.6"
     
 elif st.session_state.expandtitle == "Unit 1.6":
 
@@ -582,7 +582,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
 
     Python does basic math in the same order you would do on paper.
     """)
-    question3 = st.radio("In Python, what is the correct order of operations for evaluating expressions?", 
+    question2_2 = st.radio("In Python, what is the correct order of operations for evaluating expressions?", 
                     ("Division, Addition, Multiplication, Subtraction",
                      "Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
                      "Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
@@ -593,7 +593,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
         st.markdown("Correct!")
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 2.3"
-    elif question2_2:=="Division, Addition, Multiplication, Subtraction" or question2_2 =="Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)" or question2_2 == "Subtraction, Addition, Multiplication, Division")
+    elif question2_2 =="Division, Addition, Multiplication, Subtraction" or question2_2 =="Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)" or question2_2 == "Subtraction, Addition, Multiplication, Division":
         st.markdown("Try Again!")
         
 
@@ -2236,13 +2236,7 @@ elif st.session_state.expandtitle == "Unit 7.2":
 
     if question_number >= len(questions):
         st.header("Congratulations! You've completed the final exam.")
-        st.session_state.expandtitle = "Exam Results"
 
-
-
-elif st.session_state.expandtitle == "Cheatsheet":
-    st.header("Cheatsheet")
-    # Add content for Cheatsheet
 
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
