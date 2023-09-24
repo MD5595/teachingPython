@@ -1039,6 +1039,17 @@ elif st.session_state.expandtitle == "Unit 3.3":
     st.write("""
     Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
     """)
+    question3_3 = st.radio("Which of the following demonstrates an accurate nested conditional structure for a simple program regarding beverage preference along with temperature preference)”,
+                         ("If-else statements selecting temperature within an outer if-else statement selecting beverage", "if beverage == tea: print(“Tea rocks!”) else: print(“Coffee is better”)", "if-else statements followed by if-else statements of the same level", "if-elif-else statements are nested conditionals"),
+                         index=None,
+                        )
+
+    if (question3_3 == "If-else statements selecting temperature within an outer if-else statement selecting beverage"):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 3.4”
+    elif question3_3 == "if beverage == tea: print(“Tea rocks!”) else: print(“Coffee is better”)" or question3_3 == "if-else statements followed by if-else statements of the same level" or question3_3 == "if-elif-else statements are nested conditionals":
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 3.4":
     st.title("Unit 3: Conditionals Summary")
 
