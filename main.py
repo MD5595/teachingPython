@@ -43,6 +43,8 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 1.4"
         if st.button("Unit 1 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 1.5"
+        if st.button("Unit 1 Quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 1.6"
     with st.expander("Unit 2"):
         if st.button("Unit 2.1: Basic Symbols", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.1"
@@ -367,9 +369,157 @@ elif st.session_state.expandtitle == "Unit 1.5":
     st.write("""
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
+elif st.session_state.expandtitle == "Unit 1.6":
+
+    st.title("Unit 1 Quiz")
+
+    # Question 1
+    q1 = st.radio("If x = 3 and y = 5. A variable result is made that aims to find the product of the two, how would it be done?",
+                  ("3 * 5",
+                   "result = x * y",
+                   "print(\"3 * 5\"",
+                   "result = 3 * 5"),
+                  index=None
+                  )
+
+    if q1 == "result = x * y":
+        st.markdown("Correct!")
+
+        # Question 2
+        q2 = st.radio("What is the primary purpose of a python variable?",
+                      ("To store and manipulate data",
+                       "To display text on the screen",
+                       "To convert numbers to strings",
+                       "To create comments"),
+                      index=None
+                      )
+        if q2 == "To store and manipulate data":
+            st.markdown("Correct!")
+            # Question 3
+            q3 = st.radio("In Python, what does the if statement do?",
+                          ("It defines a function",
+                           "It performs mathematical calculations",
+                           "It controls the flow of a program based on a condition",
+                           "It converts text to lowercase"),
+                          index=None
+                          )
+            if q3 == "It controls the flow of a program based on a condition":
+                st.markdown("Correct!")
+
+                # Question 4
+                q4 = st.radio("What does 'print()' do in Python?",
+                              ("It converts text to uppercase",
+                               "It converts text to lowercase",
+                               "It displays output on the screen",
+                               "It converts numbers to strings"),
+                              index=None
+                              )
+                if q4 == "It displays output on the screen":
+                    st.markdown("Correct!")
+
+                    # Question 5
+                    q5 = st.radio("What is the purpose of the 'input()' function in Python?",
+                                  ("To convert text to uppercase",
+                                   "To accept user input",
+                                   "To display text on the screen",
+                                   "To convert numbers to strings"),
+                                  index=None
+                                  )
+                    if q5 == "To accept user input":
+                        st.markdown("Correct!")
+
+                        # Question 6
+                        q6 = st.radio("What is the result of '3 + 5' in Python?",
+                                      ("2", "7", "8", "15"),
+                                      index=None
+                                      )
+                        if q6 == "8":
+                            st.markdown("Correct!")
+
+                            # Question 7
+                            q7 = st.radio("Which of the following is not a valid Python comment?",
+                                          ("# This is a comment", "// This is a comment",
+                                           "''' This is a comment '''", '"This is a comment"'),
+                                          index=None
+                                          )
+                            if q7 == "// This is a comment":
+                                st.markdown("Correct!")
+
+                                # Question 8
+                                q8 = st.radio("Which symbol is used for exponentiation in Python?",
+                                              ("^", "*", "**", "//"),
+                                              index=None
+                                              )
+                                if q8 == "**":
+                                    st.markdown("Correct!")
+
+                                    # Question 9
+                                    q9 = st.radio("What is the output of 'print(10 // 3)' in Python?",
+                                                  ("3", "3.33", "3.0", "33"),
+                                                  index=None
+                                                  )
+                                    if q9 == "3":
+                                        st.markdown("Correct!")
+
+                                        # Question 10
+                                        q10 = st.radio("What is the purpose of the 'int()' function in Python?",
+                                                       ("To convert text to uppercase",
+                                                        "To accept user input",
+                                                        "To convert numbers to strings",
+                                                        "To convert a value to an integer"),
+                                                       index=None
+                                                       )
+                                        if q10 == "To convert a value to an integer":
+                                            st.markdown("Correct!")
+                                            if st.button("Next Section!"):
+                                                st.session_state.expandtitle = "Unit 2.1"
+
+                                        elif(q10 == "To convert text to uppercase"
+                                        or q10 == "To accept user input"
+                                        or q10 == "To convert a value to an integer"):
+                                            st.markdown("Try Again!")
+                                    elif(q9 == "3.33"
+                                    or q9 == "3.0"
+                                    or q9 == "33"):
+                                        st.markdown("Try Again!")
+                                elif(q8 == "^"
+                                or q8 == "*"
+                                or q8 == "//"):
+                                    st.markdown("Try Again!")
+                            elif(q7 == "# This is a comment"
+                            or q7 == "''' This is a comment '''"
+                            or q7 == "\"This is a comment\""):
+                                st.markdown("Try Again!")
+                        elif(q6 == "2"
+                        or q6 == "7"
+                        or q6 == "15"):
+                            st.markdown("Try Again!")
+                    elif(q5 == "To convert text to uppercase"
+                    or q5 == "To display text on the screen"
+                    or q5 == "To convert numbers to strings"):
+                        st.markdown("Try Again!")
+                elif(q4 == "It converts text to uppercase"
+                or q4 == "It converts text to lowercase"
+                or q4 == "It converts numbers to strings"):
+                    st.markdown("Try Again!")
+            elif(q3 == "It defines a function"
+            or q3 == "It performs mathematical calculations"
+            or q3 == "It converts text to lowercase"):
+                st.markdown("Try Again!")
+        elif(q2 == "To display text on the screen"
+        or q2 == "To convert numbers to strings"
+        or q2 == "To create comments"):
+            st.markdown("Try Again!")
+    elif(q1 == "3 * 5"
+    or q1 == "print(\"3 * 5\""
+    or q1 == "result = 3 * 5"):
+        st.markdown("Try Again!")
+
+
+
 
 elif st.session_state.expandtitle == "Unit 2.1":
-    st.title("Mathematical Operators Explanation")
+    st.title("Basic Symbols")
 
     # Explanation of mathematical operators
     st.write("""
@@ -725,13 +875,6 @@ elif st.session_state.expandtitle == "Home":
             # Redirect to the curriculum page or the first unit
             st.session_state.expandtitle = "Unit 1.1"
             # You can change the expandtitle value based on where you want to redirect the user
-
-        # About Us
-        st.markdown("## About Us")
-        st.write("Learn more about eduPY and our mission to empower learners with Python skills.")
-
-        if st.button("About eduPY"):
-            st.session_state.expandtitle = "About eduPY"
 
         # Footer
         st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
