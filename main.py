@@ -991,6 +991,56 @@ elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1: For Loops")
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
+    st.title("Understanding While Loops")
+
+    # Explanation
+    st.write("While loops continuously perform an action as long as a condition is fulfilled.")
+    st.write("They are useful when you don't know how many iterations your statement will have.")
+    st.write("Here's an example:")
+
+    # Initialize x
+    x = 1
+
+    # While loop example
+    st.code(
+        """
+    while x < 10:
+        st.write("x is less than 10")
+        x += 1
+        """
+    )
+
+    st.write("In this example, the while loop will execute until x becomes greater than or equal to 10.")
+    st.write(
+        "Each time the loop runs, it checks if x is less than 10. If that's true, it prints 'x is less than 10' and increments x by 1.")
+    st.write("Now, let's run the loop to see it in action:")
+
+    # While loop execution
+    x = 1  # Reset x
+    while x < 10:
+        st.write(f"x is {x}. It is less than 10.")
+        x += 1
+
+    st.write("The loop stops when x reaches 10 because the condition (x < 10) is no longer fulfilled.")
+    st.write("While loops are powerful for tasks where you need to repeat an action until a certain condition is met.")
+
+    # More complex example
+    st.header("Example: Counting Odd Numbers")
+
+    st.write("Let's use a while loop to count and display the first 10 odd numbers.")
+    st.write("We'll start with 1 and keep adding 2 until we have 10 odd numbers.")
+
+    # Initialize variables
+    count = 1
+    odd_numbers = []
+
+    # While loop to count odd numbers
+    while count <= 10:
+        odd_numbers.append(count)
+        count += 2
+
+    st.write(f"The first 10 odd numbers are: {odd_numbers}")
+
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
 elif st.session_state.expandtitle == "Unit 4.4":
