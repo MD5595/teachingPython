@@ -22,34 +22,8 @@ if 'expandtitle' not in st.session_state:
 
 
 with st.sidebar:
-
-
-    col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
-    with col1:
-        if st.button(":house:"):
-            st.session_state.expandtitle = "Home"
-    with col2:
-        if st.button("1"):
-            st.session_state.expandtitle = "Unit 1.1"
-    with col3:
-        if st.button("2"):
-            st.session_state.expandtitle = "Unit 2.1"
-    with col4:
-        if st.button("3"):
-            st.session_state.expandtitle = "Unit 3.1"
-    with col5:
-        if st.button("4"):
-            st.session_state.expandtitle = "Unit 4.1"
-    with col6:
-        if st.button("5"):
-            st.session_state.expandtitle = "Unit 5.1"
-    with col7:
-        if st.button("6"):
-            st.session_state.expandtitle = "Unit 6.1"
-    with col8:
-        if st.button("F"):
-            st.session_state.expandtitle = "Unit 7.1"
     account_manager()
+    container = st.container()
 
     "Select:"
     if st.button("Home",use_container_width=True):
@@ -87,12 +61,14 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 3.1"
         if st.button("Unit 3.2: Else Statements", use_container_width=True):
             st.session_state.expandtitle = "Unit 3.2"
-        if st.button("Unit 3.3: Nested Conditionals", use_container_width=True):
+        if st.button("Unit 3.3: Elif Statements", use_container_width=True):
             st.session_state.expandtitle = "Unit 3.3"
-        if st.button("Unit 3 Summary", use_container_width=True):
+        if st.button("Unit 3.4: Nested Conditionals", use_container_width=True):
             st.session_state.expandtitle = "Unit 3.4"
-        if st.button("Unit 3 quiz", use_container_width=True):
+        if st.button("Unit 3 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 3.5"
+        if st.button("Unit 3 quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.6"
     with st.expander("Unit 4"):
         if st.button("Unit 4.1: For-Loops", use_container_width=True):
             st.session_state.expandtitle = "Unit 4.1"
@@ -208,7 +184,7 @@ elif st.session_state.expandtitle == "Unit 1.2":
 
 
 elif st.session_state.expandtitle == "Unit 1.3":
-    st.title("Unit 1.3: Variable Explanation App")
+    st.title("Variable Explanation App")
 
     # Explanations
     st.write("""
@@ -543,7 +519,7 @@ elif st.session_state.expandtitle == "Unit 1.6":
 
 
 elif st.session_state.expandtitle == "Unit 2.1":
-    st.title("Unit 2.1: Basic Symbols")
+    st.title("Basic Symbols")
 
     # Explanation of mathematical operators
     st.write("""
@@ -576,7 +552,7 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num4 / num5 = {num4 / num5}")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
-    st.title("Unit 2.2: Order of Operations in Python")
+    st.title("Order of Operations in Python")
 
     # Explanation of the order of operations
     st.write("""
@@ -654,28 +630,6 @@ elif st.session_state.expandtitle == "Unit 2.3":
 
 elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2 Summary")
-    st.write("""
-        | Operator  |   Function                                          |
-        |-----------|-----------------------------------------------------|
-        |    ()     |    Call operator - calls function or method         |
-        |    **     | Exponent operator - raises a value to an exponent   |
-        | *,/,//,%  |    Multiplication - multiplies, Division - divides, |
-        |           |   Floor Division - removes decimal after division,  |  
-        |           |  Modulo - Provides remainder after division         |
-        |           |                                                     |
-        |   +, -    | Addition - Adds, Subtraction - subtracts            |
-        """)
-    st.write(" Examples of each: ")
-    st.code(" print('The parentheses help tell what to print')", language='python')
-    st.code(" val = 3 ** 2 #stores 9 in val", language='python')
-    st.code(" val = 3 * 2 #stores 6 in val", language='python')
-    st.code(" val = 3 / 1 #stores 3 in val", language='python')
-    st.code(" val = 3 // 2 #stores 1 in val (cuts off the .5 in 1.5)", language='python')
-    st.code(" val = 3 % 2 #stores 1 in val because 3/2 is 1 remainder 1", language='python')
-    st.code(" val = 3 + 2 #stores 5 in val", language='python')
-    st.code(" val = 3 - 2 #stores in 1", language='python')
-    st.write(" These operators, in order of highest precedence to lowest, make up the majority of arithmetic operators used in python")
-
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
     # Question 1
@@ -1028,8 +982,10 @@ elif st.session_state.expandtitle == "Unit 3.3":
     Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
     """)
 elif st.session_state.expandtitle == "Unit 3.4":
-    st.header("Unit 3 Summary")
+    st.header("Unit 3.4: Nested Conditionals")
 elif st.session_state.expandtitle == "Unit 3.5":
+    st.header("Unit 3 Summary")
+elif st.session_state.expandtitle == "Unit 3.6":
     st.header("Unit 3 Quiz")
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1: For Loops")
@@ -1468,31 +1424,6 @@ elif st.session_state.expandtitle == "Cheatsheet":
 
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
-
-    # Check if flashcards have been created previously
-    if 'flashcards' not in st.session_state:
-        st.session_state.flashcards = {}
-
-    # Input fields to add new flashcards
-    st.subheader("Create Flashcards")
-    term = st.text_input("Term:")
-    definition = st.text_input("Definition:")
-    if st.button("Add Flashcard"):
-        if term and definition:
-            st.session_state.flashcards[term] = definition
-            st.success("Flashcard added successfully!")
-
-    # Main content area to display flashcards
-    st.subheader("Your Flashcards")
-
-    if not st.session_state.flashcards:
-        st.info("No flashcards created yet. Use the input fields above to add flashcards.")
-    else:
-        for term, definition in st.session_state.flashcards.items():
-            st.write(f"**Term:** {term}")
-            st.write(f"**Definition:** {definition}")
-
-
     # Add content for Flashcards
 
 elif st.session_state.expandtitle == "Home":
