@@ -2148,6 +2148,27 @@ elif st.session_state.expandtitle == "Unit 6.3":
     st.write("The 'return' statement is used to specify the value to be returned from a function.")
     st.write(
         "Understanding how to use return values is crucial for creating functions that perform specific tasks and provide meaningful results.")
+    st.title("Unit 6.3: Returning Values in Functions Question")
+
+    # Question
+    st.write("What is the purpose of returning values from functions in programming?")
+
+    # Multiple-choice options
+    options = ["To allow functions to produce results and provide output to the caller.",
+               "To determine the order of execution in a program.",
+               "To define the name of the function.",
+               "To pass data into a function when it is called."]
+
+    # Radio buttons for options
+    selected_option = st.radio("Select the correct option:", options)
+
+    # Check if the selected option is correct
+    if selected_option == options[0]:
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 4.1"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 6.4":
 
     st.title("Unit 6: Functions Summary")
