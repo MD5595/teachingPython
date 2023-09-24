@@ -356,6 +356,9 @@ elif st.session_state.expandtitle == "Unit 1.5":
     st.write("""
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
+    if st.button("Next Section"):
+        st.session_state.expand.title = "Unit 1.6"
+    
 elif st.session_state.expandtitle == "Unit 1.6":
 
     st.title("Unit 1 Quiz")
