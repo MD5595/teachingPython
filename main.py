@@ -879,6 +879,21 @@ elif st.session_state.expandtitle == "Unit 3.1":
 
     Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
     """)
+    question = st.radio("What is the primary purpose of an 'if' statement in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To define a function",
+                         "To print text to the console"),
+                        index=None
+                        )
+    if question == "To make decisions based on conditions":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 3.2"
+    elif (question == "To create a loop"
+          or question == "To define a function"
+          or question == "To print text to the console"):
+        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 3.2":
     st.header("Unit 3.2: Else If (elif) Statements")
