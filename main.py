@@ -42,6 +42,17 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 1.4"
         if st.button("Unit 1.5: Summary"):
             st.session_state.expandtitle = "Unit 1.5"
+    with st.expander("Unit 2"):
+        if st.button("Unit 2.1: Basic Symbols"):
+            st.session_state.expandtitle = "Unit 2.1"
+        if st.button("Unit 2.2: Order of Operations"):
+            st.session_state.expandtitle = "Unit 2.2"
+        if st.button("Unit 2.3: Modules"):
+            st.session_state.expandtitle = "Unit 2.3"
+        if st.button("Unit 2.4: Summary"):
+            st.session_state.expandtitle = "Unit 2.4"
+        if st.button("Unit 2.5: Quiz"):
+            st.session_state.expandtitle = "Unit 2.5"
 
     with st.expander("Unit 4"):
         if st.button("Unit 4.1"):
@@ -222,7 +233,16 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num3 = {num3}")
     st.write(f"3 // 10 = {3 // 10}")
     st.write(f"num4 / num5 = {num4 / num5}")
-
+elif st.session_state.expandtitle == "Unit 2.1":
+    st.header("Unit 2.1: Basic Symbols")
+elif st.session_state.expandtitle == "Unit 2.2":
+    st.header("Unit 2.2: Order of Operation")
+elif st.session_state.expandtitle == "Unit 2.3":
+    st.header("Unit 2.3: Modules")
+elif st.session_state.expandtitle == "Unit 2.4":
+    st.header("Unit 2.4: Summary")
+elif st.session_state.expandtitle == "Unit 2.5":
+    st.header("Unit 2.5: Quiz")
 
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1:")
