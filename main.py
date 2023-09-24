@@ -1446,6 +1446,31 @@ elif st.session_state.expandtitle == "Cheatsheet":
 
 elif st.session_state.expandtitle == "Flashcards":
     st.header("Flashcards")
+
+    # Check if flashcards have been created previously
+    if 'flashcards' not in st.session_state:
+        st.session_state.flashcards = {}
+
+    # Input fields to add new flashcards
+    st.subheader("Create Flashcards")
+    term = st.text_input("Term:")
+    definition = st.text_input("Definition:")
+    if st.button("Add Flashcard"):
+        if term and definition:
+            st.session_state.flashcards[term] = definition
+            st.success("Flashcard added successfully!")
+
+    # Main content area to display flashcards
+    st.subheader("Your Flashcards")
+
+    if not st.session_state.flashcards:
+        st.info("No flashcards created yet. Use the input fields above to add flashcards.")
+    else:
+        for term, definition in st.session_state.flashcards.items():
+            st.write(f"**Term:** {term}")
+            st.write(f"**Definition:** {definition}")
+
+
     # Add content for Flashcards
 
 elif st.session_state.expandtitle == "Home":
