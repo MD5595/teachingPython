@@ -556,8 +556,8 @@ elif st.session_state.expandtitle == "Unit 2.1":
     if question2_1 == "5.5":
         st.markdown("Correct!")
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 1.5"
-    else:
+            st.session_state.expandtitle = "Unit 2.2"
+    elif question2_1 ==  "4.0" or question2_1 == "6.0" or question2_1 =="7.0":
         st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
@@ -2384,17 +2384,14 @@ elif st.session_state.expandtitle == "Home":
         st.write("Thank you for choosing eduPY. We wish you success in your Python development endeavors!")
 
     with tab3:
-        # Header
         st.title("About eduPY")
         st.markdown("## Welcome to eduPY – Your Gateway to Python Education!")
 
-        # Introduction
         st.write("At eduPY, we are passionate about spreading the knowledge and power of Python programming "
                  "to learners of all levels, from beginners taking their first steps in coding to seasoned "
                  "developers looking to enhance their skills. Our mission is to make Python education accessible, "
                  "engaging, and effective.")
 
-        # What Sets Us Apart
         st.markdown("## What Sets Us Apart")
         st.subheader("Comprehensive Python Curriculum")
         st.write("We offer a comprehensive curriculum that covers Python programming from the fundamentals "
@@ -2437,4 +2434,3 @@ elif st.session_state.expandtitle == "Home":
 
         st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
 
-    # Add content for Home
