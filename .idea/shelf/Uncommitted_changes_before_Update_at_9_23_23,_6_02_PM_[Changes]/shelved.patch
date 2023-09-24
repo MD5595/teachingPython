@@ -1,0 +1,94 @@
+Index: account.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/account.py b/account.py
+--- a/account.py	
++++ b/account.py	
+@@ -1,15 +1,38 @@
+ import streamlit as st
+ 
+-def app():
+-    st.title('User login/signup')
++
++def account():
++
++    user_credentials = {}
++    flag = True
++
++    st.title("Account")
++
++    if (st.button("Sign Up")):
++        create_credentials(user_credentials)
++
++    if (st.button("Login")):
++
++        login()
++        check_credentials(login[0], login[1], user_credentials)
++
++        while flag:
+ 
+-    choice = st.selection("Login/Signup', {Login")
++            if check_credentials(login[0], login[1], user_credentials):
++                st.success("Access granted")
++                flag = False
++            else:
++                st.text("Access denied, Try Again")
++                login()
++
+ 
+ def create_credentials(credentials):
++
+     # Asks user for their info
+-    username = (input("Enter a username for your account: "))
+-    password = (input("Enter a password for your account (8 characters or numbers): "))
+-
++    with st.form(key='Account Creation'):
++        username = (st.text_input("Enter a username for your account: ", "Type here..."))
++        password = (st.text_input("Enter a password for your account (8 characters or numbers): ", "Type here..."))
++        st.form_submit_button("Sign Up!")
+     # stores user info in dictionary and returns dictionary
+     credentials[username] = password
+     return credentials
+@@ -18,8 +41,10 @@
+ def login():
+ 
+     cred_list = []
+-    username = "Enter your username: "
+-    password = "Enter your password: "
++    with st.form(key='Log-In'):
++        username = (st.text_input("Enter the username for your account: ", "Type here..."))
++        password = (st.text_input("Enter the password for your account: ", "Type here..."))
++        st.form_submit_button("Log In!")
+ 
+     cred_list.append(username)
+     cred_list.append(password)
+@@ -35,25 +60,9 @@
+     if username in credentials and (credentials[username] == password):
+         return True
+     elif (username in credentials) and (credentials[username] != password):
+-        print("Incorrect password, try again.")
++        st.text("Incorrect password, try again.")
+         return False
+     elif username not in credentials:
+-        print("Username incorrect, try again or Create Account.")
++        st.text("Username incorrect, try again or Create Account.")
+         return False
+ 
+-
+-user_credentials = {}
+-flag = True
+-app()
+-create_credentials(user_credentials)
+-login()
+-
+-while flag:
+-
+-    if check_credentials(login[0], login[1], user_credentials):
+-        print("Access granted")
+-        flag = False
+-    else:
+-        login()
+-
+-

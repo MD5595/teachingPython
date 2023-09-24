@@ -1,0 +1,49 @@
+Index: account.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/account.py b/account.py
+--- a/account.py	
++++ b/account.py	
+@@ -5,11 +5,11 @@
+     user_credentials = {}
+ 
+     st.title("Account")
+-
++    login_button = st.button("Login")
+     if st.button("Sign Up"):
+         create_credentials(user_credentials)
+ 
+-    if st.button("Login"):
++    if login_button:
+ 
+         login()
+         user_info = login()
+@@ -67,3 +67,25 @@
+         st.warning("Username incorrect, try again or Create Account.")
+         return False
+ 
++"""
++
++def data_collection(num_correct, num_attempts, benchmark):
++    
++    progress_list = []
++    access = False
++    average_progress = num_correct // num_attempts
++    
++    if average_progress > benchmark:
++        access = True
++        progress_list.append(average_progress)
++        progress_list.append(access)
++        return progress_list
++    else:
++        access = False
++        progress_list.append(average_progress)
++        progress_list.append(access)
++        return progress_list
++    
++
++
++"""
+\ No newline at end of file

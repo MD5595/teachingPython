@@ -1,0 +1,35 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,8 +1,26 @@
+ import streamlit as st
++from account import account
+ from PIL import Image
+ 
++
+ st.set_page_config(page_title="py.EDU", page_icon=":snake:", layout="wide", initial_sidebar_state="auto",
+                    menu_items=None)
++
++st.markdown(
++    """
++    <style>
++        .sidebar .sidebar-content {
++            position: sticky;
++            top: 0;
++            z-index: 2;
++        }
++    </style>
++    """,
++    unsafe_allow_html=True
++)
++
++account()
++
+ st.header(":blue[py]:red[EDU]:snake:")
+ expandtitle = None
+ complete = False
