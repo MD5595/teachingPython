@@ -13,6 +13,9 @@ st.header(":blue[EDU]:red[py]:snake:")
 if 'expandtitle' not in st.session_state:
     st.session_state.expandtitle = "Home"
 
+if st.session_state.get("question_number") is None:
+    st.session_state.question_number = 0
+
 with st.sidebar:
     account_manager()
     container = st.container()
@@ -356,6 +359,9 @@ elif st.session_state.expandtitle == "Unit 1.5":
     st.write("""
     Different data types can be used in different statements. For example, integers, floats, and strings can be added to variables of the same data type, but booleans can't. Also, you can only use the modulus operator with the int and float data types.
     """)
+    if st.button("Next Section"):
+        st.session_state.expand.title = "Unit 1.6"
+    
 elif st.session_state.expandtitle == "Unit 1.6":
 
     st.title("Unit 1 Quiz")
@@ -2167,6 +2173,57 @@ elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
+
+    questions = [
+        {
+            'unit': "Unit 1: Intro",
+            'question': "Write a Python comment that says comment.",
+            'expected_answer': "# comment"
+        },
+        {
+            'unit': "Unit 2: Math Operators",
+            'question': "Write Python code to calculate the sum of two numbers, 5 and 3.",
+            'expected_answer': "5 + 3"
+        },
+        {
+            'unit': "Unit 3: Conditionals",
+            'question': "Write an 'if' statement that checks if a variable 'x' is greater than 10.",
+            'expected_answer': "if x > 10:"
+        },
+        {
+            'unit': "Unit 4: Loops",
+            'question': "Write a 'for' loop that iterates through a list named 'numbers'.",
+            'expected_answer': "for number in numbers:"
+        },
+        {
+            'unit': "Unit 5: Lists",
+            'question': "Write Python code to add an element 'apple' to a list named 'fruits'.",
+            'expected_answer': "fruits.append('apple')"
+        },
+        {
+            'unit': "Unit 6: Functions",
+            'question': "Write a function named 'multiply' that takes two arguments, 'a' and 'b', and returns their product.",
+            'expected_answer': "def multiply(a, b):\n    return a * b"
+        }
+    ]
+
+    question_number = st.session_state.question_number
+
+    if question_number < len(questions):
+        current_question = questions[question_number]
+        st.subheader(f"Question {question_number + 1} ({current_question['unit']})")
+        st.write(current_question['question'])
+        user_answer = st.text_input("Your Answer:")
+
+        if user_answer and user_answer.strip() == current_question['expected_answer']:
+            st.markdown("Correct! Your answer matches the expected response.")
+            st.session_state.question_number += 1
+        elif user_answer:
+            st.markdown("Incorrect. Please try again.")
+
+    if question_number >= len(questions):
+        st.header("Congratulations! You've completed the final exam.")
+        st.session_state.expandtitle = "Exam Results"
 
 
 
