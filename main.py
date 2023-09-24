@@ -23,7 +23,6 @@ if 'expandtitle' not in st.session_state:
 
 
 with st.sidebar:
-
     account_manager()
 
     "Select:"
@@ -55,10 +54,62 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 2.4"
         if st.button("Unit 2 Quiz", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.5"
-
+    with st.expander("Unit 3"):
+        if st.button("Unit 3.1: If Statements", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.1"
+        if st.button("Unit 3.2: Else Statements", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.2"
+        if st.button("Unit 3.3: Elif Statements", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.3"
+        if st.button("Unit 3.4: Nested Conditionals", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.4"
+        if st.button("Unit 3 Summary", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.5"
+        if st.button("Unit 3 quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 3.6"
     with st.expander("Unit 4"):
-        if st.button("Unit 4.1"):
+        if st.button("Unit 4.1: For-Loops", use_container_width=True):
             st.session_state.expandtitle = "Unit 4.1"
+        if st.button("Unit 4.2: While Loops", use_container_width=True):
+            st.session_state.expandtitle = "Unit 4.2"
+        if st.button("Unit 4.3: Nested Loops", use_container_width=True):
+            st.session_state.expandtitle = "Unit 4.3"
+        if st.button("Unit 4 Summary", use_container_width=True):
+            st.session_state.expandtitle = "Unit 4.4"
+        if st.button("Unit 4 Quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 4.5"
+    with st.expander("Unit 5"):
+        if st.button("Unit 5.1: Lists", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.1"
+        if st.button("Unit 5.2: Traversing Through Lists", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.2"
+        if st.button("Unit 5.3: Appending/Removing", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.3"
+        if st.button("Unit 5.4: 2D-Lists", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.4"
+        if st.button("Unit 5 Summary", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.5"
+        if st.button("Unit 5 quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 5.6"
+    with st.expander("Unit 6"):
+        if st.button("Unit 6.1: Function Declaration", use_container_width=True):
+            st.session_state.expandtitle = "Unit 6.1"
+        if st.button("Unit 6.2: Parameters", use_container_width=True):
+            st.session_state.expandtitle = "Unit 6.2"
+        if st.button("Unit 6.3: Returning Values in Functions", use_container_width=True):
+            st.session_state.expandtitle = "Unit 6.3"
+        if st.button("Unit 6 Summary", use_container_width=True):
+            st.session_state.expandtitle = "Unit 6.4"
+        if st.button("Unit 6 Quiz", use_container_width=True):
+            st.session_state.expandtitle = "Unit 6.5"
+    with st.expander("Unit 7"):
+        if st.button("Recap", use_container_width=True):
+            st.session_state.expandtitle = "Unit 7.1"
+        if st.button("Final Exam", use_container_width=True):
+            st.session_state.expandtitle = "Unit 7.2"
+        if st.button("Final Project", use_container_width=True):
+            st.session_state.expandtitle = "Unit 7.3"
+
 
 if st.session_state.expandtitle == "Unit 1.1":
     st.header("Unit 1.1: Introduction to Python")
@@ -429,10 +480,57 @@ elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2 Summary")
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
-
+elif st.session_state.expandtitle == "Unit 3.1":
+    st.header("Unit 3.1: If Statements")
+elif st.session_state.expandtitle == "Unit 3.2":
+    st.header("Unit 3.2: Else Statements")
+elif st.session_state.expandtitle == "Unit 3.3":
+    st.header("Unit 3.3: Elif Statements")
+elif st.session_state.expandtitle == "Unit 3.4":
+    st.header("Unit 3.4: Nested Conditionals")
+elif st.session_state.expandtitle == "Unit 3.5":
+    st.header("Unit 3 Summary")
+elif st.session_state.expandtitle == "Unit 3.6":
+    st.header("Unit 3 Quiz")
 elif st.session_state.expandtitle == "Unit 4.1":
-    st.header("Unit 4.1:")
-    # Add content for Unit 4.1
+    st.header("Unit 4.1: For Loops")
+elif st.session_state.expandtitle == "Unit 4.2":
+    st.header("Unit 4.2: While Loops")
+elif st.session_state.expandtitle == "Unit 4.3":
+    st.header("Unit 4.3: Nested Loops")
+elif st.session_state.expandtitle == "Unit 4.4":
+    st.header("Unit 4 Summary")
+elif st.session_state.expandtitle == "Unit 4.5":
+    st.header("Unit 4 Quiz")
+elif st.session_state.expandtitle == "Unit 5.1":
+    st.header("Unit 5.1: Lists")
+elif st.session_state.expandtitle == "Unit 5.2":
+    st.header("Unit 5.2: Traversing Through Lists")
+elif st.session_state.expandtitle == "Unit 5.3":
+    st.header("Unit 5.3: Appending/Removing")
+elif st.session_state.expandtitle == "Unit 5.4":
+    st.header("Unit 5.4: 2-D Lists")
+elif st.session_state.expandtitle == "Unit 5.5":
+    st.header("Unit 5 Summary")
+elif st.session_state.expandtitle == "Unit 5.6":
+    st.header("Unit 5 Quiz")
+elif st.session_state.expandtitle == "Unit 6.1":
+    st.header("Unit 6.1: Function Declaration")
+elif st.session_state.expandtitle == "Unit 6.2":
+    st.header("Unit 6.2: Parameters")
+elif st.session_state.expandtitle == "Unit 6.3":
+    st.header("Unit 6.3: Returning Values in Functions")
+elif st.session_state.expandtitle == "Unit 6.4":
+    st.header("Unit 6 Summary")
+elif st.session_state.expandtitle == "Unit 6.5":
+    st.header("Unit 6 Quiz")
+elif st.session_state.expandtitle == "Unit 7.1":
+    st.header("Recap")
+elif st.session_state.expandtitle == "Unit 7.2":
+    st.header("Final Exam")
+elif st.session_state.expandtitle == "Unit 7.3":
+    st.header("Final Project")
+
 
 elif st.session_state.expandtitle == "Cheatsheet":
     st.header("Cheatsheet")
