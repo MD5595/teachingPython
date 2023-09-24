@@ -484,8 +484,147 @@ elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
 elif st.session_state.expandtitle == "Unit 3.1":
     st.header("Unit 3.1: If Statements")
+    st.title("If-Else Statements, Conditional, and Logical Operators")
+
+    # Explanation of conditional statements, comparison operators, and logical operators
+    st.write("""
+    Conditional statements determine if one or multiple conditions have been met and perform an action based on whether the condition is fulfilled or not.
+
+    Conditional statements use logical operators. Here are the comparison operators:
+    - Greater than (>)
+    - Less than (<)
+    - Equal to (==)
+    - Not equal to (!=)
+    - Greater than or equal to (>=)
+    - Less than or equal to (<=)
+
+    And here are the logical operators:
+    - And (If both statements are true, the condition is fulfilled)
+    - Or (If either condition is true, the condition is fulfilled)
+    - Not (Reverses the Boolean value of a statement)
+
+    Values are compared, and if the statement is true (returning True, a Boolean value), then the code under the condition will get executed.
+
+    Let's see an example using the if statement:
+    """)
+    st.code("x = 15\n"
+            "if x > 10 or x != 10:\n"
+            "    print('Hello')",
+            language='python')
+
+    st.write("""
+    In the code above, the if statement checks if x is greater than 10 or not equal to 10. If the condition is met, it prints 'Hello'.
+
+    Note the indented portion of the code and the colon at the end of the condition that signifies that everything below that is indented only happens if the condition is met.
+
+    If-else statements are similar to if statements, but they allow you to specify an action to perform if the original condition is not fulfilled. Here's an example:
+    """)
+    st.code("x = int(input('Enter a number'))\n"
+            "\n"
+            "if x > 10:\n"
+            "    print('X is greater than 10.')\n"
+            "else:\n"
+            "    print('X is either less than 10')\n"
+            "    print('Or 10.')",
+            language='python')
+
+    st.write("""
+    In this code, we take user input for a number and use if-else statements to check whether it's greater than 10. Depending on the condition, different messages are printed. You can include multiple actions under one condition.
+
+    Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
+    """)
 elif st.session_state.expandtitle == "Unit 3.2":
     st.header("Unit 3.2: Else Statements")
+    st.title("Else-If Statements (elif) Explanation")
+
+    # Explanation of else-if statements (elif)
+    st.write("""
+    Else-if statements, also known as "elif" statements, are used for more complex branching in your code. They allow you to handle multiple conditions and perform different actions depending on which condition is met. 
+
+    Here's a more detailed look at else-if statements:
+
+    Else-if statements are used when you have two or more conditions to check, and you want to execute specific code blocks based on those conditions.
+
+    In the following example, we'll create a program that asks for the user's name and greets them differently based on their name:
+    """)
+    st.code("name = input('Enter your name: ')\n"
+            "\n"
+            "if name == 'Tom':\n"
+            "    print('Hi Tom')\n"
+            "elif name == 'John':\n"
+            "    print('Hi John')\n"
+            "elif name == 'June':\n"
+            "    print('Hi June')\n"
+            "else:\n"
+            "    print('Hello')",
+            language='python')
+
+    st.write("""
+    In this code, we first ask the user to enter their name. Then, we use else-if statements (elif) to check multiple conditions. If the user's name matches one of the conditions, a specific greeting is printed. If none of the conditions are met, a default greeting is printed using the else statement.
+
+    Here's a breakdown of the code:
+    - We ask for the user's name using the `input` function.
+    - We use if-elif-else statements to check the name against multiple conditions.
+    - If the name is 'Tom', it prints 'Hi Tom.'
+    - If the name is 'John', it prints 'Hi John.'
+    - If the name is 'June', it prints 'Hi June.'
+    - If none of the conditions are met, it prints 'Hello.'
+
+    You can include as many elif statements as needed to handle various cases.
+
+    Else-if statements are useful for creating complex decision trees in your code, allowing you to execute different actions based on different conditions. They make your code more flexible and capable of handling a wide range of scenarios.
+    """)
+
+    # More content here (copy and paste the above section to extend it)
+    st.write("""
+    Here's another example of using elif statements to determine the season based on the month entered by the user:
+    """)
+    st.code("month = input('Enter the month (e.g., January): ')\n"
+            "\n"
+            "if month == 'December' or month == 'January' or month == 'February':\n"
+            "    print('It's winter.')\n"
+            "elif month == 'March' or month == 'April' or month == 'May':\n"
+            "    print('It's spring.')\n"
+            "elif month == 'June' or month == 'July' or month == 'August':\n"
+            "    print('It's summer.')\n"
+            "elif month == 'September' or month == 'October' or month == 'November':\n"
+            "    print('It's autumn.')\n"
+            "else:\n"
+            "    print('Month not recognized.')",
+            language='python')
+
+    st.write("""
+    In this code, we take the user's input for the month and use elif statements to determine the season. Depending on the entered month, it prints the corresponding season. If the month is not recognized, it prints 'Month not recognized.'
+
+    This demonstrates how elif statements can handle a range of conditions and make your code more comprehensive and adaptable.
+
+    Feel free to use elif statements in your code whenever you need to make decisions based on multiple conditions, as they help structure your logic effectively.
+    """)
+
+    # More content here (copy and paste the above section to extend it)
+    st.write("""
+    Here's a more complex example that uses elif statements to determine the category of a product based on its price:
+    """)
+    st.code("price = float(input('Enter the price of the product: '))\n"
+            "\n"
+            "if price < 10:\n"
+            "    print('Category: Low-cost')\n"
+            "elif price >= 10 and price < 50:\n"
+            "    print('Category: Mid-range')\n"
+            "elif price >= 50 and price < 100:\n"
+            "    print('Category: Premium')\n"
+            "else:\n"
+            "    print('Category: Luxury')",
+            language='python')
+
+    st.write("""
+    In this code, we take the price of a product as input, and based on the price range, we determine its category. If the price is less than 10, it's considered low-cost. If it falls between 10 and 50, it's mid-range, and so on.
+
+    This example illustrates how elif statements can handle more intricate decision-making processes, allowing your code to respond intelligently to various scenarios.
+
+    Else-if statements are a powerful tool for branching logic in your code, making it more versatile and capable of handling complex decision-making tasks.
+    """)
+
 elif st.session_state.expandtitle == "Unit 3.3":
     st.header("Unit 3.3: Elif Statements")
 elif st.session_state.expandtitle == "Unit 3.4":
