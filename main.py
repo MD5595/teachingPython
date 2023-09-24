@@ -11,12 +11,16 @@ st.header(":blue[py]:red[EDU]:snake:")
 
 if 'expandtitle' not in st.session_state:
     st.session_state.expandtitle = None
+question2 = {0: "", 1: ""}
 
 
 
 
 with st.sidebar:
     "Select:"
+    if st.button("Home",use_container_width=True):
+        st.session_state.expandtitle = "Home"
+
     with st.expander("Practice Tools"):
         if st.button("Flashcard Maker"):
             st.session_state.expandtitle = "Flashcards"
@@ -62,7 +66,7 @@ if st.session_state.expandtitle == "Unit 1.1":
                 "program should be:")
     st.code("Hello, World!", language='python')
     question1 = st.radio("What would hello_world.py output?", ("Hello, World!", "Hello, Python", "Hello", "Bye"),
-                         index=None, key="q1")
+                         index=None)
     if question1 == "Hello, World!":
         st.markdown("Correct!")
         if st.button("Next Section"):
@@ -82,6 +86,24 @@ elif st.session_state.expandtitle == "Unit 1.2":
                 "is sound, if you spell something incorrectly your program will not function. Computers are good at "
                 "following instructions but mistakes as minor as writing rint(“Hello”) instead of print(“Hello”) will "
                 "trip up the computer.")
+    st.subheader("Indentation")
+    st.markdown("Indentation indicates a line/block of code is related to the non-indented code directly above it. "
+                "The following code will not work due to the unnecessary indent")
+    st.code("print(\"“Hi.\")\n\tprint(\"Hi.\")", language='python')
+    st.markdown("Ensure you include the correct spelling, spacing, indents, and within your code. Starting in unit 3 "
+                "cases where indentation is required will appear.")
+    options = ["print(\"Goodmorning!\")", "print(\'Goodmorning!\")", "print(Goodmorning!)", "print(\'Goodmorning!\')"]
+    answers = ["print(\"Goodmorning!\")", "print(\'Goodmorning!\')"]
+    wrongAnswers = ["print(Goodmorning!)", "print(\'Goodmorning!\")"]
+    question2 = st.multiselect("Which two print statements would output: Goodmorning!", options,
+                         default=None)
+    if (question2[0] in answers) and (question2[1] in answers) and (question2[0] != question2[1]):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.3"
+    elif (question2[0] in wrongAnswers) or (question2[1] in wrongAnswers) or (question2[0] == question2[1]):
+        st.markdown("Try Again!")
+
 
 
 
