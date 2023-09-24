@@ -47,7 +47,7 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 2.1"
         if st.button("Unit 2.2: Order of Operations", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.2"
-        if st.button("Unit 2.3: Modules", use_container_width=True):
+        if st.button("Unit 2.3: Modulo", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.3"
         if st.button("Unit 2.4: Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.4"
@@ -303,7 +303,7 @@ elif st.session_state.expandtitle == "Unit 2.1":
 elif st.session_state.expandtitle == "Unit 2.2":
     st.header("Unit 2.2: Order of Operation")
 elif st.session_state.expandtitle == "Unit 2.3":
-    st.header("Unit 2.3: Modules")
+    st.header("Unit 2.3: Modulo")
 elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2.4: Summary")
 elif st.session_state.expandtitle == "Unit 2.5":
