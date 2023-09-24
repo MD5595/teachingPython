@@ -1262,22 +1262,7 @@ elif st.session_state.expandtitle == "Unit 4.1":
     st.write(
         "For loops are versatile and commonly used in programming for tasks like data processing and repetitive actions.")
     st.write("Understanding how to use for loops effectively is crucial for writing efficient and structured code.")
-    question = st.radio("What is the primary purpose of a 'for' loop in Python?",
-                        ("To make decisions based on conditions",
-                         "To create a loop",
-                         "To define a function",
-                         "To print text to the console"),
-                        index=None
-                        )
 
-    if question == "To create a loop":
-        st.markdown("Correct!")
-        if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 4.2"
-    elif (question == "To make decisions based on conditions"
-          or question == "To define a function"
-          or question == "To print text to the console"):
-        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
 
@@ -1328,21 +1313,6 @@ elif st.session_state.expandtitle == "Unit 4.2":
         count += 2
 
     st.write(f"The first 10 odd numbers are: {odd_numbers}")
-    question = st.radio("What is the primary purpose of a 'while' loop in Python?",
-                        ("To make decisions based on conditions",
-                         "To create a loop",
-                         "To define a function",
-                         "To print text to the console"),
-                        index=None
-                        )
-    if question == "To create a loop":
-        st.markdown("Correct!")
-        if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 4.3"
-    elif (question == "To make decisions based on conditions"
-          or question == "To define a function"
-          or question == "To print text to the console"):
-        st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
@@ -1786,7 +1756,6 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
     st.write(
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
-
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
     st.title("Unit 5: Lists Summary")
