@@ -582,6 +582,20 @@ elif st.session_state.expandtitle == "Unit 2.2":
 
     Python does basic math in the same order you would do on paper.
     """)
+    question3 = st.radio("In Python, what is the correct order of operations for evaluating expressions?", 
+                    ("Division, Addition, Multiplication, Subtraction",
+                     "Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
+                     "Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
+                     "Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)",
+                     "Subtraction, Addition, Multiplication, Division"),
+                    index=None, key="q3")
+    if question2_2 == "Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 2.3"
+    elif question2_2:=="Division, Addition, Multiplication, Subtraction" or question2_2 =="Exponents, Parentheses, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)" or question2_2 == "Subtraction, Addition, Multiplication, Division")
+        st.markdown("Try Again!")
+        
 
 elif st.session_state.expandtitle == "Unit 2.3":
     st.title("Unit 2.3: Modules Explanation")
@@ -629,10 +643,9 @@ elif st.session_state.expandtitle == "Unit 2.4":
         |-----------|-----------------------------------------------------|
         |    ()     |    Call operator - calls function or method         |
         |    **     | Exponent operator - raises a value to an exponent   |
-        | *,/,//,%  |    Multiplication - multiplies, Division - divides, |
-        |           |   Floor Division - removes decimal after division,  |
-        |           |  Modulo - Provides remainder after division         |
-        |           |                                                     |
+        |    *,/    |    Multiplication - multiplies, Division - divides, |
+        |     //    |   Floor Division - removes decimal after division,  |
+        |     %     |  Modulo - Provides remainder after division         |
         |   +, -    | Addition - Adds, Subtraction - subtracts            |
         """)
     st.write(" Examples of each: ")
