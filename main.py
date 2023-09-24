@@ -332,10 +332,45 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num3 = {num3}")
     st.write(f"3 // 10 = {3 // 10}")
     st.write(f"num4 / num5 = {num4 / num5}")
-elif st.session_state.expandtitle == "Unit 2.1":
-    st.header("Unit 2.1: Basic Symbols")
 elif st.session_state.expandtitle == "Unit 2.2":
-    st.header("Unit 2.2: Order of Operation")
+    # Title of the web app
+    st.title("Order of Operations in Python")
+
+    # Explanation of the order of operations
+    st.write("""
+    Whenever a Python program has multiple operators in one line, different parts of the equation will be solved in a specific order.
+
+    Below is the order in which Python operations are processed:
+    1. ()
+    2. **
+    3. *, /, //, %
+    4. +, -
+
+    Once all operators left have the same precedence, the equation will be solved from left to right.
+
+    Let's look at the order of operations in action:
+    """)
+    equation = "X = 3*6+3*(6/2)+2**2"
+    st.code(equation, language='python')
+    st.write("print(X)")
+
+    # Example calculation
+    X = 3 * 6 + 3 * (6 / 2) + 2 ** 2
+    st.write(f"X = {X}")
+
+    # Explanation of the calculation
+    st.write("""
+    The equation is solved as follows:
+    1. (6/2) = 3
+    2. 2**2 = 4
+    3. 3*6 = 18
+    4. 3*3 = 9
+    5. 18+9 = 27
+    6. 27+4 = 31
+
+    Python does basic math in the same order you would do on paper.
+    """)
+
 elif st.session_state.expandtitle == "Unit 2.3":
     st.header("Unit 2.3: Modulo")
 elif st.session_state.expandtitle == "Unit 2.4":
