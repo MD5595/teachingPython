@@ -1681,7 +1681,7 @@ elif st.session_state.expandtitle == "Unit 5.1":
 
         # Provide a button to move to the next section
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Chapter 5.2"
+            st.session_state.expandtitle = "Unit 5.2"
     elif (question == "To make decisions based on conditions"
           or question == "To create a loop"
           or question == "To print text to the console"):
@@ -1742,7 +1742,7 @@ elif st.session_state.expandtitle == "Unit 5.2":
     if question == "To access and process each element in a list":
         st.markdown("Correct!")
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Chapter 5.3"
+            st.session_state.expandtitle = "Unit 5.3"
     elif (question == "To make decisions based on conditions"
           or question == "To create a loop"
           or question == "To print text to the console"):
