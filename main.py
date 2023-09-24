@@ -1800,20 +1800,21 @@ elif st.session_state.expandtitle == "Unit 5.3":
     st.write("You've seen different techniques, including 'append,' 'insert,' 'remove,' and 'pop,' "
              "that allow you to modify the contents of a list.")
     st.write("These operations are crucial for dynamic data handling and list maintenance in programming.")
-    st.title("Unit 5.3: Lists Question")
+    question = st.radio("What is the primary purpose of appending and removing elements in lists in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To add or remove elements to/from a list",
+                         "To print text to the console"),
+                        index=None
+                        )
 
-    # Question
-    st.write("What is the primary purpose of appending and removing elements from lists in programming?")
-
-    # User input field
-    question2 = st.text_input("Enter your answer here:")
-
-    # Check user's answer
-    if question2 == "To modify the content of a list by adding or removing elements":
+    if question == "To add or remove elements to/from a list":
         st.markdown("Correct!")
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 5.4"
-    else:
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
         st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 5.4":
