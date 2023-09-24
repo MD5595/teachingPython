@@ -544,6 +544,21 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num3 = {num3}")
     st.write(f"3 // 10 = {3 // 10}")
     st.write(f"num4 / num5 = {num4 / num5}")
+    question2_1 = st.radio("What is the result of the expression 5 + 3 * 2 / 4 in Python?",
+                     ("4.0",
+                      "6.0",
+                      "5.5",
+                      "7.0"),
+                     index=None,
+                     key="q3"
+                     )
+
+    if question2_1 == "5.5":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.5"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
     st.title("Unit 2.2: Order of Operations in Python")
