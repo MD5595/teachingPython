@@ -1485,7 +1485,6 @@ elif st.session_state.expandtitle == "Unit 5.5":
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
 elif st.session_state.expandtitle == "Unit 6.1":
-    st.header("Unit 6.1: Function Declaration")
     st.title("Unit 6.1: Function Declaration")
 
     st.write("A function is a reusable block of code that performs a specific task or set of tasks. "
@@ -1529,8 +1528,6 @@ elif st.session_state.expandtitle == "Unit 6.1":
         "You've seen how to declare functions with names, parameters, and a function body, as well as how to call them.")
 
 elif st.session_state.expandtitle == "Unit 6.2":
-    st.header("Unit 6.2: Parameters")
-
     st.title("Unit 6.2: Function Parameters")
 
     st.write("Function parameters are values that you can pass to a function to customize its behavior. "
@@ -1578,7 +1575,6 @@ elif st.session_state.expandtitle == "Unit 6.2":
     st.write(
         "Understanding and effectively using parameters is essential for creating flexible and reusable functions.")
 elif st.session_state.expandtitle == "Unit 6.3":
-    st.header("Unit 6.3: Returning Values in Functions")
     st.title("Unit 6.3: Returning Values in Functions")
 
     st.write(
