@@ -1,0 +1,76 @@
+Index: account.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/account.py b/account.py
+--- a/account.py	
++++ b/account.py	
+@@ -1,5 +1,6 @@
+ import streamlit as st
+ 
++
+ def account():
+ 
+     user_credentials = {}
+@@ -16,23 +17,24 @@
+         user_info = login()
+         check_credentials(user_info[0], user_info[1], user_credentials)
+ 
+-        while flag:
++        #while flag:
+ 
+-            if check_credentials(user_info[0], user_info[1], user_credentials):
+-                st.success("Access granted")
+-                flag = False
+-            else:
+-                st.error("Access denied, Try Again")
+-                login()
++        if check_credentials(user_info[0], user_info[1], user_credentials):
++            st.success("Access granted")
++            #flag = False
++        else:
++            st.error("Access denied, Try Again")
++            login()
+ 
+ 
+ def create_credentials(credentials):
+ 
+     # Asks user for their info
+-    with st.form(key='Account Creation'):
+-        username = (st.text_input("Enter a username for your account: ", "Type here..."))
+-        password = (st.text_input("Enter a password for your account (8 characters or numbers): ", "Type here..."))
++    with st.form('Account Creation'):
++        username = (st.text_input("Enter a username for your account: "))
++        password = (st.text_input("Enter a password for your account (8 characters or numbers): ", type="password"))
+         st.form_submit_button("Sign Up!")
++
+     # stores user info in dictionary and returns dictionary
+     credentials[username] = password
+     return credentials
+@@ -41,9 +43,9 @@
+ def login():
+ 
+     cred_list = []
+-    with st.form(key='Log-In'):
+-        username = (st.text_input("Enter the username for your account: ", "Type here..."))
+-        password = (st.text_input("Enter the password for your account: ", "Type here..."))
++    with st.form('Log-In'):
++        username = (st.text_input("Enter the username for your account: "))
++        password = (st.text_input("Enter the password for your account: ", type="password"))
+         st.form_submit_button("Log In!")
+ 
+     cred_list.append(username)
+@@ -51,6 +53,7 @@
+ 
+     return cred_list
+ 
++
+ def check_credentials(username, password, credentials):
+     """
+     Using dictionary of account information, checks to see if user exists
+@@ -65,4 +68,3 @@
+     elif username not in credentials:
+         st.warning("Username incorrect, try again or Create Account.")
+         return False
+-

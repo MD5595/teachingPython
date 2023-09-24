@@ -1,0 +1,111 @@
+Index: account.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/account.py b/account.py
+--- a/account.py	
++++ b/account.py	
+@@ -1,15 +1,16 @@
+ import streamlit as st
+ 
++"""
+ def account():
+ 
+     user_credentials = {}
+ 
+     st.title("Account")
+-
++    login_button = st.button("Login")
+     if st.button("Sign Up"):
+         create_credentials(user_credentials)
+ 
+-    if st.button("Login"):
++    if login_button:
+ 
+         login()
+         user_info = login()
+@@ -51,12 +52,13 @@
+ 
+     return cred_list
+ 
+-
++"""
++"""
+ def check_credentials(username, password, credentials):
+-    """
++    
+     Using dictionary of account information, checks to see if user exists
+     when logging in
+-    """
++    
+ 
+     if username in credentials and (credentials[username] == password):
+         return True
+@@ -67,3 +69,66 @@
+         st.warning("Username incorrect, try again or Create Account.")
+         return False
+ 
++
++
++def data_collection(num_correct, num_attempts, benchmark):
++    
++    progress_list = []
++    access = False
++    average_progress = num_correct // num_attempts
++    
++    if average_progress > benchmark:
++        access = True
++        progress_list.append(average_progress)
++        progress_list.append(access)
++        return progress_list
++    else:
++        access = False
++        progress_list.append(average_progress)
++        progress_list.append(access)
++        return progress_list
++    
++
++
++"""
++def account_manager():
++    # Define a dictionary to store usernames and passwords
++    user_credentials = {
++        "user1": "password1",
++        "user2": "password2",
++        "user3": "password3"
++    }
++
++    # Streamlit app title
++    st.title("Simple Username/Password Authentication")
++
++    # Streamlit sidebar for login and user creation
++    with st.sidebar:
++        st.header("Login")
++        username = st.text_input("Username")
++        password = st.text_input("Password", type="password")
++
++        st.header("Create User")
++        new_username = st.text_input("New Username")
++        new_password = st.text_input("New Password", type="password")
++        create_user = st.button("Create User")
++
++    # Streamlit main content
++    if st.sidebar.button("Login"):
++        if username in user_credentials and user_credentials[username] == password:
++            st.success("Access granted!")
++        else:
++            st.error("Access denied. Please check your username and password.")
++
++    if create_user:
++        create_new_user(new_username, new_password, user_credentials)
++
++# Function to create a new user
++def create_new_user(username, password, user_credentials):
++    if username and password:
++        user_credentials[username] = password
++        st.success(f"User '{username}' has been created.")
++    else:
++        st.warning("Please provide both a username and a password for user creation.")
++
++

@@ -1,0 +1,23 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,4 +1,5 @@
+ import streamlit as st
++from account import account
+ 
+ st.set_page_config(
+     page_title="py.EDU",
+@@ -8,7 +9,7 @@
+     menu_items=None
+ )
+ st.header(":blue[py]:red[EDU]:snake:")
+-
++account()
+ if 'expandtitle' not in st.session_state:
+     st.session_state.expandtitle = None
+ 

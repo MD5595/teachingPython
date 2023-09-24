@@ -1,0 +1,24 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,4 +1,5 @@
+ import streamlit as st
++from account import account_manager
+ 
+ st.set_page_config(
+     page_title="py.EDU",
+@@ -19,6 +20,9 @@
+ 
+ 
+ with st.sidebar:
++
++    account_manager()
++
+     "Select:"
+     if st.button("Home",use_container_width=True):
+         st.session_state.expandtitle = "Home"

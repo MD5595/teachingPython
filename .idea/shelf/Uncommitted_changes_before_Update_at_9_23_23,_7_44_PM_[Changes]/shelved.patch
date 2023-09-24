@@ -1,0 +1,25 @@
+Index: account.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import streamlit as st\n\ndef account():\n\n    user_credentials = {}\n    flag = True\n\n    st.title(\"Account\")\n\n    if (st.button(\"Sign Up\")):\n        create_credentials(user_credentials)\n\n    if (st.button(\"Login\")):\n\n        login()\n        check_credentials(login[0], login[1], user_credentials)\n\n        while flag:\n\n            if check_credentials(login[0], login[1], user_credentials):\n                st.success(\"Access granted\")\n                flag = False\n            else:\n                st.error(\"Access denied, Try Again\")\n                login()\n\n\ndef create_credentials(credentials):\n\n    # Asks user for their info\n    with st.form(key='Account Creation'):\n        username = (st.text_input(\"Enter a username for your account: \", \"Type here...\"))\n        password = (st.text_input(\"Enter a password for your account (8 characters or numbers): \", \"Type here...\"))\n        st.form_submit_button(\"Sign Up!\")\n    # stores user info in dictionary and returns dictionary\n    credentials[username] = password\n    return credentials\n\n\ndef login():\n\n    cred_list = []\n    with st.form(key='Log-In'):\n        username = (st.text_input(\"Enter the username for your account: \", \"Type here...\"))\n        password = (st.text_input(\"Enter the password for your account: \", \"Type here...\"))\n        st.form_submit_button(\"Log In!\")\n\n    cred_list.append(username)\n    cred_list.append(password)\n\n    return cred_list\n\ndef check_credentials(username, password, credentials):\n    \"\"\"\n    Using dictionary of account information, checks to see if user exists\n    when logging in\n    \"\"\"\n\n    if username in credentials and (credentials[username] == password):\n        return True\n    elif (username in credentials) and (credentials[username] != password):\n        st.warning(\"Incorrect password, try again.\")\n        return False\n    elif username not in credentials:\n        st.warning(\"Username incorrect, try again or Create Account.\")\n        return False\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/account.py b/account.py
+--- a/account.py	(revision 10c0eb51ffd98ff676803135f213cfd3c191e016)
++++ b/account.py	(date 1695510926791)
+@@ -13,11 +13,12 @@
+     if (st.button("Login")):
+ 
+         login()
+-        check_credentials(login[0], login[1], user_credentials)
++        user_info = login()
++        check_credentials(user_info[0], user_info[1], user_credentials)
+ 
+         while flag:
+ 
+-            if check_credentials(login[0], login[1], user_credentials):
++            if check_credentials(user_info[0], user_info[1], user_credentials):
+                 st.success("Access granted")
+                 flag = False
+             else:
