@@ -5,18 +5,17 @@ from account import account_manager
 
 
 st.set_page_config(
-    page_title="py.EDU",
+    page_title="EDUpy",
     page_icon=":snake:",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None
 )
-st.header(":blue[py]:red[EDU]:snake:")
+st.header(":blue[EDU]:red[py]:snake:")
+
 
 if 'expandtitle' not in st.session_state:
-    st.session_state.expandtitle = None
-
-
+    st.session_state.expandtitle = "Home"
 
 
 
@@ -24,6 +23,7 @@ if 'expandtitle' not in st.session_state:
 
 with st.sidebar:
     account_manager()
+    container = st.container()
 
     "Select:"
     if st.button("Home",use_container_width=True):
@@ -109,6 +109,8 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 7.2"
         if st.button("Final Project", use_container_width=True):
             st.session_state.expandtitle = "Unit 7.3"
+
+
 
 
 if st.session_state.expandtitle == "Unit 1.1":
@@ -542,4 +544,167 @@ elif st.session_state.expandtitle == "Flashcards":
 
 elif st.session_state.expandtitle == "Home":
     st.header("Home")
+    tab1, tab2, tab3 = st.tabs(["Welcome", "Get Started", "About Us"])
+    with tab1:
+        # Header
+        st.title("Welcome to eduPY")
+        st.subheader("Your Gateway to Python Education")
+
+        # Introduction
+        st.write(
+            "Are you ready to embark on a Python learning journey? Whether you're a beginner taking your first steps "
+            "in coding or an experienced developer looking to enhance your skills, eduPY is here to support your "
+            "Python education.")
+
+        # Key Features
+        st.markdown("## Key Features")
+        st.subheader("Comprehensive Python Curriculum")
+        st.write("Our comprehensive curriculum covers Python programming from the fundamentals to advanced topics. "
+                 "Explore a wide range of Python applications, including data science, web development, and more.")
+
+        st.subheader("Interactive Learning")
+        st.write("Learn by doing with our interactive courses and hands-on coding exercises. Engage with practical "
+                 "coding challenges that reinforce your skills.")
+
+        st.subheader("Experienced Instructors")
+        st.write("Benefit from the expertise of our experienced Python instructors. They bring real-world experience "
+                 "and a passion for teaching to every lesson.")
+
+        st.subheader("Community and Support")
+        st.write("Join our vibrant learning community. Connect with fellow students, ask questions, and collaborate on "
+                 "projects. Our support team is here to assist you on your journey.")
+
+        st.subheader("Flexible Learning Options")
+        st.write("Choose the learning style that suits you best. Whether you prefer self-paced learning or structured "
+                 "courses with deadlines, we have options to fit your needs.")
+
+        # Get Started
+        st.markdown("## Get Started")
+        st.write("Ready to begin? Dive into the world of Python programming with eduPY today!")
+
+        if st.button("Start Learning"):
+            # Redirect to the curriculum page or the first unit
+            st.session_state.expandtitle = "Unit 1.1"
+            # You can change the expandtitle value based on where you want to redirect the user
+
+        # About Us
+        st.markdown("## About Us")
+        st.write("Learn more about eduPY and our mission to empower learners with Python skills.")
+
+        if st.button("About eduPY"):
+            st.session_state.expandtitle = "About eduPY"
+
+        # Footer
+        st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
+    with tab2:
+        # Header
+        st.title("Installing Python and PyCharm")
+        st.subheader("Getting Started with Python Development")
+
+        # Introduction
+        st.write(
+            "Before you begin your Python programming journey, you'll need to set up your development environment. "
+            "This guide will walk you through the process of installing Python and PyCharm, a popular Python IDE.")
+
+        # Installing Python
+        st.markdown("## Installing Python")
+        st.subheader("Step 1: Download Python")
+        st.write("To install Python, you can download the latest version from the official Python website. "
+                 "Choose the appropriate installer for your operating system (Windows, macOS, or Linux).")
+
+        st.subheader("Step 2: Run the Installer")
+        st.write("Run the downloaded installer and follow the installation wizard. Be sure to check the box that says "
+                 "'Add Python X.X to PATH' (X.X represents the Python version number). This ensures that Python is added "
+                 "to your system's PATH environment variable.")
+
+        st.subheader("Step 3: Verify Installation")
+        st.write("To verify that Python has been installed correctly, open a command prompt or terminal and enter the "
+                 "following command:")
+        st.code("python --version", language="shell")
+
+        st.write("You should see the Python version displayed, indicating a successful installation.")
+
+        # Installing PyCharm
+        st.markdown("## Installing PyCharm")
+        st.subheader("Step 1: Download PyCharm")
+        st.write(
+            "PyCharm is a popular Python IDE developed by JetBrains. You can download the Community edition, which is "
+            "free, or the Professional edition for additional features. Visit the PyCharm website to download the installer.")
+
+        st.subheader("Step 2: Run the Installer")
+        st.write("Run the downloaded PyCharm installer and follow the installation instructions. You can choose to "
+                 "customize your installation options if desired.")
+
+        st.subheader("Step 3: First Launch")
+        st.write(
+            "After installation, launch PyCharm. You'll be prompted to import settings or customize the IDE to your liking. "
+            "Follow the setup wizard to configure PyCharm as you prefer.")
+
+        st.write("You're now ready to start coding with Python in PyCharm!")
+
+        # Next Steps
+        st.markdown("## Next Steps")
+        st.write("With Python and PyCharm installed, you're ready to explore the world of Python programming. "
+                 "Consider taking our introductory courses to begin your learning journey.")
+
+        st.link_button("Syllabus", "https://docs.google.com/document/d/18pOZAv8kwUpfFii0ko1iciQv3-eyxOmcmdLVdaqvjVg/edit?usp=sharing")
+
+        # Footer
+        st.write("Thank you for choosing eduPY. We wish you success in your Python development endeavors!")
+
+    with tab3:
+        # Header
+        st.title("About eduPY")
+        st.markdown("## Welcome to eduPY – Your Gateway to Python Education!")
+
+        # Introduction
+        st.write("At eduPY, we are passionate about spreading the knowledge and power of Python programming "
+                 "to learners of all levels, from beginners taking their first steps in coding to seasoned "
+                 "developers looking to enhance their skills. Our mission is to make Python education accessible, "
+                 "engaging, and effective.")
+
+        # What Sets Us Apart
+        st.markdown("## What Sets Us Apart")
+        st.subheader("Comprehensive Python Curriculum")
+        st.write("We offer a comprehensive curriculum that covers Python programming from the fundamentals "
+                 "to advanced topics. Whether you're interested in mastering Python basics, data science, web "
+                 "development, or artificial intelligence, our courses have you covered.")
+
+        st.subheader("Interactive Learning")
+        st.write("Learning Python doesn't have to be boring! Our interactive courses and hands-on coding exercises "
+                 "keep you engaged and motivated throughout your learning journey. You'll learn by doing, making "
+                 "your knowledge practical and immediately applicable.")
+
+        st.subheader("Experienced Instructors")
+        st.write("Our team of experienced Python instructors is dedicated to your success. They bring real-world "
+                 "experience and a passion for teaching to every lesson. You'll benefit from their guidance and "
+                 "insights as you progress in your Python education.")
+
+        st.subheader("Community and Support")
+        st.write(
+            "Join a thriving community of learners who share your passion for Python. Connect with fellow students, "
+            "ask questions, and collaborate on projects. Our support team is always here to assist you on your learning path.")
+
+        st.subheader("Flexible Learning Options")
+        st.write(
+            "We understand that everyone's learning journey is unique. That's why we offer flexible learning options. "
+            "Whether you prefer self-paced learning or structured courses with deadlines, we have options to suit your needs.")
+
+        # Our Vision
+        st.markdown("## Our Vision")
+        st.write(
+            "Our vision is to empower individuals with the skills and knowledge they need to excel in the world of Python "
+            "programming. We believe that Python is not just a programming language; it's a tool that opens doors to countless "
+            "possibilities.")
+
+        # Get Started
+        st.markdown("## Get Started Today!")
+        st.write(
+            "Are you ready to embark on your Python learning adventure? Join eduPY today and take your first steps towards "
+            "becoming a Python pro! Whether you're looking to build a career in tech, launch a data science project, or "
+            "simply explore the world of coding, we're here to support you every step of the way.")
+
+        st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
+
+
     # Add content for Home
