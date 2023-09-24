@@ -1,45 +1,39 @@
 import streamlit as st
 
 def account_manager():
-    # Define a dictionary to store usernames and passwords
-    user_credentials = {
-        "user1": "password1",
-        "user2": "password2",
-        "user3": "password3"
-    }
-
     # Streamlit app title
     st.title("Simple Username/Password Authentication")
 
-    # Streamlit sidebar for login and user creation
-    with st.sidebar:
-        st.header("Login")
-        username = st.text_input("Username")
-        password = st.text_input("Password", type="password")
+    # Function to create a new user
+    def create_new_user(username, password):
+        if "user_credentials" not in st.session_state:
+            st.session_state.user_credentials = {}
+        if username and password:
+            if username not in st.session_state.user_credentials:
+                st.session_state.user_credentials[username] = password
+                st.success(f"User '{username}' has been created.")
+            else:
+                st.warning(f"User '{username}' already exists. Please choose a different username.")
+        else:
+            st.warning("Please provide both a username and a password for user creation.")
 
-        st.header("Create User")
-        new_username = st.text_input("New Username")
-        new_password = st.text_input("New Password", type="password")
-        create_user = st.button("Create User")
+    # Input fields for creating a new user
+    new_username = st.text_input("New Username")
+    new_password = st.text_input("New Password", type="password")
+    create_user = st.button("Create User")
+
+    # Input fields for login
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
 
     # Streamlit main content
-    if st.sidebar.button("Login"):
-        if username in user_credentials and user_credentials[username] == password:
+    if st.button("Login"):
+        if "user_credentials" in st.session_state and username in st.session_state.user_credentials and st.session_state.user_credentials[username] == password:
             st.success("Access granted!")
         else:
             st.error("Access denied. Please check your username and password.")
 
     if create_user:
-        create_new_user(new_username, new_password, user_credentials)
-
-# Function to create a new user
-def create_new_user(username, password, user_credentials):
-    if username and password:
-        user_credentials[username] = password
-        st.success(f"User '{username}' has been created.")
-    else:
-        st.warning("Please provide both a username and a password for user creation.")
-
-
+        create_new_user(new_username, new_password)
 
 

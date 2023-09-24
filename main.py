@@ -1081,7 +1081,17 @@ elif st.session_state.expandtitle == "Unit 3.4":
     st.write("Nested statements provide a way to handle complex scenarios by combining conditionals.")
     st.write(
         "Understanding and mastering these conditional structures is essential for creating responsive and flexible programs.")
+    question3_3 = st.radio("Which of the following demonstrates an accurate nested conditional structure for a simple program regarding beverage preference along with temperature preference)”,
+                         ("If-else statements selecting temperature within an outer if-else statement selecting beverage", "if beverage == tea: print(“Tea rocks!”) else: print(“Coffee is better”)", "if-else statements followed by if-else statements of the same level", "if-elif-else statements are nested conditionals"),
+                         index=None,
+                        )
 
+    if (question3_3 == "If-else statements selecting temperature within an outer if-else statement selecting beverage"):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 1.3"
+    elif question3_3 == "if beverage == tea: print(“Tea rocks!”) else: print(“Coffee is better”)" or question3_3 == "if-else statements followed by if-else statements of the same level" or question3_3 == "if-elif-else statements are nested conditionals":
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 3.5":
     st.header("Unit 3 Quiz")
     # Question 1
@@ -2577,17 +2587,14 @@ elif st.session_state.expandtitle == "Home":
         st.write("Thank you for choosing eduPY. We wish you success in your Python development endeavors!")
 
     with tab3:
-        # Header
         st.title("About eduPY")
         st.markdown("## Welcome to eduPY – Your Gateway to Python Education!")
 
-        # Introduction
         st.write("At eduPY, we are passionate about spreading the knowledge and power of Python programming "
                  "to learners of all levels, from beginners taking their first steps in coding to seasoned "
                  "developers looking to enhance their skills. Our mission is to make Python education accessible, "
                  "engaging, and effective.")
 
-        # What Sets Us Apart
         st.markdown("## What Sets Us Apart")
         st.subheader("Comprehensive Python Curriculum")
         st.write("We offer a comprehensive curriculum that covers Python programming from the fundamentals "
@@ -2630,4 +2637,3 @@ elif st.session_state.expandtitle == "Home":
 
         st.write("Thank you for choosing eduPY. We look forward to helping you achieve your Python programming goals!")
 
-    # Add content for Home
