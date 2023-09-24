@@ -447,7 +447,7 @@ elif st.session_state.expandtitle == "Unit 1.6":
 
                                 # Question 8
                                 q8 = st.radio("Which symbol is used for exponentiation in Python?",
-                                              ("^", "*", "**", "//"),
+                                              ("^", "//", "**", "pwr()"),
                                               index=None
                                               )
                                 if q8 == "**":
@@ -483,8 +483,8 @@ elif st.session_state.expandtitle == "Unit 1.6":
                                     or q9 == "33"):
                                         st.markdown("Try Again!")
                                 elif(q8 == "^"
-                                or q8 == "*"
-                                or q8 == "//"):
+                                or q8 == "//"
+                                or q8 == "pwr()"):
                                     st.markdown("Try Again!")
                             elif(q7 == "# This is a comment"
                             or q7 == "''' This is a comment '''"
@@ -632,6 +632,142 @@ elif st.session_state.expandtitle == "Unit 2.4":
     st.header("Unit 2 Summary")
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
+    # Question 1
+    q1 = st.radio("What does the (%) operator do in Python?",
+                  ("It performs addition",
+                   "It performs subtraction",
+                   "It calculates the remainder after division",
+                   "It multiplies two numbers"),
+                  index=None
+                  )
+
+    if q1 == "It calculates the remainder after division":
+        st.markdown("Correct!")
+
+        # Question 2
+        q2 = st.radio("What is the result of '5 ** 3' in Python?",
+                      ("8", "15", "125", "500"),
+                      index=None
+                      )
+        if q2 == "125":
+            st.markdown("Correct!")
+
+            # Question 3
+            q3 = st.radio("What does the (//) operator do in Python?",
+                          ("It performs floor division",
+                           "It calculates the square root",
+                           "It multiplies two numbers",
+                           "It performs exponentiation"),
+                          index=None
+                          )
+            if q3 == "It performs floor division":
+                st.markdown("Correct!")
+
+                # Question 4
+                q4 = st.radio("What is the result of '15 / 4' in Python?",
+                              ("3.75", "3.0", "3", "4"),
+                              index=None
+                              )
+                if q4 == "3.75":
+                    st.markdown("Correct!")
+
+                    # Question 5
+                    q5 = st.radio("What is the purpose of the '//' operator in Python?",
+                                  ("To perform addition",
+                                   "To calculate the remainder after division",
+                                   "To perform floor division",
+                                   "To calculate the square root"),
+                                  index=None
+                                  )
+                    if q5 == "To perform floor division":
+                        st.markdown("Correct!")
+
+                        # Question 6
+                        q6 = st.radio("What is the result of '8 - 3' in Python?",
+                                      ("11", "5", "2", "24"),
+                                      index=None
+                                      )
+                        if q6 == "5":
+                            st.markdown("Correct!")
+
+                            # Question 7
+                            q7 = st.radio("Which operator is used for exponentiation in Python?",
+                                          ("^", "//", "**", "exp()"),
+                                          index=None
+                                          )
+                            if q7 == "**":
+                                st.markdown("Correct!")
+
+                                # Question 8
+                                q8 = st.radio("What is the result of '20 % 7' in Python?",
+                                              ("2", "6", "3", "0"),
+                                              index=None
+                                              )
+                                if q8 == "6":
+                                    st.markdown("Correct!")
+
+                                    # Question 9
+                                    q9 = st.radio("What is the result of '10 / 3' in Python?",
+                                                  ("3.333", "3", "3.0", "33"),
+                                                  index=None
+                                                  )
+                                    if q9 == "3.333":
+                                        st.markdown("Correct!")
+
+                                        # Question 10
+                                        q10 = st.radio("What is the purpose of the '%' operator in Python?",
+                                                       ("To perform addition",
+                                                        "To calculate the square root",
+                                                        "To calculate the remainder after division",
+                                                        "To perform floor division"),
+                                                       index=None
+                                                       )
+                                        if q10 == "To calculate the remainder after division":
+                                            st.markdown("Correct!")
+                                            if st.button("Next Section!"):
+                                                st.session_state.expandtitle = "Unit 2.2"
+
+                                        elif (q10 == "To perform addition"
+                                              or q10 == "To calculate the square root"
+                                              or q10 == "To perform floor division"):
+                                            st.markdown("Try Again!")
+                                    elif (q9 == "3"
+                                          or q9 == "3.0"
+                                          or q9 == "33"):
+                                        st.markdown("Try Again!")
+                                elif (q8 == "2"
+                                      or q8 == "3"
+                                      or q8 == "0"):
+                                    st.markdown("Try Again!")
+                            elif (q7 == "^"
+                                  or q7 == "//"
+                                  or q7 == "exp()"):
+                                st.markdown("Try Again!")
+                        elif (q6 == "11"
+                              or q6 == "2"
+                              or q6 == "24"):
+                            st.markdown("Try Again!")
+                    elif (q5 == "To perform addition"
+                          or q5 == "To calculate the square root"
+                          or q5 == "To calculate the remainder after division"):
+                        st.markdown("Try Again!")
+                elif (q4 == "3"
+                      or q4 == "3.0"
+                      or q4 == "4"):
+                    st.markdown("Try Again!")
+            elif (q3 == "It calculates the square root"
+                  or q3 == "It multiplies two numbers"
+                  or q3 == "It performs exponentiation"):
+                st.markdown("Try Again!")
+        elif (q2 == "8"
+              or q2 == "15"
+              or q2 == "500"):
+            st.markdown("Try Again!")
+    elif (q1 == "It performs addition"
+          or q1 == "It performs subtraction"
+          or q1 == "It multiplies two numbers"):
+        st.markdown("Try Again!")
+
 elif st.session_state.expandtitle == "Unit 3.1":
     st.header("Unit 3.1: If Statements")
     st.title("If-Else Statements, Conditional, and Logical Operators")
@@ -776,7 +912,75 @@ elif st.session_state.expandtitle == "Unit 3.2":
     """)
 
 elif st.session_state.expandtitle == "Unit 3.3":
-    st.header("Unit 3.3: Elif Statements")
+    st.header("Unit 3.3: Nested Conditionals")
+    st.title("Nested If Statements Explanation")
+
+    # Explanation of nested if statements
+    st.write("""
+    Nested if statements are used when you need to evaluate multiple conditions within another condition. This allows for more complex decision-making in your code.
+
+    Nested if statements are essentially if statements inside other if statements. They are used to create hierarchical decision structures, where you check multiple conditions in a structured manner.
+
+    Example 1: Categorizing a product based on price and availability
+    """)
+    st.code("price = float(input('Enter the price of the product: '))\n"
+            "availability = input('Is the product available (yes/no): ')\n"
+            "\n"
+            "if price < 10:\n"
+            "    if availability == 'yes':\n"
+            "        print('Low-cost and available')\n"
+            "    else:\n"
+            "        print('Low-cost but not available')\n"
+            "elif price < 50:\n"
+            "    if availability == 'yes':\n"
+            "        print('Mid-range and available')\n"
+            "    else:\n"
+            "        print('Mid-range but not available')\n"
+            "else:\n"
+            "    if availability == 'yes':\n"
+            "        print('Premium and available')\n"
+            "    else:\n"
+            "        print('Premium but not available')",
+            language='python')
+
+    st.write("""
+    Example 2: Determining a student's grade
+    """)
+    st.code("score = int(input('Enter the student's score: '))\n"
+            "\n"
+            "if score >= 90:\n"
+            "    if score == 100:\n"
+            "        print('Grade: A+ (Perfect score!)')\n"
+            "    else:\n"
+            "        print('Grade: A')\n"
+            "elif score >= 80:\n"
+            "    print('Grade: B')\n"
+            "elif score >= 70:\n"
+            "    print('Grade: C')\n"
+            "elif score >= 60:\n"
+            "    print('Grade: D')\n"
+            "else:\n"
+            "    print('Grade: F (Fail)')",
+            language='python')
+
+    st.write("""
+    Example 3: Checking eligibility for a driving license
+    """)
+    st.code("age = int(input('Enter your age: '))\n"
+            "driving_test = input('Have you passed the driving test (yes/no): ')\n"
+            "\n"
+            "if age >= 18:\n"
+            "    if driving_test == 'yes':\n"
+            "        print('Eligible for a driving license.')\n"
+            "    else:\n"
+            "        print('You need to pass the driving test to be eligible.')\n"
+            "else:\n"
+            "    print('Must be 18 or older to apply for a driving license.')",
+            language='python')
+
+    st.write("""
+    Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
+    """)
 elif st.session_state.expandtitle == "Unit 3.4":
     st.header("Unit 3.4: Nested Conditionals")
 elif st.session_state.expandtitle == "Unit 3.5":
