@@ -107,8 +107,6 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 7.1"
         if st.button("Final Exam", use_container_width=True):
             st.session_state.expandtitle = "Unit 7.2"
-        if st.button("Final Project", use_container_width=True):
-            st.session_state.expandtitle = "Unit 7.3"
 
 
 
@@ -182,7 +180,7 @@ elif st.session_state.expandtitle == "Unit 1.2":
 
 
 elif st.session_state.expandtitle == "Unit 1.3":
-    st.title("Variable Explanation App")
+    st.title("Unit 1.3: Variable Explanation App")
 
     # Explanations
     st.write("""
@@ -469,7 +467,7 @@ elif st.session_state.expandtitle == "Unit 1.6":
                                                        )
                                         if q10 == "To convert a value to an integer":
                                             st.markdown("Correct!")
-                                            if st.button("Next Section!"):
+                                            if st.button("Next Unit!"):
                                                 st.session_state.expandtitle = "Unit 2.1"
 
                                         elif(q10 == "To convert text to uppercase"
@@ -517,7 +515,7 @@ elif st.session_state.expandtitle == "Unit 1.6":
 
 
 elif st.session_state.expandtitle == "Unit 2.1":
-    st.title("Basic Symbols")
+    st.title("Unit 2.1: Basic Symbols")
 
     # Explanation of mathematical operators
     st.write("""
@@ -550,7 +548,7 @@ elif st.session_state.expandtitle == "Unit 2.1":
     st.write(f"num4 / num5 = {num4 / num5}")
 elif st.session_state.expandtitle == "Unit 2.2":
     # Title of the web app
-    st.title("Order of Operations in Python")
+    st.title("Unit 2.2: Order of Operations in Python")
 
     # Explanation of the order of operations
     st.write("""
@@ -588,7 +586,7 @@ elif st.session_state.expandtitle == "Unit 2.2":
     """)
 
 elif st.session_state.expandtitle == "Unit 2.3":
-    st.title("Modules Explanation")
+    st.title("Unit 2.3: Modules Explanation")
 
     # Explanation of modules
     st.write("""
@@ -743,8 +741,8 @@ elif st.session_state.expandtitle == "Unit 2.5":
                                                        )
                                         if q10 == "To calculate the remainder after division":
                                             st.markdown("Correct!")
-                                            if st.button("Next Section!"):
-                                                st.session_state.expandtitle = "Unit 2.2"
+                                            if st.button("Next Unit!"):
+                                                st.session_state.expandtitle = "Unit 3.1"
 
                                         elif (q10 == "To perform addition"
                                               or q10 == "To calculate the square root"
@@ -788,8 +786,7 @@ elif st.session_state.expandtitle == "Unit 2.5":
         st.markdown("Try Again!")
 
 elif st.session_state.expandtitle == "Unit 3.1":
-    st.header("Unit 3.1: If Statements")
-    st.title("If-Else Statements, Conditional, and Logical Operators")
+    st.header("Unit 3.1: If Statements, If-Else Statements, Logical Operators")
 
     # Explanation of conditional statements, comparison operators, and logical operators
     st.write("""
@@ -839,8 +836,7 @@ elif st.session_state.expandtitle == "Unit 3.1":
     Conditional statements, comparison operators, and logical operators are fundamental concepts in programming and are essential for making decisions in your code.
     """)
 elif st.session_state.expandtitle == "Unit 3.2":
-    st.header("Unit 3.2: Else Statements")
-    st.title("Else-If Statements (elif) Explanation")
+    st.header("Unit 3.2: Else If (elif) Statements")
 
     # Explanation of else-if statements (elif)
     st.write("""
@@ -932,7 +928,6 @@ elif st.session_state.expandtitle == "Unit 3.2":
 
 elif st.session_state.expandtitle == "Unit 3.3":
     st.header("Unit 3.3: Nested Conditionals")
-    st.title("Nested If Statements Explanation")
 
     # Explanation of nested if statements
     st.write("""
@@ -1001,7 +996,6 @@ elif st.session_state.expandtitle == "Unit 3.3":
     Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
     """)
 elif st.session_state.expandtitle == "Unit 3.4":
-    st.header("Unit 3 Summary")
     st.title("Unit 3: Conditionals Summary")
 
     st.write(
@@ -1046,10 +1040,147 @@ elif st.session_state.expandtitle == "Unit 3.4":
 
 elif st.session_state.expandtitle == "Unit 3.5":
     st.header("Unit 3 Quiz")
+    # Question 1
+    q1 = st.radio("What is the purpose of an 'if' statement in Python?",
+                  ("To iterate through a list",
+                   "To make decisions based on conditions",
+                   "To define a function",
+                   "To print text to the console"),
+                  index=None
+                  )
+
+    if q1 == "To make decisions based on conditions":
+        st.markdown("Correct!")
+        q2 = st.radio("What is the correct syntax for an 'if' statement in Python?",
+                      ("if condition:",
+                       "if (condition)",
+                       "if [condition]",
+                       "if {condition}"),
+                      index=None
+                      )
+        if q2 == "if condition:":
+            st.markdown("Correct!")
+            q3 = st.radio("What does the 'elif' keyword represent in an 'if-elif-else' statement?",
+                          ("It specifies an alternative condition to check if the previous conditions are False",
+                           "It represents the main condition",
+                           "It indicates the end of the statement",
+                           "It is used for comments"),
+                          index=None
+                          )
+            if q3 == "It specifies an alternative condition to check if the previous conditions are False":
+                st.markdown("Correct!")
+                q4 = st.radio("What is the primary role of 'else' in an 'if-elif-else' statement?",
+                              ("It defines the main condition",
+                               "It specifies an alternative condition",
+                               "It is used for comments",
+                               "It handles the final fallback condition if none of the previous conditions are met"),
+                              index=None
+                              )
+                if q4 == "It handles the final fallback condition if none of the previous conditions are met":
+                    st.markdown("Correct!")
+                    q5 = st.radio("How are nested if statements used?",
+                                  ("To combine multiple conditions within another condition",
+                                   "To create a loop",
+                                   "To define a function",
+                                   "To print text to the console"),
+                                  index=None
+                                  )
+                    if q5 == "To combine multiple conditions within another condition":
+                        st.markdown("Correct!")
+                        q6 = st.radio("What is the significance of proper indentation in nested if statements?",
+                                      ("It has no significance",
+                                       "It is used for aesthetic purposes",
+                                       "It helps define the code block that belongs to each if statement",
+                                       "It defines the order of execution"),
+                                      index=None
+                                      )
+                        if q6 == "It helps define the code block that belongs to each if statement":
+                            st.markdown("Correct!")
+                            q7 = st.radio("What do nested if statements enable you to do?",
+                                          ("Consider multiple conditions and execute code accordingly",
+                                           "Print text to the console",
+                                           "Define functions",
+                                           "Create loops"),
+                                          index=None
+                                          )
+                            if q7 == "Consider multiple conditions and execute code accordingly":
+                                st.markdown("Correct!")
+                                q8 = st.radio(
+                                    "In a nested if statement, where should the nested 'if' or 'elif' blocks be indented?",
+                                    ("They should be indented to the same level as the outer if statement",
+                                     "They should not be indented",
+                                     "They should be indented in reverse",
+                                     "The level of indentation doesn't matter"),
+                                    index=None
+                                    )
+                                if q8 == "They should be indented to the same level as the outer if statement":
+                                    st.markdown("Correct!")
+                                    q9 = st.radio(
+                                        "What kind of decision-making scenarios are nested if statements useful for?",
+                                        ("Complex scenarios where multiple conditions need to be considered",
+                                         "Simple scenarios with only one condition",
+                                         "Scenarios involving loops",
+                                         "Scenarios involving functions"),
+                                        index=None
+                                        )
+                                    if q9 == "Complex scenarios where multiple conditions need to be considered":
+                                        st.markdown("Correct!")
+                                        q10 = st.radio("What is the primary purpose of 'elif' statements?",
+                                                       (
+                                                       "To specify an alternative condition to check if the previous conditions are False",
+                                                       "To define the main condition",
+                                                       "To indicate the end of the statement",
+                                                       "To create loops"),
+                                                       index=None
+                                                       )
+                                        if q10 == "To specify an alternative condition to check if the previous conditions are False":
+                                            st.markdown("Correct!")
+                                            if st.button("Next Unit!"):
+                                                st.session_state.expandtitle = "Unit 4.1"
+
+                                        elif (q10 == "To define the main condition"
+                                              or q10 == "To indicate the end of the statement"
+                                              or q10 == "To create loops"):
+                                            st.markdown("Try Again!")
+                                    elif (q9 == "Simple scenarios with only one condition"
+                                          or q9 == "Scenarios involving loops"
+                                          or q9 == "Scenarios involving functions"):
+                                        st.markdown("Try Again!")
+                                elif (q8 == "They should not be indented"
+                                      or q8 == "They should be indented in reverse"
+                                      or q8 == "The level of indentation doesn't matter"):
+                                    st.markdown("Try Again!")
+                            elif (q7 == "Print text to the console"
+                                  or q7 == "Define functions"
+                                  or q7 == "Create loops"):
+                                st.markdown("Try Again!")
+                        elif (q6 == "It has no significance"
+                              or q6 == "It is used for aesthetic purposes"
+                              or q6 == "It defines the order of execution"):
+                            st.markdown("Try Again!")
+                    elif (q5 == "To create a loop"
+                          or q5 == "To define a function"
+                          or q5 == "To print text to the console"):
+                        st.markdown("Try Again!")
+                elif (q4 == "It defines the main condition"
+                      or q4 == "It specifies an alternative condition"
+                      or q4 == "It is used for comments"):
+                    st.markdown("Try Again!")
+            elif (q3 == "It represents the main condition"
+                  or q3 == "It indicates the end of the statement"
+                  or q3 == "It is used for comments"):
+                st.markdown("Try Again!")
+        elif (q2 == "if (condition)"
+              or q2 == "if [condition]"
+              or q2 == "if {condition}"):
+            st.markdown("Try Again!")
+    elif (q1 == "To iterate through a list"
+          or q1 == "To define a function"
+          or q1 == "To print text to the console"):
+        st.markdown("Try Again!")
+
 elif st.session_state.expandtitle == "Unit 4.1":
     st.header("Unit 4.1: For Loops")
-    st.title("Unit 4.1: For Loops")
-
     st.write(
         "For loops are used for iterating over sequences (such as lists, tuples, or strings) and performing actions on each item in the sequence.")
 
@@ -1090,7 +1221,6 @@ elif st.session_state.expandtitle == "Unit 4.1":
 
 elif st.session_state.expandtitle == "Unit 4.2":
     st.header("Unit 4.2: While Loops")
-    st.title("Understanding While Loops")
 
     # Explanation
     st.write("While loops continuously perform an action as long as a condition is fulfilled.")
@@ -1142,7 +1272,6 @@ elif st.session_state.expandtitle == "Unit 4.2":
 
 elif st.session_state.expandtitle == "Unit 4.3":
     st.header("Unit 4.3: Nested Loops")
-    st.title("Unit 4.3: Nested Loops")
 
     st.write(
         "Nested loops are loops within loops. They are used when you need to perform repetitive tasks within repetitive tasks.")
@@ -1181,7 +1310,6 @@ elif st.session_state.expandtitle == "Unit 4.3":
     st.write("Proper indentation and understanding of loop order are essential when working with nested loops.")
 elif st.session_state.expandtitle == "Unit 4.4":
     st.header("Unit 4 Summary")
-    st.title("Unit 4: Loops Summary")
 
     st.write(
         "Unit 4 explores the concept of loops, which are used to perform repetitive tasks and iterate through data structures.")
@@ -1226,9 +1354,147 @@ elif st.session_state.expandtitle == "Unit 4.4":
 
 elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
+    q1 = st.radio("What is the purpose of a 'for' loop in Python?",
+                  ("To make decisions based on conditions",
+                   "To create a loop",
+                   "To define a function",
+                   "To print text to the console"),
+                  index=None
+                  )
+
+    if q1 == "To create a loop":
+        st.markdown("Correct!")
+        q2 = st.radio("Which of the following is NOT a key point about 'while' loops?",
+                      ("They continue executing as long as the specified condition remains true",
+                       "Proper indentation is crucial to define the code block within the loop",
+                       "They are useful when you know the exact number of iterations",
+                       "They repeatedly execute a block of code as long as a condition is true"),
+                      index=None
+                      )
+        if q2 == "They are useful when you know the exact number of iterations":
+            st.markdown("Correct!")
+            q3 = st.radio("What is the primary purpose of 'break' and 'continue' statements in loops?",
+                          ("To define the main condition",
+                           "To specify an alternative condition",
+                           "To control the flow of the loop",
+                           "To create loops"),
+                          index=None
+                          )
+            if q3 == "To control the flow of the loop":
+                st.markdown("Correct!")
+                q4 = st.radio("What kind of tasks are 'while' loops particularly useful for?",
+                              ("Tasks where you don't know the number of iterations in advance",
+                               "Tasks with known and fixed numbers of iterations",
+                               "Tasks involving multi-dimensional data",
+                               "Tasks involving matrix traversal"),
+                              index=None
+                              )
+                if q4 == "Tasks where you don't know the number of iterations in advance":
+                    st.markdown("Correct!")
+                    q5 = st.radio("In a 'for' loop, what does the loop variable do?",
+                                  ("It specifies the alternative condition to check",
+                                   "It defines the main condition",
+                                   "It takes on each item in the sequence during each iteration",
+                                   "It is used for comments"),
+                                  index=None
+                                  )
+                    if q5 == "It takes on each item in the sequence during each iteration":
+                        st.markdown("Correct!")
+                        q6 = st.radio("What does proper indentation indicate in loops?",
+                                      ("It has no significance",
+                                       "It is used for aesthetic purposes",
+                                       "It defines the order of execution",
+                                       "It indicates the code block that belongs to the loop"),
+                                      index=None
+                                      )
+                        if q6 == "It indicates the code block that belongs to the loop":
+                            st.markdown("Correct!")
+                            q7 = st.radio("What is the primary purpose of nested loops?",
+                                          ("To make the code more complex",
+                                           "To simplify code execution",
+                                           "To perform repetitive tasks within repetitive tasks",
+                                           "To create loops"),
+                                          index=None
+                                          )
+                            if q7 == "To perform repetitive tasks within repetitive tasks":
+                                st.markdown("Correct!")
+                                q8 = st.radio(
+                                    "What type of tasks are nested loops often used for?",
+                                    ("Tasks involving simple iterations",
+                                     "Tasks where you need to repeat an action until a certain condition is met",
+                                     "Tasks with a single loop",
+                                     "Tasks where you don't need to iterate"),
+                                    index=None
+                                )
+                                if q8 == "Tasks involving simple iterations":
+                                    st.markdown("Correct!")
+                                    q9 = st.radio(
+                                        "What is the order of execution in nested loops?",
+                                        ("The inner loop runs completely for each iteration of the outer loop",
+                                         "The outer loop runs completely for each iteration of the inner loop",
+                                         "Both loops run in parallel",
+                                         "The inner loop executes first, followed by the outer loop"),
+                                        index=None
+                                    )
+                                    if q9 == "The inner loop runs completely for each iteration of the outer loop":
+                                        st.markdown("Correct!")
+                                        q10 = st.radio("What is a common use case for nested loops?",
+                                                       (
+                                                           "Matrix traversal and working with multi-dimensional data",
+                                                           "Simple data processing tasks",
+                                                           "Creating loops within functions",
+                                                           "Printing text to the console"),
+                                                       index=None
+                                                       )
+                                        if q10 == "Matrix traversal and working with multi-dimensional data":
+                                            st.markdown("Correct!")
+
+                                            if st.button("Next Unit!"):
+                                                st.session_state.expandtitle = "Unit 5.1"
+
+                                        elif (q10 == "Simple data processing tasks"
+                                              or q10 == "Creating loops within functions"
+                                              or q10 == "Printing text to the console"):
+                                            st.markdown("Try Again!")
+                                    elif (q9 == "The outer loop runs completely for each iteration of the inner loop"
+                                          or q9 == "Both loops run in parallel"
+                                          or q9 == "The inner loop executes first, followed by the outer loop"):
+                                        st.markdown("Try Again!")
+                                elif (q8 == "Tasks where you need to repeat an action until a certain condition is met"
+                                      or q8 == "Tasks with a single loop"
+                                      or q8 == "Tasks where you don't need to iterate"):
+                                    st.markdown("Try Again!")
+                            elif (q7 == "To make the code more complex"
+                                  or q7 == "To simplify code execution"
+                                  or q7 == "To create loops"):
+                                st.markdown("Try Again!")
+                        elif (q6 == "It has no significance"
+                              or q6 == "It is used for aesthetic purposes"
+                              or q6 == "It defines the order of execution"):
+                            st.markdown("Try Again!")
+                    elif (q5 == "It specifies the alternative condition to check"
+                          or q5 == "It defines the main condition"
+                          or q5 == "It is used for comments"):
+                        st.markdown("Try Again!")
+                elif (q4 == "Tasks with known and fixed numbers of iterations"
+                      or q4 == "Tasks involving multi-dimensional data"
+                      or q4 == "Tasks involving matrix traversal"):
+                    st.markdown("Try Again!")
+            elif (q3 == "To define the main condition"
+                  or q3 == "To specify an alternative condition"
+                  or q3 == "To create loops"):
+                st.markdown("Try Again!")
+        elif (q2 == "They continue executing as long as the specified condition remains true"
+              or q2 == "Proper indentation is crucial to define the code block within the loop"
+              or q2 == "They repeatedly execute a block of code as long as a condition is true"):
+            st.markdown("Try Again!")
+    elif (q1 == "To make decisions based on conditions"
+          or q1 == "To define a function"
+          or q1 == "To print text to the console"):
+        st.markdown("Try Again!")
+
 elif st.session_state.expandtitle == "Unit 5.1":
     st.header("Unit 5.1: Lists")
-    st.title("Unit 5.1: Lists")
 
     st.write("Lists store multiple values within one variable. Any data type can be stored within a list, "
              "and differing data types can be stored within the same list. Any value stored within a list is called an element.")
@@ -1266,8 +1532,6 @@ elif st.session_state.expandtitle == "Unit 5.1":
         "Mastering lists is crucial for a wide range of programming tasks, and they are widely used in various applications.")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.header("Unit 5.2: Traversing Through Lists")
-
-    st.title("Unit 5.2: Traversing Through Lists")
 
     st.write("Traversing through lists means accessing and processing each element in a list one by one. "
              "This is a fundamental operation when working with lists.")
@@ -1313,8 +1577,7 @@ elif st.session_state.expandtitle == "Unit 5.2":
     st.write("Mastering these techniques is crucial for working efficiently with lists in programming.")
 
 elif st.session_state.expandtitle == "Unit 5.3":
-    st.header("Unit 5.3: Appending/Removing")
-    st.title("Unit 5.3: Appending and Removing from Lists")
+    st.header("Unit 5.3: Appending/Removing From Lists")
 
     st.write("Appending and removing elements from lists are common operations when working with data in programming. "
              "These operations allow you to modify the contents of a list.")
@@ -1635,7 +1898,7 @@ elif st.session_state.expandtitle == "Unit 5.5":
     st.write("Lists allow you to store and manipulate collections of values, providing flexibility in data management.")
     st.write("Traversing through lists, appending, and removing elements enable dynamic data processing.")
     st.write(
-        "2D lists expand your data modeling capabilities, making them essential for various applications in programming."
+        "2D lists expand your data modeling capabilities, making them essential for various applications in programming.")
 elif st.session_state.expandtitle == "Unit 5.6":
     st.header("Unit 5 Quiz")
 elif st.session_state.expandtitle == "Unit 6.1":
@@ -1819,8 +2082,7 @@ elif st.session_state.expandtitle == "Unit 7.1":
     st.header("Recap")
 elif st.session_state.expandtitle == "Unit 7.2":
     st.header("Final Exam")
-elif st.session_state.expandtitle == "Unit 7.3":
-    st.header("Final Project")
+
 
 
 elif st.session_state.expandtitle == "Cheatsheet":
