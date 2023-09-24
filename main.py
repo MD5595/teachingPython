@@ -1486,7 +1486,8 @@ elif st.session_state.expandtitle == "Unit 4.4":
     st.write("Nested for-loops enable you to work with complex data structures and perform multi-level iterations.")
     st.write(
         "Mastering loops is crucial for automating repetitive tasks and processing data efficiently in your programs.")
-
+    if st.button("Next Section"):
+        st.session_state.expandtitle = "Unit 4.5"
 elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
     q1 = st.radio("What is the purpose of a 'for' loop in Python?",
