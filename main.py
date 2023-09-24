@@ -626,7 +626,75 @@ elif st.session_state.expandtitle == "Unit 3.2":
     """)
 
 elif st.session_state.expandtitle == "Unit 3.3":
-    st.header("Unit 3.3: Elif Statements")
+    st.header("Unit 3.3: Nested Conditionals")
+    st.title("Nested If Statements Explanation")
+
+    # Explanation of nested if statements
+    st.write("""
+    Nested if statements are used when you need to evaluate multiple conditions within another condition. This allows for more complex decision-making in your code.
+
+    Nested if statements are essentially if statements inside other if statements. They are used to create hierarchical decision structures, where you check multiple conditions in a structured manner.
+
+    Example 1: Categorizing a product based on price and availability
+    """)
+    st.code("price = float(input('Enter the price of the product: '))\n"
+            "availability = input('Is the product available (yes/no): ')\n"
+            "\n"
+            "if price < 10:\n"
+            "    if availability == 'yes':\n"
+            "        print('Low-cost and available')\n"
+            "    else:\n"
+            "        print('Low-cost but not available')\n"
+            "elif price < 50:\n"
+            "    if availability == 'yes':\n"
+            "        print('Mid-range and available')\n"
+            "    else:\n"
+            "        print('Mid-range but not available')\n"
+            "else:\n"
+            "    if availability == 'yes':\n"
+            "        print('Premium and available')\n"
+            "    else:\n"
+            "        print('Premium but not available')",
+            language='python')
+
+    st.write("""
+    Example 2: Determining a student's grade
+    """)
+    st.code("score = int(input('Enter the student's score: '))\n"
+            "\n"
+            "if score >= 90:\n"
+            "    if score == 100:\n"
+            "        print('Grade: A+ (Perfect score!)')\n"
+            "    else:\n"
+            "        print('Grade: A')\n"
+            "elif score >= 80:\n"
+            "    print('Grade: B')\n"
+            "elif score >= 70:\n"
+            "    print('Grade: C')\n"
+            "elif score >= 60:\n"
+            "    print('Grade: D')\n"
+            "else:\n"
+            "    print('Grade: F (Fail)')",
+            language='python')
+
+    st.write("""
+    Example 3: Checking eligibility for a driving license
+    """)
+    st.code("age = int(input('Enter your age: '))\n"
+            "driving_test = input('Have you passed the driving test (yes/no): ')\n"
+            "\n"
+            "if age >= 18:\n"
+            "    if driving_test == 'yes':\n"
+            "        print('Eligible for a driving license.')\n"
+            "    else:\n"
+            "        print('You need to pass the driving test to be eligible.')\n"
+            "else:\n"
+            "    print('Must be 18 or older to apply for a driving license.')",
+            language='python')
+
+    st.write("""
+    Nested if statements allow you to create complex decision trees in your code, making it capable of handling detailed scenarios effectively.
+    """)
 elif st.session_state.expandtitle == "Unit 3.4":
     st.header("Unit 3.4: Nested Conditionals")
 elif st.session_state.expandtitle == "Unit 3.5":
