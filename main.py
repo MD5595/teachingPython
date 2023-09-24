@@ -1756,6 +1756,21 @@ elif st.session_state.expandtitle == "Unit 5.4":
         "You've seen how to access elements, iterate through rows and elements, and perform operations on 2-D lists.")
     st.write(
         "2-D lists are essential for tasks that involve structured data representation, such as matrices and tables.")
+    st.title("Unit 5.4: Lists Question")
+
+    # Question
+    st.write("What is the main characteristic of 2D lists in programming?")
+
+    # User input field
+    question2 = st.text_input("Enter your answer here:")
+
+    # Check user's answer
+    if question2 == "They are lists that contain other lists as elements, creating a multi-dimensional structure":
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 5.5"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.5":
     st.header("Unit 5 Summary")
     st.title("Unit 5: Lists Summary")
@@ -1990,7 +2005,27 @@ elif st.session_state.expandtitle == "Unit 6.1":
     st.write("Functions allow you to encapsulate code, making it reusable and organized.")
     st.write(
         "You've seen how to declare functions with names, parameters, and a function body, as well as how to call them.")
+    st.title("Unit 6.1: Function Declaration Question")
 
+    # Question
+    st.write("In programming, what is the purpose of function declaration?")
+
+    # Multiple-choice options
+    options = ["To define and create a reusable block of code with a specified name.",
+               "To perform mathematical calculations.",
+               "To create conditional statements.",
+               "To print output to the console."]
+
+    # Radio buttons for options
+    selected_option = st.radio("Select the correct option:", options)
+
+    # Check if the selected option is correct
+    if selected_option == options[0]:
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 6.2"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 6.2":
     st.title("Unit 6.2: Function Parameters")
 
@@ -2038,6 +2073,27 @@ elif st.session_state.expandtitle == "Unit 6.2":
         "You've seen how to declare parameters, pass arguments, use multiple parameters, and assign default values.")
     st.write(
         "Understanding and effectively using parameters is essential for creating flexible and reusable functions.")
+    st.title("Unit 6.2: Function Parameters Question")
+
+    # Question
+    st.write("What is the role of function parameters in programming?")
+
+    # Multiple-choice options
+    options = ["They allow data to be passed into a function when it is called.",
+               "They define the name of the function.",
+               "They determine the return value of the function.",
+               "They control the order of execution in a program."]
+
+    # Radio buttons for options
+    selected_option = st.radio("Select the correct option:", options)
+
+    # Check if the selected option is correct
+    if selected_option == options[0]:
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 6.3"
+    else:
+        st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 6.3":
     st.title("Unit 6.3: Returning Values in Functions")
 
