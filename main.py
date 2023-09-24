@@ -649,6 +649,20 @@ elif st.session_state.expandtitle == "Unit 2.3":
     st.write("""
     It will be convenient for you to memorize these functions, but it is no problem if you forget the correct syntax. Consult the cheat sheet or Google to properly type out the functions/modules.
     """)
+    question2_3 = st.radio("What is the purpose of Python modules?",
+                     ("To define custom data types",
+                      "To group related functions, variables, and classes into reusable files",
+                      "To create graphical user interfaces (GUIs)",
+                      "To execute Python code line by line"),
+                     index=None,
+                     key="q3"
+                     )
+    if (question2_3 == "To group related functions, variables, and classes into reusable files" ):
+        st.markdown("Correct!")
+        if st.button("Next Section"):
+            st.session_state.expandtitle = "Unit 2.4"
+        elif (question2_3 == "To define custom data types" or question2_3 == "To create graphical user interfaces (GUIs)" or question2_3 == "To execute Python code line by line"):
+            st.markdown("Try Again!")
 
 
 elif st.session_state.expandtitle == "Unit 2.4":
@@ -674,6 +688,9 @@ elif st.session_state.expandtitle == "Unit 2.4":
     st.code(" val = 3 - 2 #stores in 1", language='python')
     st.write(
         " These operators, in order of highest precedence to lowest, make up the majority of arithmetic operators used in python")
+    if st.button("Next Section"):
+        st.session_state.expandtitle= "Unit 2.5"
+
 elif st.session_state.expandtitle == "Unit 2.5":
     st.header("Unit 2 Quiz")
     # Question 1
