@@ -102,7 +102,7 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 6.4"
         if st.button("Unit 6 Quiz", use_container_width=True):
             st.session_state.expandtitle = "Unit 6.5"
-    with st.expander("Unit 7"):
+    with st.expander("Finals"):
         if st.button("Recap", use_container_width=True):
             st.session_state.expandtitle = "Unit 7.1"
         if st.button("Final Exam", use_container_width=True):
