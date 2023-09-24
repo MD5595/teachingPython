@@ -1486,7 +1486,8 @@ elif st.session_state.expandtitle == "Unit 4.4":
     st.write("Nested for-loops enable you to work with complex data structures and perform multi-level iterations.")
     st.write(
         "Mastering loops is crucial for automating repetitive tasks and processing data efficiently in your programs.")
-
+    if st.button("Next Section"):
+        st.session_state.expandtitle = "Unit 4.5"
 elif st.session_state.expandtitle == "Unit 4.5":
     st.header("Unit 4 Quiz")
     q1 = st.radio("What is the purpose of a 'for' loop in Python?",
@@ -1670,14 +1671,24 @@ elif st.session_state.expandtitle == "Unit 5.1":
     st.write("Which of the following best describes the purpose of lists in programming?")
 
     #
-    question2 = st.text_input("Enter your answer here:")
+    question = st.radio("What is the primary purpose of lists in Python?",
+                        ("To make decisions based on conditions",
+                         "To create a loop",
+                         "To store and manage multiple values in a single variable",
+                         "To print text to the console"),
+                        index=None
+                        )
 
-    # Check user's answer
-    if question2 == "To store multiple values within a single variable":
+    # Check the answer
+    if question == "To store and manage multiple values in a single variable":
         st.markdown("Correct!")
+
+        # Provide a button to move to the next section
         if st.button("Next Section"):
-            st.session_state.expandtitle = "Unit 5.2"
-    else:
+            st.session_state.expandtitle = "Chapter 5.2"
+    elif (question == "To make decisions based on conditions"
+          or question == "To create a loop"
+          or question == "To print text to the console"):
         st.markdown("Try Again!")
 elif st.session_state.expandtitle == "Unit 5.2":
     st.title("Unit 5.2: Traversing Through Lists")
