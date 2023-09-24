@@ -45,7 +45,7 @@ with st.sidebar:
             st.session_state.expandtitle = "Unit 2.1"
         if st.button("Unit 2.2: Order of Operations", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.2"
-        if st.button("Unit 2.3: Modulo", use_container_width=True):
+        if st.button("Unit 2.3: Modules", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.3"
         if st.button("Unit 2 Summary", use_container_width=True):
             st.session_state.expandtitle = "Unit 2.4"
@@ -141,7 +141,7 @@ if st.session_state.expandtitle == "Unit 1.1":
 elif st.session_state.expandtitle == "Unit 1.2":
     st.header("Unit 1.2: Syntax and Formatting Conventions")
     st.divider()
-    st.subheader("A Python file being formatted improperly or having inappropriately named components will cause it to "
+    st.markdown("A Python file being formatted improperly or having inappropriately named components will cause it to "
                  "not function.")
     st.divider()
     st.subheader("Syntax Errors")
