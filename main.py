@@ -11,7 +11,9 @@ st.header(":blue[py]:red[EDU]:snake:")
 
 if 'expandtitle' not in st.session_state:
     st.session_state.expandtitle = None
-question2 = {0: "", 1: ""}
+
+
+
 
 
 
@@ -92,16 +94,16 @@ elif st.session_state.expandtitle == "Unit 1.2":
     st.code("print(\"“Hi.\")\n\tprint(\"Hi.\")", language='python')
     st.markdown("Ensure you include the correct spelling, spacing, indents, and within your code. Starting in unit 3 "
                 "cases where indentation is required will appear.")
-    options = ["print(\"Goodmorning!\")", "print(\'Goodmorning!\")", "print(Goodmorning!)", "print(\'Goodmorning!\')"]
-    answers = ["print(\"Goodmorning!\")", "print(\'Goodmorning!\')"]
-    wrongAnswers = ["print(Goodmorning!)", "print(\'Goodmorning!\")"]
-    question2 = st.multiselect("Which two print statements would output: Goodmorning!", options,
-                         default=None)
-    if (question2[0] in answers) and (question2[1] in answers) and (question2[0] != question2[1]):
+    question2 = st.radio("Which two print statements would output: Goodmorning!",
+                         ("print(\"Goodmorning!\')", "print(Goodmorning!\")", "print(\"Goodmorning!\")", "print(\"Goodmorning!)"),
+                         index=None,
+                        )
+
+    if (question2 == "print(\"Goodmorning!\")"):
         st.markdown("Correct!")
         if st.button("Next Section"):
             st.session_state.expandtitle = "Unit 1.3"
-    elif (question2[0] in wrongAnswers) or (question2[1] in wrongAnswers) or (question2[0] == question2[1]):
+    elif question2 == "print(\"Goodmorning!\')" or question2 == "print(Goodmorning!\")" or question2 == "print(\"Goodmorning!)":
         st.markdown("Try Again!")
 
 
